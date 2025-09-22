@@ -18,7 +18,7 @@ export default function Home() {
           width={4091}
           height={1025}
         />
-        <h1 className="text-2xl">We're under construction. Please check back for an update soon.</h1>
+        <h1 className="text-2xl">We&apos;re under construction. Please check back for an update soon.</h1>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         ©Copyright 2025, Appibara LTD
