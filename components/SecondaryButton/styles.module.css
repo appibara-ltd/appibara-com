@@ -1,0 +1,8 @@
+.button {
+    background-color: #fdfdfc;
+    color: var(--foreground);
+}
+
+.button:hover {
+    background-color: var(--muted);
+}

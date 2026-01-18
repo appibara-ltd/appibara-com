@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Audiowide } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
+});
+const audiowide = Audiowide({
+  variable: "--font-audiowide",
+  weight: "400"
 });
 
 export const metadata: Metadata = {
@@ -19,7 +23,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} antialiased`}>{children}</body>
+      <body
+        className={`${nunito.variable} ${audiowide.variable} antialiased flex flex-col h-screen`}
+        style={{ backgroundColor: "#fafaf9" }}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,18 @@
+.card {
+    background: linear-gradient(to right, rgba(255, 185, 0, 0.3), rgba(81, 162, 255, 0.3));
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem;
+    /* Adding some padding to make it look like a card around the icon */
+    aspect-ratio: 1;
+    /* Keeping it square usually looks better for icon cards, or just padding */
+}
+
+.icon {
+    color: #e17100;
+    width: 32px;
+    height: 32px;
+}
