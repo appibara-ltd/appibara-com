@@ -12,10 +12,10 @@ import Image from "next/image";
 export default function Home() {
 
   return <>
-    <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto">
+    <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center">
       <Header />
-      <MotionSection id="home" className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)]">
-        <div className="text-[72px] flex flex-col justify-center items-center">
+      <MotionSection id="home" className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
+        <div className="text-[42px] md:text-[72px] flex flex-col justify-center items-center text-center">
           <AudiowaveText className="leading-none">Calm Tech for</AudiowaveText>
           <AudiowaveText className="leading-none">Complex Needs</AudiowaveText>
         </div>
@@ -30,17 +30,17 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      <MotionSection id="who-we-are" delay={0.2} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)]">
+      <MotionSection id="who-we-are" delay={0.2} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] items-center">
 
-          <AudiowaveText className="text-[48px] leading-tight">Who We Are</AudiowaveText>
+          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Who We Are</AudiowaveText>
           <p className="text-[20px] font-nunito text-gray-700">
             At Appibara, our focused team combines expertise in design and development to create seamless and intuitive digital experiences.
           </p>
           <p className="text-[18px] font-nunito italic text-[#e17200]">
             Passionate developers, designers, and innovators
           </p>
-          <div className="flex gap-[2rem] flex-row w-full">
+          <div className="flex gap-[2rem] flex-col md:flex-row w-full">
             <div className="flex items-center gap-[1rem] flex-col w-full">
               <IconCard icon={Lightbulb} />
               <AudiowaveText useGradient={false}>Innovation</AudiowaveText>
@@ -60,14 +60,14 @@ export default function Home() {
         </Card>
       </MotionSection>
 
-      <MotionSection id="our-services" delay={0.3} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)]">
+      <MotionSection id="our-services" delay={0.3} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] w-full items-center">
-          <AudiowaveText className="text-[48px] leading-tight">Our Services</AudiowaveText>
+          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Our Services</AudiowaveText>
           <p className="text-[20px] font-nunito text-gray-700">
             Comprehensive solutions for modern challenges
           </p>
-          <div className="flex flex-row w-full">
-            <div className="flex flex-col gap-[1rem] w-[50%]">
+          <div className="flex flex-col md:flex-row w-full gap-[2rem] md:gap-0">
+            <div className="flex flex-col gap-[1rem] w-full md:w-[50%]">
               <div className="flex items-center gap-[1rem]">
                 <IconCard icon={Server} />
                 <AudiowaveText useGradient={false} className="text-[24px]">SaaS Products</AudiowaveText>
@@ -76,7 +76,7 @@ export default function Home() {
                 <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Transform your business operations with our cutting-edge Software as a Service solutions. We specialize in creating scalable, cloud-based platforms that adapt to your growing needs.</p>
               </div>
             </div>
-            <div className="text-left pt-[1rem]">
+            <div className="text-left pt-[1rem] md:pt-0 w-full md:w-[50%] md:pl-8">
               <AudiowaveText useGradient={false} className="text-[20px] text-left">Key Features</AudiowaveText>
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
@@ -102,8 +102,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-row w-full">
-            <div className="flex flex-col gap-[1rem] w-[50%]">
+          <div className="flex flex-col md:flex-row w-full gap-[2rem] md:gap-0">
+            <div className="flex flex-col gap-[1rem] w-full md:w-[50%]">
               <div className="flex items-center gap-[1rem]">
                 <IconCard icon={Smartphone} />
                 <AudiowaveText useGradient={false} className="text-[24px]">Mobile Applications</AudiowaveText>
@@ -112,7 +112,7 @@ export default function Home() {
                 <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Create engaging mobile experiences that connect with your audience. Our mobile applications combine beautiful design with powerful functionality for both iOS and Android platforms.</p>
               </div>
             </div>
-            <div className="text-left pt-[1rem]">
+            <div className="text-left pt-[1rem] md:pt-0 w-full md:w-[50%] md:pl-8">
               <AudiowaveText useGradient={false} className="text-[20px] text-left">Key Features</AudiowaveText>
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
@@ -141,18 +141,18 @@ export default function Home() {
         </Card>
       </MotionSection>
 
-      <MotionSection id="our-products" delay={0.4} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)]">
+      <MotionSection id="our-products" delay={0.4} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] w-full items-center">
-          <AudiowaveText className="text-[48px] leading-tight">Our Products</AudiowaveText>
+          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Our Products</AudiowaveText>
           <p className="text-[20px] font-nunito text-gray-700">
             Building the future with cutting-edge applications
           </p>
         </Card>
       </MotionSection>
 
-      <MotionSection id="contact" delay={0.5} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)]">
+      <MotionSection id="contact" delay={0.5} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[1rem] text-center max-w-[1000px] w-full items-center">
-          <AudiowaveText className="text-[48px] leading-tight">Let&apos;s Connect</AudiowaveText>
+          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Let&apos;s Connect</AudiowaveText>
           <p className="text-[20px] font-nunito text-gray-700">
             Need a calm hand? We're here — quietly, but ready to help.
           </p>

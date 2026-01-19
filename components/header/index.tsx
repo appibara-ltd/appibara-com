@@ -9,8 +9,10 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Briefcase, Home, Mail, Users, Menu, X } from "lucide-react";
-import { ReactNode, useState } from "react";
+import { ReactNode, useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+
+// ... (ListItem component remains unchanged)
 
 interface ListItemProps extends Omit<React.ComponentPropsWithoutRef<"li">, "title" | "onClick"> {
   href: string;
@@ -58,12 +60,27 @@ function ListItem({
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
+      <div
+        className={cn(styles.header, "transition-shadow duration-300", {
+          "shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]": hasScrolled,
+          "bg-[#fdfdfcd9]": hasScrolled,
+        })}
+      >
         <div className="flex items-center">
           <Image
             className="block dark:hidden w-16 h-16"
@@ -72,7 +89,10 @@ export const Header = () => {
             width={64}
             height={64}
           />
-          <p className="text-[1.5rem] font-audiowide font-bold">Appibara LTD</p>
+          <p className={cn("transition-all duration-300 text-[1.55rem] font-audiowide font-bold", {
+            "text-[1.75rem] mb-[-10px]": hasScrolled,
+            "ml-[-.5rem] mb-[-22px]": !hasScrolled,
+          })}>Appibara LTD</p>
         </div>
 
         {/* Mobile Menu Button */}
