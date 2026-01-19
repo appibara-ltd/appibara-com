@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { Box, Briefcase, Home, Mail, Users, Menu, X } from "lucide-react";
-import { ReactNode, useState, useEffect } from "react";
+import { ReactNode, useState, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
 // ... (ListItem component remains unchanged)
@@ -71,7 +71,7 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = useCallback(() => setIsOpen(s => !s), []);
 
   return (
     <div className={styles.container}>
@@ -81,19 +81,21 @@ export const Header = () => {
           "bg-[#fdfdfcd9]": hasScrolled,
         })}
       >
-        <div className="flex items-center">
-          <Image
-            className="block dark:hidden w-16 h-16"
-            src="/appibara_icon.png"
-            alt="Appibara Logo"
-            width={64}
-            height={64}
-          />
-          <p className={cn("transition-all duration-300 text-[1.55rem] font-audiowide font-bold", {
-            "text-[1.75rem] mb-[-10px]": hasScrolled,
-            "ml-[-.5rem] mb-[-22px]": !hasScrolled,
-          })}>Appibara LTD</p>
-        </div>
+        <Link href={"/"} className="cursor-pointer select-none">
+          <div className="flex items-center">
+            <Image
+              className="block dark:hidden w-16 h-16"
+              src="/appibara_icon.png"
+              alt="Appibara Logo"
+              width={64}
+              height={64}
+            />
+            <p className={cn("transition-all duration-300 text-[1.55rem] font-audiowide font-bold", {
+              "text-[1.75rem] mb-[-10px]": hasScrolled,
+              "ml-[-.5rem] mb-[-22px]": !hasScrolled,
+            })}>Appibara LTD</p>
+          </div>
+        </Link>
 
         {/* Mobile Menu Button */}
         <button className="lg:hidden p-2" onClick={toggleMenu}>
