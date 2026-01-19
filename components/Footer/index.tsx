@@ -58,13 +58,13 @@ export const Footer = () => {
                         © 2026 Appibara LTD. All rights reserved.
                     </div>
                     <div className={styles.links}>
-                        <Link href="#" className={styles.link + " font-nunito"}>
+                        <Link href="/terms-and-conditions" className={styles.link + " font-nunito"}>
                             Terms and Conditions
                         </Link>
-                        <Link href="#" className={styles.link + " font-nunito"}>
+                        <Link href="/privacy-policy" className={styles.link + " font-nunito"}>
                             Privacy Policy
                         </Link>
-                        <Link href="#" className={styles.link + " font-nunito"}>
+                        <Link href="/cookie-policy" className={styles.link + " font-nunito"}>
                             Cookie Policy
                         </Link>
                     </div>
