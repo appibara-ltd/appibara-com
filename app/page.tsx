@@ -155,6 +155,7 @@ export default function Home() {
             href="https://nativeflow.app"
             buttonText="Try NativeFlow"
             tags={["No-Code"]}
+            logoUrl="https://www.nativeflow.app/logo.png"
           />
         </Card>
       </MotionSection>
