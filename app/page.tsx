@@ -154,7 +154,7 @@ export default function Home() {
             description="A no-code app builder where you can design apps in your browser with drag-and-drop and publish directly to the App Store and Google Play — fast, simple, and code-free. See your apps live as you build. Test, preview, and interact in real time."
             href="https://nativeflow.app"
             buttonText="Try NativeFlow"
-            tags={["No-Code"]}
+            tags={["No-Code", "Web App", "Mobile App Builder"]}
             logoUrl="https://www.nativeflow.app/logo.png"
           />
         </Card>
