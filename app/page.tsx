@@ -7,8 +7,6 @@ import { IconCard } from "@/components/IconCard";
 import { Footer } from "@/components/Footer";
 import { ChevronRight, Smartphone, Lightbulb, Award, Handshake, Server, CircleCheck, Mail, Send } from "lucide-react";
 import { Header } from "@/components/header";
-import Image from "next/image";
-import { Pill } from "@/components/Pill";
 import { ProductCard } from "@/components/ProductCard";
 
 export default function Home() {
@@ -82,23 +80,23 @@ export default function Home() {
               <AudiowaveText useGradient={false} className="text-[20px] text-left">Key Features</AudiowaveText>
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Cloud-native architecture for maximum scalability</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Real-time data synchronization across devices</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem]  self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Advanced security and compliance features</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Intuitive user interfaces and dashboards</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">API-first design for seamless integrations</p>
                 </div>
               </div>
@@ -118,23 +116,23 @@ export default function Home() {
               <AudiowaveText useGradient={false} className="text-[20px] text-left">Key Features</AudiowaveText>
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Native iOS and Android development</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Cross-platform solutions with React Native</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Offline functionality and data sync</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Push notifications and real-time updates</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]" color="var(--border)" />
+                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
                   <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">App Store/Play Console optimizations and deployment</p>
                 </div>
               </div>
