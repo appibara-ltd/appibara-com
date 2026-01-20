@@ -1,5 +1,5 @@
 .button {
-    background-color: #fdfdfc;
+    background-color: var(--surface-off-white);
     color: var(--foreground);
 }
 

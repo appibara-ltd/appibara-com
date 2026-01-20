@@ -1,10 +1,12 @@
-.text {
-    background-image: linear-gradient(to right, #ffaa55, #bb4d00, #ffaa55);
-    background-clip: text;
-    -webkit-background-clip: text;
+.gradientText {
+    background-image: linear-gradient(to right, var(--brand-orange-light), var(--brand-orange-dark), var(--brand-orange-light));
+    /* background-size: 200% auto; */
     color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 4s linear infinite;
 }
 
-.defaultColor {
-    color: #e17100;
+.defaultText {
+    color: var(--brand-orange);
 }

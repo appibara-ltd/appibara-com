@@ -1,10 +1,9 @@
 .card {
     border-radius: 1.5rem;
-    /* 24px */
-    background-color: #fcfcfb;
+    background-color: var(--surface-off-white);
     padding: 1.5rem;
-    /* 24px on mobile */
-    box-shadow: var(--shadow-md, 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1));
+    width: 100%;
+    box-shadow: var(--shadow-md, 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color));
 }
 
 @media (min-width: 768px) {

@@ -7,6 +7,7 @@ interface PrimaryButtonProps extends React.AnchorHTMLAttributes<HTMLAnchorElemen
     href: string;
     icon?: React.ReactNode;
     children: React.ReactNode;
+    noWrap?: boolean;
 }
 
 export const PrimaryButton = ({
@@ -14,6 +15,7 @@ export const PrimaryButton = ({
     icon,
     children,
     className,
+    noWrap,
     ...props
 }: PrimaryButtonProps) => {
     return (
@@ -22,6 +24,7 @@ export const PrimaryButton = ({
             className={cn(
                 styles.button,
                 "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white font-medium transition-transform hover:scale-105 active:scale-95 shadow-sm",
+                { "whitespace-nowrap": noWrap },
                 className
             )}
             {...props}

@@ -51,7 +51,7 @@
 }
 
 .socialIcon:hover {
-    color: #e17100;
+    color: var(--brand-orange);
 }
 
 .bottom {
@@ -69,14 +69,17 @@
 .links {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .link {
-    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    color: var(--text-gray-600);
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .link:hover {
-    color: #e17100;
+    color: var(--brand-orange);
 }

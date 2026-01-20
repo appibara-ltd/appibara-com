@@ -1,0 +1,46 @@
+.pill {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: max-content;
+    justify-content: center;
+    padding: 0.125rem 1rem;
+    border-radius: 9999px;
+    font-family: var(--font-nunito);
+    font-weight: 600;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    background: linear-gradient(to right, color-mix(in srgb, var(--brand-yellow), transparent 70%), color-mix(in srgb, var(--brand-blue-light), transparent 70%));
+    /* Ensure content is above the pseudo-element border if z-index is involved, 
+       but here default stacking is fine as pseudo is child */
+    z-index: 0;
+    user-select: none;
+}
+
+.pill::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    /* border thickness */
+    background: linear-gradient(to right, var(--brand-yellow), var(--brand-orange));
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+    /* Place behind text content */
+}
+
+/* Optional: Add hover effect */
+.pill:hover {
+    opacity: 0.9;
+}

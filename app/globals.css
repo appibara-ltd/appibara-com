@@ -63,6 +63,23 @@ body {
 
 :root {
   --radius: 0.625rem;
+
+  /* Brand Colors */
+  --brand-yellow: #ffb900;
+  --brand-orange: #e17100;
+  --brand-orange-dark: #bb4d00;
+  --brand-orange-light: #ffaa55;
+  --brand-blue: #155dfc;
+  --brand-blue-light: #51a2ff;
+
+  /* UI Colors */
+  --surface-off-white: #fdfdfc;
+  --text-dark: #1a1a1a;
+  --text-gray-600: #666666;
+  --background-gray-100: #f5f5f5;
+  --background-orange-100: #fff0e0;
+  --border-light: rgba(0, 0, 0, 0.05);
+  --shadow-color: rgb(0 0 0 / 0.1);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

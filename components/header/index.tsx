@@ -77,8 +77,8 @@ export const Header = () => {
     <div className={styles.container}>
       <div
         className={cn(styles.header, "transition-shadow duration-300", {
-          "shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]": hasScrolled,
-          "bg-[#fdfdfcd9]": hasScrolled,
+          "shadow-[0px_25px_50px_-12px_var(--shadow-color)]": hasScrolled,
+          "bg-[color-mix(in_srgb,var(--surface-off-white),transparent_15%)]": hasScrolled,
         })}
       >
         <Link href={"/"} className="cursor-pointer select-none">

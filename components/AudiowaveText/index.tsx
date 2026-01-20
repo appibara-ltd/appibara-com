@@ -15,7 +15,7 @@ export const AudiowaveText = ({
 }: AudiowaveTextProps) => {
     return (
         <span
-            className={cn("font-audiowide", useGradient ? styles.text : styles.defaultColor, className)}
+            className={cn("font-audiowide", useGradient ? styles.gradientText : styles.defaultText, className)}
             {...props}
         >
             {children}

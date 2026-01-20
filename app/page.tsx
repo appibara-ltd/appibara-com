@@ -8,6 +8,8 @@ import { Footer } from "@/components/Footer";
 import { ChevronRight, Smartphone, Lightbulb, Award, Handshake, Server, CircleCheck, Mail, Send } from "lucide-react";
 import { Header } from "@/components/header";
 import Image from "next/image";
+import { Pill } from "@/components/Pill";
+import { ProductCard } from "@/components/ProductCard";
 
 export default function Home() {
 
@@ -147,6 +149,13 @@ export default function Home() {
           <p className="text-[20px] font-nunito text-gray-700">
             Building the future with cutting-edge applications
           </p>
+          <ProductCard
+            title="NativeFlow"
+            description="A no-code app builder where you can design apps in your browser with drag-and-drop and publish directly to the App Store and Google Play — fast, simple, and code-free. See your apps live as you build. Test, preview, and interact in real time."
+            href="https://nativeflow.app"
+            buttonText="Try NativeFlow"
+            tags={["No-Code"]}
+          />
         </Card>
       </MotionSection>
 
@@ -157,11 +166,11 @@ export default function Home() {
             Need a calm hand? We're here — quietly, but ready to help.
           </p>
           <div className="flex flex-row items-center gap-[0.5rem] justify-center">
-            <Mail className="w-4 h-4" color="#e17100" />
+            <Mail size={'1.5rem'} strokeWidth="3" color="var(--brand-orange)" />
             <AudiowaveText className="text-[20px]" useGradient={false}>contact@appibara.com</AudiowaveText>
           </div>
           <p className="text-[1rem] font-nunito text-gray-700">We typically respond within 24 hours</p>
-          <PrimaryButton href="/contact" icon={<Send className="w-5 h-5" />}>
+          <PrimaryButton href="mailto:contact@appibara.com" icon={<Send className="w-5 h-5" />}>
             Get In Touch
           </PrimaryButton>
         </Card>
