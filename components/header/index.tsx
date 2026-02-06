@@ -83,6 +83,14 @@ export const Header = () => {
       >
         <Link href={"/"} className="cursor-pointer select-none">
           <div className="flex items-center">
+            {/* <div className="flex items-center h-[72px] pl-[0.5rem]">
+              <Image
+                src="/logo_sub_text_light.png"
+                alt="Appibara Logo"
+                width={200}
+                height={64}
+              />
+            </div> */}
             <Image
               className="block dark:hidden w-16 h-16"
               src="/appibara_icon.png"
