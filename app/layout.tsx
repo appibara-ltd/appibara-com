@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Nunito, Audiowide } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -30,6 +31,7 @@ export default function RootLayout({
       >
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
