@@ -3,6 +3,7 @@
     background-color: var(--surface-off-white);
     padding: 1.5rem;
     width: 100%;
+    box-sizing: border-box;
     box-shadow: var(--shadow-md, 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color));
 }
 

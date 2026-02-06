@@ -20,7 +20,11 @@
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    /* gap: 2rem; */
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 
 .column {
@@ -35,7 +39,7 @@
 }
 
 .logoColumn {
-    max-width: 300px;
+    max-width: 350px;
 }
 
 .logo {

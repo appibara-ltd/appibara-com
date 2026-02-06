@@ -8,7 +8,7 @@ interface MarkdownViewerProps {
 
 export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
     return (
-        <div className={cn("prose prose-slate max-w-none dark:prose-invert font-nunito", className)}>
+        <div className={cn("prose prose-slate max-w-none dark:prose-invert font-nunito w-full", className)}>
             <ReactMarkdown
                 components={{
                     h1: ({ node, ...props }) => <h1 className="text-3xl font-audiowide font-bold mt-8 mb-4 border-b pb-2" {...props} />,
@@ -16,7 +16,7 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                     h3: ({ node, ...props }) => <h3 className="text-xl font-audiowide font-bold mt-4 mb-2" {...props} />,
                     p: ({ node, ...props }) => <p className="mb-4 text-gray-700 leading-relaxed" {...props} />,
                     ul: ({ node, ...props }) => <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700" {...props} />,
-                    li: ({ node, ...props }) => <li className="" {...props} />,
+                    li: ({ node, ...props }) => <li className="break-all" {...props} />,
                     a: ({ node, ...props }) => <a className="text-[#e17100] hover:underline" {...props} />,
                     hr: ({ node, ...props }) => <hr className="my-8 border-gray-200" {...props} />,
                     strong: ({ node, ...props }) => <strong className="font-bold text-gray-900" {...props} />,

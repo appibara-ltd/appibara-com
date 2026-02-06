@@ -140,4 +140,4 @@ We may update this Privacy Policy from time to time. Any changes will be publish
 If you have any questions about this Privacy Policy or how we handle personal data, please contact us:
 
 **Appibara Ltd**  
-E-mail: contact@appibara.com
+📧 contact@appibara.com

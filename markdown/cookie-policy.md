@@ -75,4 +75,4 @@ We may update this Cookie Policy from time to time. Any changes will be publishe
 If you have any questions about this Cookie Policy, you can contact us at:
 
 **Appibara Ltd**  
-contact@appibara.com
+📧 contact@appibara.com
