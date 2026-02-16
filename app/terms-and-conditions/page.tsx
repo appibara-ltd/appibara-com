@@ -7,7 +7,7 @@ import { Header } from "@/components/header";
 import { MarkdownViewer } from "@/components/MarkdownViewer";
 
 async function getMarkdownContent() {
-    const filePath = path.join(process.cwd(), 'markdown', 'terms-and-conditions.md');
+    const filePath = path.join(process.cwd(), 'markdown', 'selfymon', 'terms-and-conditions.md');
     const fileContent = await fs.readFile(filePath, 'utf8');
     return fileContent;
 }
