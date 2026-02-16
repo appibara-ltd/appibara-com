@@ -12,7 +12,7 @@ async function getMarkdownContent() {
     return fileContent;
 }
 
-export default async function TermsOfService() {
+export default async function PrivacyPolicy() {
     const markdownContent = await getMarkdownContent();
     return (
         <>
