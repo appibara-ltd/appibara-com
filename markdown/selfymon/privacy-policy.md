@@ -18,7 +18,6 @@ SelfyMon ("we," "our," or "us") is committed to protecting your privacy. This Pr
 ## 3. Data Processing and Third-Party Disclosure
 To provide our AI-powered features, we process images you upload within the app. These features are delivered through our secure servers and our third-party AI provider, **Google AI (Gemini)**, for real-time processing. When you request an image generation, the content you upload is shared with Google AI **solely to generate the requested output.** We, and our providers, apply appropriate technical and organizational safeguards to protect your information during this process.
 
-
 ## 4. Third-Party Services
 We share necessary data with the following providers to operate our service:
 - **Supabase:** Secure database and cloud storage.
