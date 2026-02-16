@@ -15,18 +15,22 @@ SelfyMon ("we," "our," or "us") is committed to protecting your privacy. This Pr
     - Once you download and confirm the result within the app, we initiate a manual or automatic deletion process from our servers.
 - **No Biometric Training:** We **do not** use your photos to train our AI models or for any facial recognition purposes.
 
-## 3. Third-Party Services
+## 3. Data Processing and Third-Party Disclosure
+To provide our AI-powered features, we process images you upload within the app. These features are delivered through our secure servers and our third-party AI provider, **Google AI (Gemini)**, for real-time processing. When you request an image generation, the content you upload is shared with Google AI **solely to generate the requested output.** We, and our providers, apply appropriate technical and organizational safeguards to protect your information during this process.
+
+
+## 4. Third-Party Services
 We share necessary data with the following providers to operate our service:
 - **Supabase:** Secure database and cloud storage.
 - **Google AI (Gemini):** Image analysis and generation.
 - **RevenueCat:** Management of in-app purchases and subscriptions.
 - **OneSignal:** Push notifications regarding your processing status.
 
-## 4. Data Retention
+## 5. Data Retention
 We aim for data minimization. Your images are automatically purged after 30 days of inactivity or upon your request within the app.
 
-## 5. Children's Privacy
+## 6. Children's Privacy
 SelfyMon is not intended for individuals under the age of 13. We do not knowingly collect data from children.
 
-## 6. Contact Us
+## 7. Contact Us
 If you have any questions about this Privacy Policy, please contact us at: contact@appibara.com
