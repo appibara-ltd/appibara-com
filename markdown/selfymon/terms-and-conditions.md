@@ -16,7 +16,7 @@ SelfyMon provides an AI-powered image transformation service. The quality and ac
 ## 4. AI Content Acknowledgment:
 By using SelfyMon, you acknowledge and agree that your content (images) will be processed for the purpose of providing AI-powered features. If you choose not to allow this processing, you will not be able to access the core AI generation features of the application.
 
-## 5. Consent for Minors (Kritik Madde):
+## 5. Consent for Minors:
 If any uploaded image includes the likeness of a minor, you represent and warrant that you are the minor’s parent or legal guardian, or have obtained valid parental or guardian consent as required by applicable law. You are solely responsible for ensuring that the upload of such content complies with your local regulations.
 
 ## 6. Payments and Subscriptions
