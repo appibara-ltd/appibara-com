@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** 19 January 2026
+**Last updated:** 15 February 2026
 
 At **Appibara Ltd** (“Company”, “we”, “us”, or “our”), we value your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, and safeguard personal data when you visit our website or use any of our software products and services, in accordance with the **UK General Data Protection Regulation (UK GDPR)** and the **Data Protection Act 2018**.
 
@@ -10,7 +10,7 @@ At **Appibara Ltd** (“Company”, “we”, “us”, or “our”), we value 
 
 **Company name:** Appibara Ltd  
 **Registered country:** United Kingdom  
-**Contact email:** contact@appibara.com  
+**Contact email:** [contact@appibara.com]  
 
 Appibara Ltd develops and operates SaaS products and digital tools.
 
