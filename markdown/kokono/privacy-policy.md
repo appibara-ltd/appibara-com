@@ -1,68 +1,86 @@
-# Privacy Policy for KokoNo
+# Privacy Policy
 
-**Last updated:** May 7, 2026
+**Effective Date:** May 12, 2026
 
-Appibara Ltd ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application, KokoNo (the "App").
+KokoNo ("the App"), developed and operated by Appibara LTD ("we", "us", or "our"), is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application.
 
-Our core philosophy is "Calm Technology." We believe your digital experience should be peaceful and distraction-free. While we require certain data to make our smart filtering work, we are dedicated to minimizing data collection and keeping your identity strictly anonymous.
+Please read this Privacy Policy carefully. By using the App, you consent to the data practices described in this policy. If you do not agree with the terms of this Privacy Policy, please do not access the application.
 
----
+## 1. Information We Collect
 
-## 1. How We Process Your Notifications 
+We collect information that you provide directly to us, as well as information automatically collected when you use the App.
 
-To provide you with smart notification filtering, KokoNo processes your incoming alerts.
+### A. Personal Data
+When you register or use the App, we may collect:
+*   **Authentication Data:** Name, email address, and profile picture provided through third-party authentication services (Apple Sign-In, Google Sign-In) or direct email registration.
+*   **Contact Information:** Email address for support and account-related communications.
 
-* **Cloud Processing & Storage:** Notification metadata, including links and notification patterns, are securely transmitted and stored on our backend infrastructure (provided by Supabase).
+### B. Device and Usage Information
+To ensure the App functions correctly, we automatically collect:
+*   **Device Identifiers:** Unique device ID (UUID), IP address, and push notification tokens (Firebase Cloud Messaging).
+*   **Technical Data:** Device model, operating system version, and browser type.
+*   **Usage Logs:** Interaction data, timestamps, and crash reports (via Firebase Crashlytics).
 
-* **Strict Anonymization:** The data sent to our servers is completely anonymized. We **do not** collect, store, or link your name, personal identity, phone number, or email address to this notification data. It is used exclusively to power the filtering logic and improve the App's core functionality.
+### C. Webhook Data
+The App manages webhooks on your behalf. We store webhook metadata (names, titles, and message templates) on our secure servers (Supabase) to provide the service.
 
+### D. Local Storage
+We use local storage technologies (such as MMKV and Keychain) to store your authentication session and user preferences on your device. This data is used to keep you signed in and maintain your settings.
 
----
+## 2. How We Use Your Information
 
-## 2. Information We Collect
+We use the information we collect to:
+*   Provide, operate, and maintain the App.
+*   Manage your user account and verify your identity.
+*   Send push notifications related to your webhooks via Firebase.
+*   Analyze usage patterns and improve App performance.
+*   Detect, prevent, and address technical issues or fraud.
+*   Comply with legal obligations.
 
-To ensure the App functions correctly and to improve user experience, we may collect minimal, non-personally identifiable information:
-* **Device and Usage Data:** We collect anonymous data regarding your device (such as device model, OS version, and anonymous Device IDs) and how you interact with the App's features.
-* **Diagnostic Data:** We collect crash logs and performance metrics to identify and fix technical issues instantly. This process is powered by Firebase Crashlytics.
+**We do not sell your personal data to third parties.**
 
----
+## 3. Third-Party Service Providers
 
-## 3. Third-Party Services
+We share information with third-party service providers who perform services on our behalf. These providers are bound by confidentiality agreements and are prohibited from using your data for any other purpose.
 
-We utilize trusted third-party infrastructure to operate the App effectively:
+*   **Supabase:** Backend database and authentication storage. [Privacy Policy](https://supabase.com/privacy)
+*   **Firebase (Google):** Analytics, crash reporting, and cloud messaging (FCM). [Privacy Policy](https://policies.google.com/privacy)
+*   **Apple:** Authentication services. [Privacy Policy](https://www.apple.com/legal/privacy/)
+*   **Google:** Authentication services. [Privacy Policy](https://policies.google.com/privacy)
 
-* **Supabase:** Used as our secure database and backend infrastructure to process and store anonymized notification metadata and filtering rules.
+## 4. Data Retention and Deletion
 
-* **Firebase Crashlytics:** Used to monitor App stability and track bugs.
-These third parties have their own robust Privacy Policies. They only process anonymized identifiers strictly for operational and analytical purposes. We **do not** use third-party advertising networks or sell your data to brokers.
----
+We retain your personal information for as long as your account is active or as needed to provide you with services.
 
-## 4. Data Security and Storage Location
+### Account and Data Deletion
+You have the right to delete your account and associated data at any time.
+*   **In-App:** Navigate to the **Profile** section and select **"Delete Account"**.
+*   **Request via Email:** You may also request data deletion by contacting us at [contact@appibara.com](mailto:contact@appibara.com).
+Upon deletion, your personal data will be removed from our active databases, subject to legal retention requirements.
 
-We implement strong administrative and technical security measures to protect the anonymized data we store. All data transmitted between your device and our servers (Supabase) is encrypted in transit. While we take every reasonable precaution, please be aware that no method of electronic transmission over the internet is 100% secure.
+## 5. Security of Your Information
 
----
+We use administrative, technical, and physical security measures (such as SSL encryption and secure server protocols) to help protect your personal information. While we have taken reasonable steps to secure the information you provide, please be aware that no security measures are perfect or impenetrable.
 
-## 5. Children's Privacy
+## 6. Children's Privacy (COPPA)
 
-The App is not intended for use by children. We do not knowingly collect personal information from children under the age of 18. If we become aware that we have inadvertently collected such information, we will take steps to delete it immediately.
+We do not knowingly solicit information from or market to children under the age of 13. If we learn that we have collected personal information from a child under age 13 without verification of parental consent, we will delete that information as quickly as possible.
 
----
+## 7. Your Rights (GDPR / CCPA)
 
-## 6. Changes to This Privacy Policy
+Depending on your location, you may have the following rights:
+*   Access, rectification, and erasure of your data.
+*   Data portability.
+*   Withdrawal of consent for data processing.
 
-We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Last Updated" at the top of this policy. You are advised to review this Privacy Policy periodically for any changes.
+## 8. Changes to This Privacy Policy
 
----
+We may update this Privacy Policy from time to time. We will notify you of any changes by updating the "Effective Date" at the top of this policy.
 
-## 7. Contact Us
+## 9. Contact Us
 
-If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:
+If you have questions or comments about this Privacy Policy, please contact us at:
 
-**Appibara LTD** 
-
-London, United Kingdom  
-
-Email: contact@appibara.com 
-
-Website: https://appibara.com
+**Appibara LTD**
+Email: [contact@appibara.com](mailto:contact@appibara.com)
+Website: [https://appibara.com](https://appibara.com)
