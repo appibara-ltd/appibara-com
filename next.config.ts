@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.nativeflow.app',
       },
+      {
+        protocol: 'https',
+        hostname: 'learnsql.dev',
+      },
     ],
   },
 };

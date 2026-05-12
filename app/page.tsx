@@ -155,6 +155,14 @@ export default function Home() {
             tags={["No-Code", "Web App", "Mobile App Builder"]}
             logoUrl="https://www.nativeflow.app/logo.png"
           />
+          <ProductCard
+            title="Learn SQL"
+            description="Master SQL for SaaS Analytics with a professional, distraction-free platform entirely in your browser. Progress from basic SELECT queries to advanced window functions using a zero-setup, real-world mock database schema."
+            href="https://learnsql.dev"
+            buttonText="Master SQL"
+            tags={["SQL", "SaaS Analytics", "Data Mastery"]}
+            logoUrl="/learn-sql-logo.png"
+          />
         </Card>
       </MotionSection>
 
