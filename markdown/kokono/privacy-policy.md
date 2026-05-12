@@ -82,6 +82,7 @@ We may update this Privacy Policy from time to time. We will notify you of any c
 If you have questions or comments about this Privacy Policy, please contact us at:
 
 **Appibara LTD**
+
 Email: [contact@appibara.com](mailto:contact@appibara.com)
 
 Website: [https://appibara.com](https://appibara.com)
