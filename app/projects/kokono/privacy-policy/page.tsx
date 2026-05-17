@@ -13,7 +13,7 @@ async function getMarkdownContent() {
 }
 
 export default async function PrivacyPolicy() {
-    const markdownContent = await getMarkdownContent();
+    const markdownContent = `# Privacy Policy\n${await getMarkdownContent()}`;
     return (
         <>
             <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center pt-[100px]">
