@@ -7,13 +7,13 @@ import { Header } from "@/components/header";
 import { MarkdownViewer } from "@/components/MarkdownViewer";
 
 async function getMarkdownContent() {
-    const filePath = path.join(process.cwd(), 'markdown', 'kokono', 'privacy-policy.md');
+    const filePath = path.join(process.cwd(), 'markdown', 'kokono', 'terms-conditions.md');
     const fileContent = await fs.readFile(filePath, 'utf8');
     return fileContent;
 }
 
-export default async function PrivacyPolicy() {
-    const markdownContent = `# Privacy Policy\n${await getMarkdownContent()}`;
+export default async function TermsAndConditions() {
+    const markdownContent = `# Terms and Conditions\n${await getMarkdownContent()}`;
     return (
         <>
             <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center pt-[100px]">
