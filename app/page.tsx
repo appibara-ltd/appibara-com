@@ -163,6 +163,16 @@ export default function Home() {
             tags={["SQL", "SaaS Analytics", "Data Mastery"]}
             logoUrl="/learn-sql-logo.png"
           />
+          <ProductCard
+            title="KokoNo"
+            description="Instant push notifications via simple webhooks. Send alerts, build notifications, and trigger system status logs directly to your mobile devices with a clean, lightspeed POST request. Features zero SDK dependencies, event timelines, multi-device broadcasts, and team/group sharing."
+            appStoreUrl="https://apps.apple.com/tr/app/kokono/id6765647478?l=tr"
+            playStoreUrl="https://play.google.com/store/apps/details?id=com.appibara.kokono&hl=tr"
+            websiteUrl="https://kokono.me/"
+            buttonText="Visit Website"
+            tags={["Developer Tool", "Webhooks", "Push Notifications"]}
+            logoUrl="/kokono_logo_v2.png"
+          />
         </Card>
       </MotionSection>
 

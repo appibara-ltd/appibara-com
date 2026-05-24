@@ -6,10 +6,13 @@ import { PrimaryButton } from "@/components/PrimaryButton";
 interface ProductCardProps {
     title: string;
     description: string;
-    href: string;
+    href?: string;
     buttonText?: string;
     tags?: string[];
     logoUrl?: string;
+    appStoreUrl?: string;
+    playStoreUrl?: string;
+    websiteUrl?: string;
 }
 
 export const ProductCard = ({
@@ -18,7 +21,10 @@ export const ProductCard = ({
     href,
     buttonText = "Try Now",
     tags = [],
-    logoUrl
+    logoUrl,
+    appStoreUrl,
+    playStoreUrl,
+    websiteUrl
 }: ProductCardProps) => {
     return (
         <div className="flex flex-col md:flex-row justify-center items-center gap-[2rem] border border-gray-200 rounded-[1rem] p-8 w-full">
@@ -48,9 +54,43 @@ export const ProductCard = ({
                     </div>
                 )}
             </div>
-            <PrimaryButton className="w-[200px] h-[50px] flex-shrink-0 not-md:self-start" href={href} noWrap>
-                {buttonText}
-            </PrimaryButton>
+            {appStoreUrl || playStoreUrl || websiteUrl ? (
+                <div className="flex flex-col gap-3 items-center w-[200px] flex-shrink-0 not-md:self-start">
+                    {appStoreUrl && (
+                        <a href={appStoreUrl} target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105 active:scale-95 block w-full">
+                            <Image
+                                src="/app-store-badge.svg"
+                                alt="Download on the App Store"
+                                width={200}
+                                height={60}
+                                className="w-full h-auto object-contain"
+                            />
+                        </a>
+                    )}
+                    {playStoreUrl && (
+                        <a href={playStoreUrl} target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-105 active:scale-95 block w-full">
+                            <Image
+                                src="/google-play-badge.svg"
+                                alt="Get it on Google Play"
+                                width={200}
+                                height={60}
+                                className="w-full h-auto object-contain"
+                            />
+                        </a>
+                    )}
+                    {websiteUrl && (
+                        <PrimaryButton className="w-full h-[50px] flex-shrink-0 text-center justify-center" href={websiteUrl} noWrap>
+                            {buttonText}
+                        </PrimaryButton>
+                    )}
+                </div>
+            ) : (
+                href && (
+                    <PrimaryButton className="w-[200px] h-[50px] flex-shrink-0 not-md:self-start" href={href} noWrap>
+                        {buttonText}
+                    </PrimaryButton>
+                )
+            )}
         </div>
     );
 };
