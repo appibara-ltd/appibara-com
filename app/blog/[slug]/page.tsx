@@ -14,10 +14,14 @@ import path from "path";
 async function getPostMarkdownContent(slug: string): Promise<string> {
   const filePath = path.join(process.cwd(), "markdown", "blog", `${slug}.md`);
   try {
-    return await fs.readFile(filePath, "utf8");
+    let content = await fs.readFile(filePath, "utf8");
+    content = content.trim();
+    // Strip leading H1 title line to avoid double rendering (since it's already rendered in the page template)
+    content = content.replace(/^#\s+.*(?:\r?\n)+/, "");
+    return content;
   } catch (error) {
     console.error(`Error reading markdown for slug ${slug}:`, error);
-    return "# Post Not Found\nThe content for this blog post could not be loaded.";
+    return "The content for this blog post could not be loaded.";
   }
 }
 

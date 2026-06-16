@@ -77,7 +77,4 @@ A product will no longer be judged by how much attention it captures, but by how
 
 And perhaps then, technology will truly become an extension of the human being — an experience that evokes emotion without being felt.
 
-![Quiet Integration](/blog/why-calm-tech-will-define-the-experience-of-the-future/cover.png)
-*AI-generated image*
-
 Calm Tech isn't a trend; it's a way of reclaiming one's attention, time, and peace. The future of technology lies not in chaos, but in quiet harmony — like a quiet friend you can always count on.

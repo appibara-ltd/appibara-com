@@ -1,4 +1,5 @@
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import { cn } from "@/lib/utils";
 
 interface MarkdownViewerProps {
@@ -10,6 +11,7 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
     return (
         <div className={cn("prose prose-slate max-w-none dark:prose-invert font-nunito w-full", className)}>
             <ReactMarkdown
+                rehypePlugins={[rehypeRaw]}
                 components={{
                     h1: ({ node, ...props }) => <h1 className="text-3xl font-audiowide font-bold mt-8 mb-4 border-b pb-2" {...props} />,
                     h2: ({ node, ...props }) => <h2 className="text-2xl font-audiowide font-bold mt-6 mb-3" {...props} />,

@@ -15,37 +15,37 @@ The world of design and technology has undergone rapid change. The evolution of 
 
 ### Let's take a look at the historical process and some of its milestones:
 
-#### Ancient Periods: Feng Shui and Ergonomics
+### Ancient Periods: Feng Shui and Ergonomics
 - **4000 BC — Feng Shui in China:** In ancient China, the layout and organization of living spaces were optimized to improve people's quality of life. This reflected an approach similar to the fundamental principles of modern UX design.
 - **500 BC — Ergonomics in Ancient Greece:** In ancient Greece, human anatomy and functionality were considered in the design of tools and equipment. This was the first step in ergonomics.
 
 ![Ancient Design](/blog/is-ux-still-human-centered/industrial.png)
 *AI-generated image*
 
-#### Industrial Revolution and Scientific Management
+### Industrial Revolution and Scientific Management
 - **Early 1900s — Frederick Winslow Taylor:** During the Industrial Revolution, scientific management principles were developed to increase the efficiency of work processes. This paved the way for the first steps toward optimizing human interaction in the workplace.
 - **1940s — Toyota Production System:** Toyota developed systems to increase efficiency by prioritizing the human factor in its production processes. This is an example of the integration of human-centered design into industry.
 
 ![Scientific Management](/blog/is-ux-still-human-centered/cognitive.png)
 *AI-generated image*
 
-#### Cognitive Science and Human-Centered Design
+### Cognitive Science and Human-Centered Design
 - **1950s — Henry Dreyfuss:** In his work "Designing for People," Henry Dreyfuss emphasized that design should be tailored to human needs. This established the fundamental principles of human-centered design.
 - **1970s — Xerox PARC:** Xerox PARC made computer interaction more user-friendly with innovations like the graphical user interface (GUI) and the mouse. This laid the foundations for modern UX design.
 
 ![Don Norman & Apple](/blog/is-ux-still-human-centered/norman.png)
 *AI-generated image*
 
-#### Don Norman and the Emergence of the Term UX
+### Don Norman and the Emergence of the Term UX
 - **1990s — Don Norman:** While working at Apple, Don Norman coined the term "user experience" (UX). This emphasized that design encompasses not only interfaces but all aspects of user interaction.
 
 ![Web 2.0 & Mobile](/blog/is-ux-still-human-centered/mobile.png)
 *AI-generated image*
 
-#### Digitalization and Data-Driven UX
+### Digitalization and Data-Driven UX
 - **2000s — Web 2.0 and Mobile Applications:** With the proliferation of the internet, user experience design became more data-driven. User behavior was analyzed, and experiences began to be personalized.
 
-#### Today: UX and Sales Strategies
+### Today: UX and Sales Strategies
 - **2010s and Beyond — Experience Design:** Today, UX design has become a field that not only increases user satisfaction but also shapes brands' strategic goals.
 
 However, there's a common misconception: UX designers don't design interfaces — they design experiences. The buttons, colors, or transitions we see on the screen are merely the surface of that experience. The true power of UX comes from understanding the user's entire journey, their emotions, and their context.
