@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${nunito.variable} ${audiowide.variable} antialiased flex flex-col h-screen`}
+        className={`${nunito.variable} ${audiowide.variable} antialiased flex flex-col min-h-screen`}
         style={{ backgroundColor: "#fafaf9" }}
       >
         {children}

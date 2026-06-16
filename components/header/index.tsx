@@ -8,7 +8,7 @@ import {
 import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { Box, Briefcase, Home, Mail, Users, Menu, X } from "lucide-react";
+import { Box, Briefcase, Home, Mail, Users, Menu, X, BookOpen } from "lucide-react";
 import { ReactNode, useState, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
 
@@ -125,6 +125,9 @@ export const Header = () => {
             <ListItem href={"/#our-products"}>
               <Box color="var(--foreground)" /> Our Products
             </ListItem>
+            <ListItem href={"/blog"}>
+              <BookOpen color="var(--foreground)" /> Blog
+            </ListItem>
             <ListItem href={"/#contact"}>
               <Mail color="var(--foreground)" /> Contact
             </ListItem>
@@ -148,6 +151,9 @@ export const Header = () => {
                 </ListItem>
                 <ListItem href={"/#our-products"} onClick={toggleMenu}>
                   <Box className="w-5 h-5" color="var(--foreground)" /> Our Products
+                </ListItem>
+                <ListItem href={"/blog"} onClick={toggleMenu}>
+                  <BookOpen className="w-5 h-5" color="var(--foreground)" /> Blog
                 </ListItem>
                 <ListItem href={"/#contact"} onClick={toggleMenu}>
                   <Mail className="w-5 h-5" color="var(--foreground)" /> Contact

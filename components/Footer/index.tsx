@@ -67,6 +67,12 @@ export const Footer = () => {
                         >
                             Products
                         </a>
+                        <a
+                            href="/blog"
+                            className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
+                        >
+                            Blog
+                        </a>
                     </div>
                     <div className={styles.column}>
                         <AudiowaveText className="text-xl">Legal</AudiowaveText>
