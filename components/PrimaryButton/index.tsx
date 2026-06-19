@@ -23,7 +23,7 @@ export const PrimaryButton = ({
             href={href}
             className={cn(
                 styles.button,
-                "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white font-medium transition-transform hover:scale-105 active:scale-95 shadow-sm",
+                "inline-flex items-center justify-center gap-2 md:px-6 py-3 px-4 rounded-lg text-white font-medium transition-transform hover:scale-105 active:scale-95 shadow-sm",
                 { "whitespace-nowrap": noWrap },
                 className
             )}
