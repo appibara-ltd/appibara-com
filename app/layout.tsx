@@ -7,10 +7,13 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const nunito = Nunito({
   variable: "--font-nunito",
   subsets: ["latin"],
+  preload: true
 });
 const audiowide = Audiowide({
   variable: "--font-audiowide",
-  weight: "400"
+  weight: "400",
+  subsets: ["latin"],
+  preload: true
 });
 
 export const metadata: Metadata = {
