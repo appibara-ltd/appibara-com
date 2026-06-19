@@ -253,7 +253,7 @@ const FULL_POSTS_LIST = [
   },
 ]
 
-const targetIndex = FULL_POSTS_LIST.findIndex(post => post.slug === "why-a-slack-message-steals-25-minutes-of-a-developers-time");
+export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 9);
 export const POSTS: BlogPost[] = (targetIndex !== -1 ? FULL_POSTS_LIST.slice(0, targetIndex + 1) : FULL_POSTS_LIST) as BlogPost[];
 
 export async function getPosts(): Promise<BlogPost[]> {
