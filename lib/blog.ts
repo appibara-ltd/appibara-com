@@ -254,7 +254,7 @@ const FULL_POSTS_LIST = [
 ]
 
 export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 9);
-export const POSTS: BlogPost[] = (targetIndex !== -1 ? FULL_POSTS_LIST.slice(0, targetIndex + 1) : FULL_POSTS_LIST) as BlogPost[];
+
 
 export async function getPosts(): Promise<BlogPost[]> {
   return POSTS;
