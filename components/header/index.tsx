@@ -106,7 +106,7 @@ export const Header = () => {
         </Link>
 
         {/* Mobile Menu Button */}
-        <button className="lg:hidden p-2" onClick={toggleMenu}>
+        <button className="lg:hidden p-2" onClick={toggleMenu} aria-label={isOpen ? "Close menu" : "Open menu"}>
           {isOpen ? <X /> : <Menu />}
         </button>
 
