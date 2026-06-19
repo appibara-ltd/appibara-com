@@ -14,8 +14,8 @@ const audiowide = Audiowide({
 });
 
 export const metadata: Metadata = {
-  title: "Appibara",
-  description: "Appibara LTD",
+  title: "Appibara | UI/UX-Focused Software & Design Studio",
+  description: "Appibara is a design-centric software development studio specializing in Calm Technology, custom SaaS platform development, React Native mobile apps, and no-code tools.",
 };
 
 export default function RootLayout({

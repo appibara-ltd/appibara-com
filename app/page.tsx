@@ -15,10 +15,10 @@ export default function Home() {
     <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center">
       <Header />
       <MotionSection id="home" className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
-        <div className="text-[42px] md:text-[72px] flex flex-col justify-center items-center text-center">
-          <AudiowaveText className="leading-none">Calm Tech for</AudiowaveText>
+        <h1 className="text-[42px] md:text-[72px] flex flex-col justify-center items-center text-center">
+          <AudiowaveText className="leading-none">Calm Tech for </AudiowaveText>
           <AudiowaveText className="leading-none">Complex Needs</AudiowaveText>
-        </div>
+        </h1>
         <p className="text-[20px] leading-none m-0 p-0 text-center font-nunito">Welcome to Appibara, where innovative solutions meet simplicity and clarity.</p>
         <div className="flex gap-4">
           <PrimaryButton href="/#who-we-are" icon={<ChevronRight className="w-4 h-4" />}>
@@ -33,7 +33,9 @@ export default function Home() {
       <MotionSection id="who-we-are" delay={0.2} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] items-center">
 
-          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Who We Are</AudiowaveText>
+          <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
+            <AudiowaveText>About Appibara: UI/UX & Software Studio</AudiowaveText>
+          </h2>
           <p className="text-[20px] font-nunito text-gray-700">
             At Appibara, our focused team combines expertise in design and development to create seamless and intuitive digital experiences.
           </p>
@@ -62,15 +64,19 @@ export default function Home() {
 
       <MotionSection id="our-services" delay={0.3} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] w-full items-center">
-          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Our Services</AudiowaveText>
+          <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
+            <AudiowaveText>Custom SaaS & Mobile Application Development Services</AudiowaveText>
+          </h2>
           <p className="text-[20px] font-nunito text-gray-700">
-            Comprehensive solutions for modern challenges
+            Comprehensive software solutions for B2B, SaaS, and mobile challenges
           </p>
           <div className="flex flex-col md:flex-row w-full gap-[2rem] md:gap-0">
             <div className="flex flex-col gap-[1rem] w-full md:w-[50%]">
               <div className="flex items-center gap-[1rem]">
                 <IconCard icon={Server} />
-                <AudiowaveText useGradient={false} className="text-[24px]">SaaS Products</AudiowaveText>
+                <h3 className="text-[24px] font-audiowide text-left">
+                  <AudiowaveText useGradient={false}>Scalable SaaS Product Engineering</AudiowaveText>
+                </h3>
               </div>
               <div>
                 <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Transform your business operations with our cutting-edge Software as a Service solutions. We specialize in creating scalable, cloud-based platforms that adapt to your growing needs.</p>
@@ -106,7 +112,9 @@ export default function Home() {
             <div className="flex flex-col gap-[1rem] w-full md:w-[50%]">
               <div className="flex items-center gap-[1rem]">
                 <IconCard icon={Smartphone} />
-                <AudiowaveText useGradient={false} className="text-[24px]">Mobile Applications</AudiowaveText>
+                <h3 className="text-[24px] font-audiowide text-left">
+                  <AudiowaveText useGradient={false}>Cross-Platform Mobile Apps (React Native)</AudiowaveText>
+                </h3>
               </div>
               <div>
                 <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Create engaging mobile experiences that connect with your audience. Our mobile applications combine beautiful design with powerful functionality for both iOS and Android platforms.</p>
@@ -143,9 +151,11 @@ export default function Home() {
 
       <MotionSection id="our-products" delay={0.4} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] w-full items-center">
-          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Our Products</AudiowaveText>
+          <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
+            <AudiowaveText>Our Digital Products: SaaS, No-Code & Dev Tools</AudiowaveText>
+          </h2>
           <p className="text-[20px] font-nunito text-gray-700">
-            Building the future with cutting-edge applications
+            Building the future with cutting-edge, zero-setup applications and platforms
           </p>
           <ProductCard
             title="NativeFlow"
@@ -178,9 +188,11 @@ export default function Home() {
 
       <MotionSection id="contact" delay={0.5} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[1rem] text-center max-w-[1000px] w-full items-center">
-          <AudiowaveText className="text-[32px] md:text-[48px] leading-tight">Let&apos;s Connect</AudiowaveText>
+          <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
+            <AudiowaveText>Let&apos;s Connect: Start Your Project with Appibara</AudiowaveText>
+          </h2>
           <p className="text-[20px] font-nunito text-gray-700">
-            Need a calm hand? We're here — quietly, but ready to help.
+            Need a calm hand for your next design or development cycle? We're here — quietly, but ready to help.
           </p>
           <div className="flex flex-row items-center gap-[0.5rem] justify-center">
             <Mail size={'1.5rem'} strokeWidth="3" color="var(--brand-orange)" />
