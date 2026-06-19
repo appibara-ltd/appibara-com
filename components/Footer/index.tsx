@@ -23,7 +23,9 @@ export const Footer = () => {
                         </p>
                         <div className={styles.socialIcons}>
                             <Link href="https://x.com/AppibaraLTD" className={styles.socialIcon} target="_blank" rel="noopener noreferrer" aria-label="Appibara on X (formerly Twitter)">
-                                <img src="https://about.x.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" style={{ height: "28px", width: 'auto', }} alt="X Logo" />
+                                <svg className="w-[28px] h-[28px]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                                </svg>
                             </Link>
                             <Link href="http://linkedin.com/company/appibara-ltd" className={styles.socialIcon} target="_blank" rel="noopener noreferrer" aria-label="Appibara on LinkedIn">
                                 <svg className="w-[28px] h-[28px]"><path fill="#0a66c2" d="m25.9 0h-23.8c-1.2 0-2.1 0.9-2.1 2v24c0 1.1 0.9 2 2.1 2h23.9c1.1 0 2.1-0.9 2.1-2v-24c-0.1-1.1-1-2-2.2-2zm-17.6 23.9h-4.1v-13.4h4.2v13.4zm-2.1-15.2c-1.3 0-2.4-1.1-2.4-2.4s1.1-2.4 2.4-2.4 2.4 1.1 2.4 2.4-1 2.4-2.4 2.4zm17.7 15.2h-4.1v-6.5c0-1.5 0-3.5-2.2-3.5s-2.5 1.7-2.5 3.4v6.6h-4.1v-13.4h4v1.8h0.1c0.6-1 1.9-2.2 3.9-2.2 4.2 0 5 2.8 5 6.4v7.4z"></path></svg>
@@ -32,10 +34,12 @@ export const Footer = () => {
                                 <svg fill="none" viewBox="0 0 64 57" width="30" style={{
                                     width: "30px",
                                     height: "26.7188px"
-                                }}><path fill="#0F73FF" d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825 18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"></path></svg>
+                                }}><path fill="#0F73FF" d="M13.873 3.805C21.21 9.332 29.103 20.537 32 26.55v15.882c0-.338-.13.044-.41.867-1.512 4.456-7.418 21.847-20.923 7.944-7.111-7.32-3.819-14.64 9.125-16.85-7.405 1.264-15.73-.825-18.014-9.015C1.12 23.022 0 8.51 0 6.55 0-3.268 8.579-.182 13.873 3.805ZM50.127 3.805C42.79 9.332 34.897 20.537 32 26.55v15.882c0-.338.13.044.41.867 1.512 4.456 7.418 21.847 20.923 7.944 7.111-7.32 3.819-14.64-9.125-16.85 7.405 1.264 15.73-.825-18.014-9.015C62.88 23.022 64 8.51 64 6.55c0-9.818-8.578-6.732-13.873-2.745Z"></path></svg>
                             </Link>
                             <Link href="https://www.instagram.com/appibara_ltd" className={styles.socialIcon} target="_blank" rel="noopener noreferrer" aria-label="Appibara on Instagram">
-                                <img src="https://scontent.fist4-1.fna.fbcdn.net/v/t39.8562-6/452615141_1867050850474850_3818297208510997530_n.png?_nc_cat=107&amp;ccb=1-7&amp;_nc_sid=f537c7&amp;_nc_ohc=ntiC7UOb9cIQ7kNvwE6_own&amp;_nc_oc=AdmabGsXh3MSNsjwK2MYO1GUwfNK881FFnQ_2TER33gj33ej_SdhJbGovyGVDRfb-JU&amp;_nc_zt=14&amp;_nc_ht=scontent.fist4-1.fna&amp;_nc_gid=RgE-7zNhJLVDbliG0fbc4w&amp;oh=00_Afv-xQZJ3rMrlDAuc-ex8Dv7jEBpQ7Uf5QsJKUPz6d52Bw&amp;oe=698BE9FB" alt="Instagram Logo"></img>
+                                <svg className="w-[28px] h-[28px]" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                                </svg>
                             </Link>
                             <Link href="https://appibara.medium.com/" className={styles.socialIcon} target="_blank" rel="noopener noreferrer" aria-label="Appibara on Medium">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 1024 1024" fill="none">
