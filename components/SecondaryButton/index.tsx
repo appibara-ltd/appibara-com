@@ -21,7 +21,7 @@ export const SecondaryButton = ({
             href={href}
             className={cn(
                 styles.button,
-                "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-nunito font-medium transition-all hover:scale-105 active:scale-95 shadow-sm",
+                "inline-flex items-center justify-center gap-2 md:px-6 py-3 px-4 rounded-lg font-nunito font-medium transition-all hover:scale-105 active:scale-95 shadow-sm",
                 className
             )}
             {...props}
