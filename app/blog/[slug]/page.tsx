@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/header";
@@ -33,6 +34,20 @@ export async function generateStaticParams() {
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) {
+    return {
+      title: "Post Not Found | Appibara Blog",
+    };
+  }
+  return {
+    title: `${post.title} | Appibara Blog`,
+    description: post.excerpt,
+  };
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
