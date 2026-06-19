@@ -39,7 +39,7 @@ export default function Home() {
           <p className="text-[20px] font-nunito text-gray-700">
             At Appibara, our focused team combines expertise in design and development to create seamless and intuitive digital experiences.
           </p>
-          <p className="text-[18px] font-nunito italic text-[#e17200]">
+          <p className="text-[18px] font-nunito italic text-[#bb4d00]">
             Passionate developers, designers, and innovators
           </p>
           <div className="flex gap-[2rem] flex-col md:flex-row w-full">
