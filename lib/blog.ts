@@ -251,8 +251,7 @@ const FULL_POSTS_LIST = [
     readTime: "4 min read",
     imageUrl: "/blog/is-your-b2b-software-the-loudest-employee-in-the-room/image1.png",
   },
-]
-
+] as const
 export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 9);
 
 
