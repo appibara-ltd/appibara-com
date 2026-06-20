@@ -253,7 +253,7 @@ const FULL_POSTS_LIST = [
   },
 ] as const
 
-export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 12);
+export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 13);
 
 
 export async function getPosts(): Promise<BlogPost[]> {
