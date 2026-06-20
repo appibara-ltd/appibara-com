@@ -252,7 +252,8 @@ const FULL_POSTS_LIST = [
     imageUrl: "/blog/is-your-b2b-software-the-loudest-employee-in-the-room/image1.png",
   },
 ] as const
-export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 9);
+
+export const POSTS: BlogPost[] = FULL_POSTS_LIST.slice(0, 10);
 
 
 export async function getPosts(): Promise<BlogPost[]> {
