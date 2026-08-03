@@ -77,7 +77,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
 
           {/* Main Card with Post Detail */}
-          <Card className="flex flex-col gap-6 w-full p-6 md:p-12 border border-gray-100/50">
+          <Card className="flex flex-col gap-6 w-full p-6 md:p-12 border border-gray-100/50 overflow-hidden">
             {/* Header info */}
             <div className="flex flex-col gap-4 border-b border-gray-100 pb-6">
               <Pill>{post.categoryLabel}</Pill>
