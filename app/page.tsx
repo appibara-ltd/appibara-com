@@ -183,6 +183,14 @@ export default function Home() {
             tags={["Developer Tool", "Webhooks", "Push Notifications"]}
             logoUrl="/kokono_logo_v2.png"
           />
+          <ProductCard
+            title="Nema"
+            description="A high-performance 60 FPS GPU canvas playground in React. Powered by CanvasKit (Skia) and WebAssembly, Nema maps GLSL fragment shaders to React state with zero DOM layout tax and locked 60 FPS hardware acceleration."
+            href="https://appibara.com/nema"
+            buttonText="Try Nema"
+            tags={["GPU Engine", "CanvasKit", "WebGL", "Developer Tool"]}
+            logoUrl="/nema/logo.jpg"
+          />
         </Card>
       </MotionSection>
 
