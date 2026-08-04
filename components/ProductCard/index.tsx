@@ -2,6 +2,7 @@ import Image from "next/image";
 import { AudiowaveText } from "@/components/AudiowaveText";
 import { Pill } from "@/components/Pill";
 import { PrimaryButton } from "@/components/PrimaryButton";
+import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
     title: string;
@@ -29,13 +30,13 @@ export const ProductCard = ({
     return (
         <div className="flex flex-col md:flex-row justify-center items-center gap-[2rem] border border-gray-200 rounded-[1rem] p-8 w-full">
             {logoUrl && (
-                <div className="flex-shrink-0 bg-gray-50 p-4 rounded-xl border border-gray-100 self-start">
+                <div className="flex-shrink-0 bg-gray-50 p-4 rounded-xl border border-gray-100 self-start overflow-hidden flex items-center justify-center">
                     <Image
                         src={logoUrl}
                         alt={`${title} Logo`}
                         width={64}
                         height={64}
-                        className="w-16 h-16 object-contain"
+                        className={cn("w-16 h-16", logoUrl.endsWith('.jpg') ? "object-cover rounded-full shadow-sm" : "object-contain")}
                     />
                 </div>
             )}

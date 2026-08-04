@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/cookie-policy',
     '/privacy-policy',
     '/privashot',
+    '/nema',
     '/projects/kokono/privacy-policy',
     '/projects/kokono/terms-conditions',
     '/projects/selfymon/privacy-policy',
