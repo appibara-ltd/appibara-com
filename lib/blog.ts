@@ -339,6 +339,17 @@ const FULL_POSTS_LIST = [
     readTime: "4 min read",
     imageUrl: "/blog/the-architectural-edge-engineering-for-purpose-not-hype/cover.png",
   },
+  {
+    slug: "what-cold-war-spy-planes-can-teach-us-about-product-design",
+    title: "What Cold War Spy Planes Can Teach Us About Product Design",
+    excerpt: "In the 1960s, the lead engineer of the world’s most advanced aerospace team issued a bizarre challenge to his designers.",
+    date: "August 4, 2026",
+    category: "vision",
+    categoryLabel: "Vision & Philosophy",
+    author: "Appibara Team",
+    readTime: "3 min read",
+    imageUrl: "/blog/what-cold-war-spy-planes-can-teach-us-about-product-design/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
