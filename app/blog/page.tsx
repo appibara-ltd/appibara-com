@@ -15,17 +15,11 @@ import { cn } from "@/lib/utils";
 export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
-  const isRecentPost = (dateStr: string) => {
-    try {
-      const postDate = new Date(dateStr);
-      const today = new Date();
-      const diffTime = today.getTime() - postDate.getTime();
-      const diffDays = diffTime / (1000 * 60 * 60 * 24);
-      return diffDays >= 0 && diffDays <= 30; // Within the last 30 days
-    } catch {
-      return false;
-    }
-  };
+  const latestPostSlug = POSTS.reduce((latest, current) => {
+    return new Date(current.date).getTime() > new Date(latest.date).getTime()
+      ? current
+      : latest;
+  }, POSTS[0])?.slug;
 
   const filteredPosts = (selectedCategory === "all"
     ? POSTS
@@ -106,7 +100,7 @@ export default function BlogPage() {
                             <Pin className="w-3 h-3 rotate-[30deg] fill-[#e17100] stroke-none" /> Pinned
                           </span>
                         )}
-                        {isRecentPost(post.date) && (
+                        {post.slug === latestPostSlug && (
                           <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-bold bg-gradient-to-r from-red-500 to-orange-500 text-white px-2.5 py-1 rounded-full font-nunito shadow-sm border border-red-400/20">
                             <span className="relative flex h-2 w-2">
                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
