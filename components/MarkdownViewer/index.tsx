@@ -71,10 +71,11 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                         </div>
                     ),
                     code: ({ node, inline, className, children, ...props }: any) => {
-                        if (inline) {
+                        const isInline = inline || (!className && !String(children).includes('\n'));
+                        if (isInline) {
                             return (
                                 <code
-                                    className="px-1.5 py-0.5 mx-0.5 rounded bg-amber-50 text-[#bb4d00] border border-amber-200/60 font-mono text-[13px] font-medium break-words inline-block"
+                                    className="px-1.5 py-0.5 mx-0.5 rounded bg-amber-100/80 text-[#bb4d00] border border-amber-200/80 font-mono text-[13px] font-semibold break-words"
                                     {...props}
                                 >
                                     {children}

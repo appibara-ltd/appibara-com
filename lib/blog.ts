@@ -350,6 +350,17 @@ const FULL_POSTS_LIST = [
     readTime: "3 min read",
     imageUrl: "/blog/what-cold-war-spy-planes-can-teach-us-about-product-design/cover.png",
   },
+  {
+    slug: "end-the-terminal-staredown-build-your-own-alert-system-with-a-single-cli-command",
+    title: "End the Terminal Staredown: Build Your Own Alert System with a Single CLI Command",
+    excerpt: "Stop staring at long-running terminal builds. Learn how to build real-time CLI alerts with a zero-SDK approach.",
+    date: "August 11, 2026",
+    category: "kitchen",
+    categoryLabel: "Kitchen (Know-How)",
+    author: "Appibara Team",
+    readTime: "4 min read",
+    imageUrl: "/blog/end-the-terminal-staredown-build-your-own-alert-system-with-a-single-cli-command/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
