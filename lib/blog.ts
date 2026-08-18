@@ -361,6 +361,17 @@ const FULL_POSTS_LIST = [
     readTime: "4 min read",
     imageUrl: "/blog/end-the-terminal-staredown-build-your-own-alert-system-with-a-single-cli-command/cover.png",
   },
+  {
+    slug: "the-burden-of-simplicity-why-calm-technology-is-hard-to-build",
+    title: "The Burden of Simplicity: Why Calm Technology Is Hard to Build",
+    excerpt: "That flawless, one-button interface your users love? Someone is paying a heavy price for that simplicity.",
+    date: "August 18, 2026",
+    category: "vision",
+    categoryLabel: "Vision & Philosophy",
+    author: "Appibara Team",
+    readTime: "4 min read",
+    imageUrl: "/blog/the-burden-of-simplicity-why-calm-technology-is-hard-to-build/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
