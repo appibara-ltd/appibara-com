@@ -372,6 +372,17 @@ const FULL_POSTS_LIST = [
     readTime: "4 min read",
     imageUrl: "/blog/the-burden-of-simplicity-why-calm-technology-is-hard-to-build/cover.png",
   },
+  {
+    slug: "the-psychology-of-latency",
+    title: "The Psychology of Latency",
+    excerpt: "What happens in our brains when we stare at a spinning loading icon or wait for an AI model to generate a response?",
+    date: "August 27, 2026",
+    category: "trends",
+    categoryLabel: "Trends & Agenda",
+    author: "Appibara Team",
+    readTime: "4 min read",
+    imageUrl: "/blog/the-psychology-of-latency/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
