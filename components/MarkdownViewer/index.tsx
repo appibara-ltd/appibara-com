@@ -101,6 +101,11 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                     ),
                     img: ({ node, ...props }) => (
                         <img className="max-w-full h-auto rounded-xl my-6 mx-auto shadow-sm border border-gray-100" {...props} />
+                    ),
+                    iframe: ({ node, ...props }: any) => (
+                        <div className="my-6 w-full overflow-hidden rounded-xl shadow-sm border border-gray-100">
+                            <iframe className="w-full" {...props} />
+                        </div>
                     )
                 }}
             >

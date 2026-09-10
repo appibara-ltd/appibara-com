@@ -383,6 +383,28 @@ const FULL_POSTS_LIST = [
     readTime: "4 min read",
     imageUrl: "/blog/the-psychology-of-latency/cover.png",
   },
+  {
+    slug: "auditing-a-design-system-for-calm-a-practical-checklist",
+    title: "Auditing a Design System for Calm: A Practical Checklist",
+    excerpt: "How to check if your design system is really reducing mental effort — or just organizing the same effort more neatly.",
+    date: "September 1, 2026",
+    category: "kitchen",
+    categoryLabel: "Kitchen (Know-How)",
+    author: "Appibara Team",
+    readTime: "8 min read",
+    imageUrl: "/blog/auditing-a-design-system-for-calm-a-practical-checklist/cover.png",
+  },
+  {
+    slug: "why-is-calm-tech-missing-in-developer-tools",
+    title: "Why is Calm Tech Missing in Developer Tools?",
+    excerpt: "When we look for calmness in consumer products, why did we surrender our own working tools to noise?",
+    date: "September 10, 2026",
+    category: "vision",
+    categoryLabel: "Vision & Philosophy",
+    author: "Appibara Team",
+    readTime: "6 min read",
+    imageUrl: "/blog/why-is-calm-tech-missing-in-developer-tools/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
