@@ -405,6 +405,17 @@ const FULL_POSTS_LIST = [
     readTime: "6 min read",
     imageUrl: "/blog/why-is-calm-tech-missing-in-developer-tools/cover.png",
   },
+  {
+    slug: "how-neurodivergent-safe-is-your-design-system",
+    title: "How Neurodivergent-Safe Is Your Design System?",
+    excerpt: "“Calm” is not the same as “neurodivergent-friendly.” Why cognitive accessibility belongs in your design system defaults, not just individual page fixes.",
+    date: "September 15, 2026",
+    category: "kitchen",
+    categoryLabel: "Kitchen (Know-How)",
+    author: "Appibara Team",
+    readTime: "5 min read",
+    imageUrl: "/blog/how-neurodivergent-safe-is-your-design-system/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
