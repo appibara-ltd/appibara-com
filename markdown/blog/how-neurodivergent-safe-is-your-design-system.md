@@ -4,6 +4,8 @@
 
 ![How Neurodivergent-Safe Is Your Design System Cover](/blog/how-neurodivergent-safe-is-your-design-system/cover.png)
 
+<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2400975957&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+
 A few weeks ago, we published an audit framework for checking whether a design system actually reduces mental effort, or just reorganizes the same effort more neatly. That piece was about calm technology in general. This one is more specific.
 
 Calm interfaces feel good to most people. But “calm” and “neurodivergent-friendly” are not the same thing. A minimal screen can still overwhelm someone with autism if it relies on auto-playing motion. A clean form can still exhaust someone with ADHD if it hides the next step until the current one is finished loading. Calm is a starting point, not a guarantee.
