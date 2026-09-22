@@ -416,6 +416,17 @@ const FULL_POSTS_LIST = [
     readTime: "5 min read",
     imageUrl: "/blog/how-neurodivergent-safe-is-your-design-system/cover.png",
   },
+  {
+    slug: "what-971-cockpit-dials-taught-us-about-simplicity",
+    title: "What 971 Cockpit Dials Taught Us About Simplicity",
+    excerpt: "What happens when a complex product becomes simple — and why calm is not the same as less information.",
+    date: "September 22, 2026",
+    category: "vision",
+    categoryLabel: "Vision & Philosophy",
+    author: "Appibara Team",
+    readTime: "4 min read",
+    imageUrl: "/blog/what-971-cockpit-dials-taught-us-about-simplicity/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
