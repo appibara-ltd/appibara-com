@@ -427,6 +427,17 @@ const FULL_POSTS_LIST = [
     readTime: "4 min read",
     imageUrl: "/blog/what-971-cockpit-dials-taught-us-about-simplicity/cover.png",
   },
+  {
+    slug: "design-tokens-for-minimal-context-switch-fatigue",
+    title: "Design Tokens for Minimal Context-Switch Fatigue",
+    excerpt: "How to build a three-layer token system in DTCG and Figma that eliminates context-switching friction for engineers.",
+    date: "September 29, 2026",
+    category: "kitchen",
+    categoryLabel: "Kitchen (Know-How)",
+    author: "Appibara Team",
+    readTime: "9 min read",
+    imageUrl: "/blog/design-tokens-for-minimal-context-switch-fatigue/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
