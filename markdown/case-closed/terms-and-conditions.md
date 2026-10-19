@@ -52,8 +52,8 @@ We offer auto-renewable subscription tiers ("**Detective Membership**" / "**VIP 
 - Subscriptions are billed through your **Apple ID** (on iOS) or **Google Play Account** (on Android) upon confirmation of purchase.
 - Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription.
 
-### B. Automatic Renewal Terms (Apple Guideline 3.1.2 Compliance)
-- **Auto-Renewal:** Your subscription automatically renews for the same tier and duration (e.g., weekly, monthly, annually) unless auto-renew is disabled at least **24 hours prior** to the conclusion of the current subscription period.
+### B. Automatic Renewal Terms
+- **Auto-Renewal:** Your subscription automatically renews for the same tier and duration (monthly, annually) unless auto-renew is disabled at least **24 hours prior** to the conclusion of the current subscription period.
 - **Renewal Charge:** Your account will be charged for renewal within **24 hours prior** to the end of the current billing cycle at the standard tier rate displayed at purchase.
 
 ### C. Managing and Canceling Subscriptions
@@ -62,7 +62,7 @@ You can manage your subscription and turn off auto-renewal at any time through y
 - **Android:** Open **Google Play Store > Profile Icon > Payments & Subscriptions > Subscriptions > Case Closed > Cancel Subscription**.
 - Uninstalling the App will **not** automatically cancel your active subscription. You must cancel the subscription through your platform account settings.
 
-### D. Restoring Purchases (Apple Guideline 3.1.1 Compliance)
+### D. Restoring Purchases
 - You may restore your active subscriptions at any time on any authorized device associated with your Apple ID or Google Play account by tapping the **"Restore Purchases"** button on the Paywall screen.
 - As required by platform store rules, **consumable items (Tickets)** cannot be restored once consumed.
 
