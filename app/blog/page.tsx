@@ -44,13 +44,13 @@ export default function BlogPage() {
             <h1 className="text-[42px] md:text-[64px] leading-tight">
               <AudiowaveText>Blog</AudiowaveText>
             </h1>
-            <p className="text-[18px] md:text-[20px] text-gray-600 max-w-[700px] font-nunito leading-relaxed">
+            <p className="text-[18px] md:text-[20px] text-[var(--text-secondary)] max-w-[700px] font-nunito leading-relaxed">
               Reflections on design, engineering deep-dives, and calm solutions for complex digital experiences.
             </p>
           </div>
 
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mt-6 pb-2 w-full border-b border-gray-100">
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-6 pb-2 w-full border-b border-[var(--border-subtle)]">
             {CATEGORIES.map((category) => {
               const isActive = selectedCategory === category.id;
               return (
@@ -61,7 +61,7 @@ export default function BlogPage() {
                     "px-5 py-2.5 rounded-full font-nunito font-semibold text-sm transition-all duration-300 cursor-pointer shadow-sm",
                     isActive
                       ? "bg-gradient-to-r from-[var(--brand-orange)] to-[var(--brand-blue)] text-white scale-105"
-                      : "bg-[var(--surface-off-white)] text-gray-700 hover:bg-gray-100 hover:scale-102 border border-gray-100"
+                      : "bg-[var(--surface-off-white)] text-[var(--text-primary)] hover:bg-[var(--bg-tertiary)] hover:scale-102 border border-[var(--border-subtle)]"
                   )}
                 >
                   {category.label}
@@ -79,7 +79,7 @@ export default function BlogPage() {
                   delay={index * 0.1}
                   className="h-full flex"
                 >
-                  <Card className="flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 border border-gray-100/50 hover:shadow-lg w-full group">
+                  <Card className="flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 border border-[var(--border-subtle)] hover:shadow-lg w-full group">
                     <div>
                       {/* Image Preview */}
                       {post.imageUrl && (
@@ -96,8 +96,8 @@ export default function BlogPage() {
                       <div className="flex flex-wrap items-center gap-2 mb-4">
                         <Pill>{post.categoryLabel}</Pill>
                         {post.pinned && (
-                          <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-bold bg-[#fff0e0] text-[#e17100] px-2.5 py-1 rounded-full font-nunito shadow-sm border border-[#fff0e0]">
-                            <Pin className="w-3 h-3 rotate-[30deg] fill-[#e17100] stroke-none" /> Pinned
+                          <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-bold bg-[var(--bg-tertiary)] text-[var(--accent-primary)] px-2.5 py-1 rounded-full font-nunito shadow-sm border border-[var(--border-subtle)]">
+                            <Pin className="w-3 h-3 rotate-[30deg] fill-[var(--accent-primary)] stroke-none" /> Pinned
                           </span>
                         )}
                         {post.slug === latestPostSlug && (
@@ -113,20 +113,20 @@ export default function BlogPage() {
 
                       {/* Post Title */}
                       <Link href={`/blog/${post.slug}`}>
-                        <h2 className="text-xl md:text-2xl font-audiowide font-bold mb-3 text-gray-900 hover:text-[var(--brand-orange)] transition-colors leading-tight">
+                        <h2 className="text-xl md:text-2xl font-audiowide font-bold mb-3 text-[var(--text-primary)] hover:text-[var(--brand-orange)] transition-colors leading-tight">
                           {post.title}
                         </h2>
                       </Link>
 
                       {/* Excerpt */}
-                      <p className="font-nunito text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                      <p className="font-nunito text-[var(--text-secondary)] text-sm md:text-base leading-relaxed mb-6">
                         {post.excerpt}
                       </p>
                     </div>
 
                     {/* Meta Info */}
-                    <div className="border-t border-gray-100 pt-4 flex flex-col gap-3">
-                      <div className="flex items-center justify-between text-xs text-gray-500 font-nunito">
+                    <div className="border-t border-[var(--border-subtle)] pt-4 flex flex-col gap-3">
+                      <div className="flex items-center justify-between text-xs text-[var(--text-muted)] font-nunito">
                         <div className="flex items-center gap-1.5">
                           <Calendar className="w-3.5 h-3.5 text-[var(--brand-orange)]" />
                           <span>{post.date}</span>
@@ -149,7 +149,7 @@ export default function BlogPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16 font-nunito text-gray-500">
+            <div className="text-center py-16 font-nunito text-[var(--text-muted)]">
               No posts found in this category. Check back soon!
             </div>
           )}

@@ -92,7 +92,7 @@ export const Header = () => {
               />
             </div> */}
             <Image
-              className="block dark:hidden w-16 h-16"
+              className="w-16 h-16"
               src="/appibara_icon.png"
               alt="Appibara Logo"
               width={64}
@@ -136,7 +136,7 @@ export const Header = () => {
 
         {/* Mobile Menu Overlay */}
         {isOpen && (
-          <div className="absolute top-[calc(100%+1rem)] left-0 right-0 bg-[#fdfdfc] p-4 mt-0 m-8 rounded-xl shadow-xl lg:hidden flex flex-col gap-4 border border-gray-100 z-50">
+          <div className="absolute top-[calc(100%+1rem)] left-0 right-0 bg-[var(--surface-off-white)] p-4 mt-0 m-8 rounded-xl shadow-xl lg:hidden flex flex-col gap-4 border border-[var(--border-subtle)] z-50">
 
             <NavigationMenu className="flex flex-col gap-2 w-full max-w-none justify-stretch items-stretch">
               <NavigationMenuList className="flex flex-col gap-2 w-full">

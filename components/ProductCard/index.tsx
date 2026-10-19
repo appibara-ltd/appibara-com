@@ -28,9 +28,9 @@ export const ProductCard = ({
     websiteUrl
 }: ProductCardProps) => {
     return (
-        <div className="flex flex-col md:flex-row justify-center items-center gap-[2rem] border border-gray-200 rounded-[1rem] p-8 w-full">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-[2rem] border border-[var(--border-subtle)] rounded-[1rem] p-8 w-full">
             {logoUrl && (
-                <div className="flex-shrink-0 bg-gray-50 p-4 rounded-xl border border-gray-100 self-start overflow-hidden flex items-center justify-center">
+                <div className="flex-shrink-0 bg-[var(--bg-secondary)] p-4 rounded-xl border border-[var(--border-subtle)] self-start overflow-hidden flex items-center justify-center">
                     <Image
                         src={logoUrl}
                         alt={`${title} Logo`}
@@ -43,7 +43,7 @@ export const ProductCard = ({
             <div className="text-left flex flex-col gap-[1rem] flex-1">
                 <div className="flex flex-col gap-[.125rem]">
                     <AudiowaveText className="text-[20px]" useGradient={false}>{title}</AudiowaveText>
-                    <p className="text-[1rem] font-nunito text-gray-700">
+                    <p className="text-[1rem] font-nunito text-[var(--text-secondary)]">
                         {description}
                     </p>
                 </div>

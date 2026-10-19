@@ -36,27 +36,27 @@ export default function Home() {
           <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
             <AudiowaveText>About Appibara: UI/UX & Software Studio</AudiowaveText>
           </h2>
-          <p className="text-[20px] font-nunito text-gray-700">
+          <p className="text-[20px] font-nunito text-[var(--text-secondary)]">
             At Appibara, our focused team combines expertise in design and development to create seamless and intuitive digital experiences.
           </p>
-          <p className="text-[18px] font-nunito italic text-[#bb4d00]">
+          <p className="text-[18px] font-nunito italic text-[var(--accent-primary)]">
             Passionate developers, designers, and innovators
           </p>
           <div className="flex gap-[2rem] flex-col md:flex-row w-full">
             <div className="flex items-center gap-[1rem] flex-col w-full">
               <IconCard icon={Lightbulb} />
               <AudiowaveText useGradient={false}>Innovation</AudiowaveText>
-              <p className="font-nunito">Pushing boundaries with cutting-edge technology</p>
+              <p className="font-nunito text-[var(--text-secondary)]">Pushing boundaries with cutting-edge technology</p>
             </div>
             <div className="flex items-center gap-[1rem] flex-col w-full">
               <IconCard icon={Award} />
               <AudiowaveText useGradient={false}>Quality</AudiowaveText>
-              <p className="font-nunito">Delivering excellence in every project</p>
+              <p className="font-nunito text-[var(--text-secondary)]">Delivering excellence in every project</p>
             </div>
             <div className="flex items-center gap-[1rem] flex-col w-full">
               <IconCard icon={Handshake} />
               <AudiowaveText useGradient={false}>Partnership</AudiowaveText>
-              <p className="font-nunito">Your success is our mission</p>
+              <p className="font-nunito text-[var(--text-secondary)]">Your success is our mission</p>
             </div>
           </div>
         </Card>
@@ -67,7 +67,7 @@ export default function Home() {
           <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
             <AudiowaveText>Custom SaaS & Mobile Application Development Services</AudiowaveText>
           </h2>
-          <p className="text-[20px] font-nunito text-gray-700">
+          <p className="text-[20px] font-nunito text-[var(--text-secondary)]">
             Comprehensive software solutions for B2B, SaaS, and mobile challenges
           </p>
           <div className="flex flex-col md:flex-row w-full gap-[2rem] md:gap-0">
@@ -79,7 +79,7 @@ export default function Home() {
                 </h3>
               </div>
               <div>
-                <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Transform your business operations with our cutting-edge Software as a Service solutions. We specialize in creating scalable, cloud-based platforms that adapt to your growing needs.</p>
+                <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Transform your business operations with our cutting-edge Software as a Service solutions. We specialize in creating scalable, cloud-based platforms that adapt to your growing needs.</p>
               </div>
             </div>
             <div className="text-left pt-[1rem] md:pt-0 w-full md:w-[50%] md:pl-8">
@@ -87,23 +87,23 @@ export default function Home() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Cloud-native architecture for maximum scalability</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Cloud-native architecture for maximum scalability</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Real-time data synchronization across devices</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Real-time data synchronization across devices</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem]  self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Advanced security and compliance features</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Advanced security and compliance features</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Intuitive user interfaces and dashboards</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Intuitive user interfaces and dashboards</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">API-first design for seamless integrations</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">API-first design for seamless integrations</p>
                 </div>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Home() {
                 </h3>
               </div>
               <div>
-                <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Create engaging mobile experiences that connect with your audience. Our mobile applications combine beautiful design with powerful functionality for both iOS and Android platforms.</p>
+                <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Create engaging mobile experiences that connect with your audience. Our mobile applications combine beautiful design with powerful functionality for both iOS and Android platforms.</p>
               </div>
             </div>
             <div className="text-left pt-[1rem] md:pt-0 w-full md:w-[50%] md:pl-8">
@@ -125,23 +125,23 @@ export default function Home() {
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Native iOS and Android development</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Native iOS and Android development</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Cross-platform solutions with React Native</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Cross-platform solutions with React Native</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Offline functionality and data sync</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Offline functionality and data sync</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">Push notifications and real-time updates</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Push notifications and real-time updates</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-gray-700 font-medium text-left">App Store/Play Console optimizations and deployment</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">App Store/Play Console optimizations and deployment</p>
                 </div>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function Home() {
           <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
             <AudiowaveText>Our Digital Products: SaaS, No-Code & Dev Tools</AudiowaveText>
           </h2>
-          <p className="text-[20px] font-nunito text-gray-700">
+          <p className="text-[20px] font-nunito text-[var(--text-secondary)]">
             Building the future with cutting-edge, zero-setup applications and platforms
           </p>
           <ProductCard
@@ -199,14 +199,14 @@ export default function Home() {
           <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
             <AudiowaveText>Let&apos;s Connect: Start Your Project with Appibara</AudiowaveText>
           </h2>
-          <p className="text-[20px] font-nunito text-gray-700">
+          <p className="text-[20px] font-nunito text-[var(--text-secondary)]">
             Need a calm hand for your next design or development cycle? We're here — quietly, but ready to help.
           </p>
           <div className="flex flex-row items-center gap-[0.5rem] justify-center">
             <Mail size={'1.5rem'} strokeWidth="3" color="var(--brand-orange)" />
             <AudiowaveText className="text-[20px]" useGradient={false}>contact@appibara.com</AudiowaveText>
           </div>
-          <p className="text-[1rem] font-nunito text-gray-700">We typically respond within 24 hours</p>
+          <p className="text-[1rem] font-nunito text-[var(--text-secondary)]">We typically respond within 24 hours</p>
           <PrimaryButton href="mailto:contact@appibara.com" icon={<Send className="w-5 h-5" />}>
             Get In Touch
           </PrimaryButton>
