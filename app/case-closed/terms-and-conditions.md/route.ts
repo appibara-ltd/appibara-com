@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 
   const fileName =
     lang === 'tr' ? 'terms-and-conditions-tr.md' : 'terms-and-conditions.md';
-  const filePath = path.join(process.cwd(), 'markdown', 'kokono', fileName);
+  const filePath = path.join(process.cwd(), 'markdown', 'case-closed', fileName);
   try {
     const fileContent = await fs.readFile(filePath, 'utf8');
     return new NextResponse(fileContent, {
