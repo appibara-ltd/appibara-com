@@ -14,46 +14,46 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                 rehypePlugins={[rehypeRaw]}
                 components={{
                     h1: ({ node, ...props }) => (
-                        <h1 className="text-2xl md:text-3xl font-audiowide font-bold mt-10 mb-4 text-gray-900 border-b border-gray-100 pb-3 leading-snug" {...props} />
+                        <h1 className="text-2xl md:text-3xl font-audiowide font-bold mt-10 mb-4 text-[var(--text-primary)] border-b border-[var(--border-subtle)] pb-3 leading-snug" {...props} />
                     ),
                     h2: ({ node, ...props }) => (
-                        <h2 className="text-xl md:text-2xl font-audiowide font-bold mt-8 mb-4 text-gray-900 leading-snug" {...props} />
+                        <h2 className="text-xl md:text-2xl font-audiowide font-bold mt-8 mb-4 text-[var(--text-primary)] leading-snug" {...props} />
                     ),
                     h3: ({ node, ...props }) => (
-                        <h3 className="text-lg md:text-xl font-audiowide font-bold mt-6 mb-3 text-[var(--brand-orange-dark)] leading-snug" {...props} />
+                        <h3 className="text-lg md:text-xl font-audiowide font-bold mt-6 mb-3 text-[var(--accent-primary)] leading-snug" {...props} />
                     ),
                     h4: ({ node, ...props }) => (
-                        <h4 className="text-base md:text-lg font-audiowide font-bold mt-5 mb-2 text-gray-900 leading-snug" {...props} />
+                        <h4 className="text-base md:text-lg font-audiowide font-bold mt-5 mb-2 text-[var(--text-primary)] leading-snug" {...props} />
                     ),
                     h5: ({ node, ...props }) => (
-                        <h5 className="text-base font-audiowide font-bold mt-4 mb-2 text-gray-800" {...props} />
+                        <h5 className="text-base font-audiowide font-bold mt-4 mb-2 text-[var(--text-primary)]" {...props} />
                     ),
                     h6: ({ node, ...props }) => (
-                        <h6 className="text-sm font-audiowide font-bold mt-3 mb-1 text-gray-700" {...props} />
+                        <h6 className="text-sm font-audiowide font-bold mt-3 mb-1 text-[var(--text-secondary)]" {...props} />
                     ),
                     p: ({ node, ...props }) => (
-                        <p className="mb-5 text-gray-700 leading-relaxed text-base md:text-[17px]" {...props} />
+                        <p className="mb-5 text-[var(--text-secondary)] leading-relaxed text-base md:text-[17px]" {...props} />
                     ),
                     ul: ({ node, ...props }) => (
-                        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-700 text-base md:text-[17px]" {...props} />
+                        <ul className="list-disc pl-6 mb-6 space-y-2 text-[var(--text-secondary)] text-base md:text-[17px]" {...props} />
                     ),
                     ol: ({ node, ...props }) => (
-                        <ol className="list-decimal pl-6 mb-6 space-y-2 text-gray-700 text-base md:text-[17px]" {...props} />
+                        <ol className="list-decimal pl-6 mb-6 space-y-2 text-[var(--text-secondary)] text-base md:text-[17px]" {...props} />
                     ),
                     li: ({ node, ...props }) => (
                         <li className="leading-relaxed" {...props} />
                     ),
                     a: ({ node, ...props }) => (
-                        <a className="text-[#bb4d00] font-medium underline underline-offset-4 hover:text-[var(--brand-orange)] transition-colors" target="_blank" rel="noopener noreferrer" {...props} />
+                        <a className="text-[var(--accent-primary)] font-medium underline underline-offset-4 hover:text-[var(--brand-orange)] transition-colors" target="_blank" rel="noopener noreferrer" {...props} />
                     ),
                     hr: ({ node, ...props }) => (
-                        <hr className="my-10 border-gray-200" {...props} />
+                        <hr className="my-10 border-[var(--border-subtle)]" {...props} />
                     ),
                     strong: ({ node, ...props }) => (
-                        <strong className="font-bold text-gray-900" {...props} />
+                        <strong className="font-bold text-[var(--text-primary)]" {...props} />
                     ),
                     blockquote: ({ node, ...props }) => (
-                        <blockquote className="border-l-4 border-[var(--brand-orange-dark)] bg-amber-50/50 italic px-5 py-4 my-6 rounded-r-xl text-gray-800 font-nunito" {...props} />
+                        <blockquote className="border-l-4 border-[var(--accent-primary)] bg-[var(--bg-secondary)] italic px-5 py-4 my-6 rounded-r-xl text-[var(--text-secondary)] font-nunito" {...props} />
                     ),
                     pre: ({ node, children, ...props }) => (
                         <div className="relative my-6 max-w-full rounded-xl bg-[#1e1e1e] border border-slate-800/80 shadow-lg overflow-hidden">
@@ -75,7 +75,7 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                         if (isInline) {
                             return (
                                 <code
-                                    className="px-1.5 py-0.5 mx-0.5 rounded bg-amber-100/80 text-[#bb4d00] border border-amber-200/80 font-mono text-[13px] font-semibold break-words"
+                                    className="px-1.5 py-0.5 mx-0.5 rounded bg-[var(--bg-secondary)] text-[var(--accent-primary)] border border-[var(--border-subtle)] font-mono text-[13px] font-semibold break-words"
                                     {...props}
                                 >
                                     {children}
@@ -89,21 +89,21 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                         );
                     },
                     table: ({ node, ...props }) => (
-                        <div className="my-6 w-full max-w-full overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+                        <div className="my-6 w-full max-w-full overflow-x-auto rounded-lg border border-[var(--border-subtle)] shadow-sm">
                             <table className="w-full text-left border-collapse font-nunito text-sm" {...props} />
                         </div>
                     ),
                     th: ({ node, ...props }) => (
-                        <th className="bg-gray-100 px-4 py-3 font-audiowide text-gray-900 font-semibold border-b border-gray-200" {...props} />
+                        <th className="bg-[var(--bg-tertiary)] px-4 py-3 font-audiowide text-[var(--text-primary)] font-semibold border-b border-[var(--border-subtle)]" {...props} />
                     ),
                     td: ({ node, ...props }) => (
-                        <td className="px-4 py-3 border-b border-gray-100 text-gray-700" {...props} />
+                        <td className="px-4 py-3 border-b border-[var(--border-subtle)] text-[var(--text-secondary)]" {...props} />
                     ),
                     img: ({ node, ...props }) => (
-                        <img className="max-w-full h-auto rounded-xl my-6 mx-auto shadow-sm border border-gray-100" {...props} />
+                        <img className="max-w-full h-auto rounded-xl my-6 mx-auto shadow-sm border border-[var(--border-subtle)]" {...props} />
                     ),
                     iframe: ({ node, ...props }: any) => (
-                        <div className="my-6 w-full overflow-hidden rounded-xl shadow-sm border border-gray-100">
+                        <div className="my-6 w-full overflow-hidden rounded-xl shadow-sm border border-[var(--border-subtle)]">
                             <iframe className="w-full" {...props} />
                         </div>
                     )

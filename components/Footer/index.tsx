@@ -16,9 +16,16 @@ export const Footer = () => {
                             alt="Appibara Logo"
                             width={200}
                             height={50}
-                            className={styles.logo}
+                            className={`${styles.logo} block dark:hidden`}
                         />
-                        <p className="font-audiowide text-sm text-gray-500">
+                        <Image
+                            src="/logo_sub_text_dark.png.png"
+                            alt="Appibara Logo"
+                            width={200}
+                            height={50}
+                            className={`${styles.logo} hidden dark:block`}
+                        />
+                        <p className="font-audiowide text-sm text-[var(--text-muted)]">
                             Calm tech for complex needs
                         </p>
                         <div className={styles.socialIcons}>

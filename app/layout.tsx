@@ -30,7 +30,6 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${nunito.variable} ${audiowide.variable} antialiased flex flex-col min-h-screen`}
-        style={{ backgroundColor: "#fafaf9" }}
       >
         {children}
         <Analytics />
