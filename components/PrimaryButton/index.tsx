@@ -15,7 +15,7 @@ export const PrimaryButton = ({
     icon,
     children,
     className,
-    noWrap,
+    noWrap = true,
     ...props
 }: PrimaryButtonProps) => {
     return (
@@ -23,13 +23,15 @@ export const PrimaryButton = ({
             href={href}
             className={cn(
                 styles.button,
-                "inline-flex items-center justify-center gap-2 md:px-6 py-3 px-4 rounded-lg text-white font-medium transition-transform hover:scale-105 active:scale-95 shadow-sm",
-                { "whitespace-nowrap": noWrap },
+                "inline-flex items-center justify-center gap-2 py-3 px-4 md:px-6 rounded-lg text-white font-medium text-sm md:text-base transition-transform hover:scale-105 active:scale-95 shadow-sm whitespace-nowrap shrink-0",
+                noWrap === false && "!whitespace-normal",
                 className
             )}
             {...props}
         >
-            {children}
+            <span className={cn("inline-block", noWrap !== false && "whitespace-nowrap")}>
+                {children}
+            </span>
             {icon && <span className="flex-shrink-0">{icon}</span>}
         </Link>
     );

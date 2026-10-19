@@ -20,7 +20,7 @@ export default function Home() {
           <AudiowaveText className="leading-none">Complex Needs</AudiowaveText>
         </h1>
         <p className="text-[20px] leading-none m-0 p-0 text-center font-nunito">Welcome to Appibara, where innovative solutions meet simplicity and clarity.</p>
-        <div className="flex gap-4">
+        <div className="flex flex-col min-[426px]:flex-row gap-4 items-center justify-center">
           <PrimaryButton href="/#who-we-are" icon={<ChevronRight className="w-4 h-4" />}>
             Learn More
           </PrimaryButton>
