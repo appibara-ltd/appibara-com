@@ -91,7 +91,7 @@ body {
   --accent-primary: #bb4d00;
   --accent-secondary: #54a2ff;
   --border-primary: #8c94a1;
-  --border-subtle: #c4ccdb;
+  --border-subtle: rgba(0, 0, 0, 0.05);
   --border-focus: #bb4d00;
 
   /* Brand Colors */
@@ -157,7 +157,7 @@ body {
     --accent-primary: #bb4d00;
     --accent-secondary: #54a2ff;
     --border-primary: #5f6673;
-    --border-subtle: #353c47;
+    --border-subtle: #353c47ba;
     --border-focus: #bb4d00;
 
     /* UI Variables Dark Overrides */

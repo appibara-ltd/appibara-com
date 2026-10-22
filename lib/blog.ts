@@ -438,6 +438,28 @@ const FULL_POSTS_LIST = [
     readTime: "9 min read",
     imageUrl: "/blog/design-tokens-for-minimal-context-switch-fatigue/cover.png",
   },
+  {
+    slug: "defensive-component-design-building-design-systems-for-executive-dysfunction",
+    title: "Defensive Component Design: Building Design Systems for Executive Dysfunction",
+    excerpt: "Your form should assume you’ll be interrupted. The best ones make interruption safe.",
+    date: "October 6, 2026",
+    category: "kitchen",
+    categoryLabel: "Kitchen (Know-How)",
+    author: "Appibara Team",
+    readTime: "7 min read",
+    imageUrl: "/blog/defensive-component-design-building-design-systems-for-executive-dysfunction/cover.png",
+  },
+  {
+    slug: "figma-config-india-2026-code-layers-specs-and-what-they-mean-for-design-systems",
+    title: "Figma Config India 2026: Code Layers, Specs and What They Mean for Design Systems",
+    excerpt: "At Config India on October 15, 2026, Figma moved code layers into open beta and launched Specs, a Markdown format that both people and AI agents can read. Here is what that means for design systems.",
+    date: "October 22, 2026",
+    category: "trends",
+    categoryLabel: "Trends & Agenda",
+    author: "Appibara Team",
+    readTime: "7 min read",
+    imageUrl: "/blog/figma-config-india-2026-code-layers-specs-and-what-they-mean-for-design-systems/cover.png",
+  },
 ]
 
 export const POSTS = FULL_POSTS_LIST as BlogPost[];
