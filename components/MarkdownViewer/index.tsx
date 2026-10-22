@@ -103,7 +103,7 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                         <img className="max-w-full h-auto rounded-xl my-6 mx-auto shadow-sm border border-[var(--border-subtle)]" {...props} />
                     ),
                     iframe: ({ node, ...props }: any) => (
-                        <div className="my-6 w-full overflow-hidden rounded-xl shadow-sm border border-[var(--border-subtle)]">
+                        <div className="my-6 w-full overflow-hidden rounded-xl flex flex-row justify-center">
                             <iframe className="w-full" {...props} />
                         </div>
                     )
