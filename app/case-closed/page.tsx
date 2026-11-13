@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Case Closed | Detective Mystery Game by Appibara",
   description:
     "Case Closed is an immersive detective puzzle game developed by Appibara LTD. Solve crime mysteries, analyze evidence, and crack the case.",
+  alternates: {
+    canonical: "/case-closed",
+  },
 };
 
 export default function CaseClosedPage() {
