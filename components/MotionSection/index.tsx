@@ -37,7 +37,7 @@ export const MotionSection = ({
                     observer.unobserve(element);
                 }
             },
-            { rootMargin: "-50px" }
+            { rootMargin: "50px" }
         );
 
         observer.observe(element);

@@ -1,5 +1,5 @@
 .card {
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     background-color: var(--surface-off-white);
     border: 1px solid var(--border-light);
     padding: 1.5rem;
@@ -10,7 +10,7 @@
 
 @media (min-width: 768px) {
     .card {
-        padding: 3rem;
+        padding: 1.5rem;
         /* 48px on desktop */
     }
 }

@@ -76,7 +76,7 @@ export default function BlogPage() {
               {filteredPosts.map((post, index) => (
                 <MotionSection
                   key={post.slug}
-                  delay={index * 0.1}
+                  delay={(index % 3) * 0.05}
                   className="h-full flex"
                 >
                   <Card className="flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 border border-[var(--border-subtle)] hover:shadow-lg w-full group">

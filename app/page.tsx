@@ -7,11 +7,13 @@ import { IconCard } from "@/components/IconCard";
 import { Footer } from "@/components/Footer";
 import { ChevronRight, Smartphone, Lightbulb, Award, Handshake, Server, CircleCheck, Mail, Send } from "lucide-react";
 import { Header } from "@/components/header";
-import { ProductCard } from "@/components/ProductCard";
+import { ProductShowcase } from "@/components/ProductShowcase";
+import { PageNavigation } from "@/components/PageNavigation";
 
 export default function Home() {
 
   return <>
+    <PageNavigation />
     <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center">
       <Header />
       <MotionSection id="home" className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
@@ -149,50 +151,7 @@ export default function Home() {
         </Card>
       </MotionSection>
 
-      <MotionSection id="our-products" delay={0.4} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
-        <Card className="flex flex-col gap-[32px] text-center max-w-[1000px] w-full items-center">
-          <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
-            <AudiowaveText>Our Digital Products: SaaS, No-Code & Dev Tools</AudiowaveText>
-          </h2>
-          <p className="text-[20px] font-nunito text-[var(--text-secondary)]">
-            Building the future with cutting-edge, zero-setup applications and platforms
-          </p>
-          <ProductCard
-            title="NativeFlow"
-            description="A no-code app builder where you can design apps in your browser with drag-and-drop and publish directly to the App Store and Google Play — fast, simple, and code-free. See your apps live as you build. Test, preview, and interact in real time."
-            href="https://nativeflow.app"
-            buttonText="Try NativeFlow"
-            tags={["No-Code", "Web App", "Mobile App Builder"]}
-            logoUrl="https://www.nativeflow.app/logo.png"
-          />
-          <ProductCard
-            title="Learn SQL"
-            description="Master SQL for SaaS Analytics with a professional, distraction-free platform entirely in your browser. Progress from basic SELECT queries to advanced window functions using a zero-setup, real-world mock database schema."
-            href="https://learnsql.dev"
-            buttonText="Master SQL"
-            tags={["SQL", "SaaS Analytics", "Data Mastery"]}
-            logoUrl="/learn-sql-logo.png"
-          />
-          <ProductCard
-            title="KokoNo"
-            description="Instant push notifications via simple webhooks. Send alerts, build notifications, and trigger system status logs directly to your mobile devices with a clean, lightspeed POST request. Features zero SDK dependencies, event timelines, multi-device broadcasts, and team/group sharing."
-            appStoreUrl="https://apps.apple.com/tr/app/kokono/id6765647478?l"
-            playStoreUrl="https://play.google.com/store/apps/details?id=com.appibara.kokono&hl"
-            websiteUrl="https://kokono.me/"
-            buttonText="Visit Website"
-            tags={["Developer Tool", "Webhooks", "Push Notifications"]}
-            logoUrl="/kokono_logo_v2.png"
-          />
-          <ProductCard
-            title="Nema"
-            description="A high-performance 60 FPS GPU canvas playground in React. Powered by CanvasKit (Skia) and WebAssembly, Nema maps GLSL fragment shaders to React state with zero DOM layout tax and locked 60 FPS hardware acceleration."
-            href="https://appibara.com/nema"
-            buttonText="Try Nema"
-            tags={["GPU Engine", "CanvasKit", "WebGL", "Developer Tool"]}
-            logoUrl="/nema/logo.jpg"
-          />
-        </Card>
-      </MotionSection>
+      <ProductShowcase />
 
       <MotionSection id="contact" delay={0.5} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[1rem] text-center max-w-[1000px] w-full items-center">
