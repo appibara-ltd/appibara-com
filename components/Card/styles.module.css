@@ -1,16 +1,18 @@
 .card {
-    border-radius: 1.5rem;
-    background-color: var(--surface-off-white);
+    border-radius: 2rem;
+    background-color: color-mix(in srgb, var(--surface-off-white) 20%, transparent);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-light);
     padding: 1.5rem;
     width: 100%;
     box-sizing: border-box;
-    box-shadow: var(--shadow-md, 0 4px 6px -1px var(--shadow-color), 0 2px 4px -2px var(--shadow-color));
-}
-
-@media (min-width: 768px) {
-    .card {
-        padding: 3rem;
-        /* 48px on desktop */
-    }
+    box-shadow:
+        inset 0 1px 0 0 var(--card-highlight),
+        0 1px 3px 0 var(--shadow-color),
+        0 10px 30px -5px var(--shadow-color);
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }

@@ -19,7 +19,7 @@ export default async function PrivacyPolicy() {
             <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center pt-[100px]">
                 <Header />
                 <MotionSection className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8">
-                    <Card className="flex flex-col gap-[32px] max-w-[1000px] w-full">
+                    <Card className="flex flex-col gap-[32px] max-w-[1200px] w-full">
                         <MarkdownViewer content={markdownContent} />
                     </Card>
                 </MotionSection>
