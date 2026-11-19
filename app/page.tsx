@@ -138,7 +138,7 @@ export default function Home() {
               <div className="flex items-center gap-[1rem]">
                 <IconCard icon={Smartphone} />
                 <h3 className="text-[24px] font-audiowide text-left">
-                  <AudiowaveText useGradient={false}>Cross-Platform Mobile Apps (React Native)</AudiowaveText>
+                  <AudiowaveText useGradient={false}>Native & Cross-Platform Mobile Applications</AudiowaveText>
                 </h3>
               </div>
               <div>
@@ -154,7 +154,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
-                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Cross-platform solutions with React Native</p>
+                  <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Cross-platform solutions tailored to your architecture</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
                   <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
