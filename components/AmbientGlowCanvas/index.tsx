@@ -154,25 +154,22 @@ fn fs_main(@builtin(position) fragCoord: vec4f) -> @location(0) vec4f {
   let cssSize = uniforms.resolution / dprSafe;
   let cssPos  = fragCoord.xy / dprSafe;
 
-  // Responsive scale synced with Hero breakpoints (max 2x larger than previous):
-  // 320px -> 0.25 (65x45), 390px -> 0.30 (79x55), 768px -> 0.60 (156x108),
-  // 1440px -> 0.94 (244x169), 1920px -> 1.03 (267x185), 2200px+ -> 1.08 (281x194)
+  // Responsive scale synced with Hero breakpoints (matching live appibara.com proportions)
   let tMobile  = clamp((cssSize.x - 320.0) / (768.0 - 320.0), 0.0, 1.0);
   let tDesktop = clamp((cssSize.x - 768.0) / (1440.0 - 768.0), 0.0, 1.0);
   let tWide    = clamp((cssSize.x - 1440.0) / (2200.0 - 1440.0), 0.0, 1.0);
-  let sWidth   = 0.25 + 0.35 * tMobile + 0.34 * tDesktop + 0.14 * tWide;
-  let sHeight  = clamp(cssSize.y / 720.0, 0.50, 1.10);
+  let sWidth   = 0.34 + 0.34 * tMobile + 0.32 * tDesktop + 0.12 * tWide;
+  let sHeight  = clamp(cssSize.y / 700.0, 0.55, 1.15);
   let s        = min(sWidth, sHeight);
 
-  // Anchor to #home flex-centered hero content (pt-35=140px, pb-8=32px -> +54px vertical center offset)
-  let anchorX = cssSize.x * 0.5;
-  let anchorY = cssSize.y * 0.5 + min(54.0, cssSize.y * 0.08);
+  // Diagonal placement matching live appibara.com:
+  // Orange: higher up (~34% height), slightly left of horizontal center (above/behind "Calm Tech")
+  // Blue: lower (~51% height) and further right (beside "Needs" and "Explore Products")
+  let centerOrange = vec2f(cssSize.x * 0.5 - 52.0 * s, cssSize.y * 0.34);
+  let centerBlue   = vec2f(cssSize.x * 0.5 + min(295.0 * s, cssSize.x * 0.32), cssSize.y * 0.51);
 
-  let centerOrange = vec2f(anchorX - 142.0 * s, anchorY - (52.0 + 48.0 * s));
-  let centerBlue   = vec2f(anchorX + 130.0 * s, anchorY - (14.0 + 16.0 * s));
-
-  let radiusOrange = vec2f(260.0, 180.0) * s;
-  let radiusBlue   = vec2f(244.0, 172.0) * s;
+  let radiusOrange = vec2f(225.0, 162.0) * s;
+  let radiusBlue   = vec2f(210.0, 152.0) * s;
 
   let dOrange = (cssPos - centerOrange) / radiusOrange;
   let dBlue   = (cssPos - centerBlue)   / radiusBlue;
@@ -180,10 +177,10 @@ fn fs_main(@builtin(position) fragCoord: vec4f) -> @location(0) vec4f {
   var intensityOrange = exp(-dot(dOrange, dOrange) * 0.5) * 0.24;
   var intensityBlue   = exp(-dot(dBlue,   dBlue)   * 0.5) * 0.20;
 
-  let edgeFade = smoothstep(0.0, 0.12, st.x) * smoothstep(0.0, 0.12, 1.0 - st.x)
-               * smoothstep(0.0, 0.12, st.y) * smoothstep(0.0, 0.12, 1.0 - st.y);
-  intensityOrange *= edgeFade;
-  intensityBlue   *= edgeFade;
+  // Feather only the bottom boundary where #home meets #who-we-are (avoid pinching right-side blue or top orange)
+  let bottomFade = smoothstep(0.0, 0.16, 1.0 - st.y);
+  intensityOrange *= bottomFade;
+  intensityBlue   *= bottomFade;
 
   let cell = floor(fragCoord.xy / max(uniforms.dpr, 1.0));
   let dO  = triPdf(ign(cell));
@@ -249,18 +246,15 @@ void main() {
   float tMobile  = clamp((cssSize.x - 320.0) / (768.0 - 320.0), 0.0, 1.0);
   float tDesktop = clamp((cssSize.x - 768.0) / (1440.0 - 768.0), 0.0, 1.0);
   float tWide    = clamp((cssSize.x - 1440.0) / (2200.0 - 1440.0), 0.0, 1.0);
-  float sWidth   = 0.25 + 0.35 * tMobile + 0.34 * tDesktop + 0.14 * tWide;
-  float sHeight  = clamp(cssSize.y / 720.0, 0.50, 1.10);
+  float sWidth   = 0.34 + 0.34 * tMobile + 0.32 * tDesktop + 0.12 * tWide;
+  float sHeight  = clamp(cssSize.y / 700.0, 0.55, 1.15);
   float s        = min(sWidth, sHeight);
 
-  float anchorX = cssSize.x * 0.5;
-  float anchorY = cssSize.y * 0.5 + min(54.0, cssSize.y * 0.08);
+  vec2 centerOrange = vec2(cssSize.x * 0.5 - 52.0 * s, cssSize.y * 0.34);
+  vec2 centerBlue   = vec2(cssSize.x * 0.5 + min(295.0 * s, cssSize.x * 0.32), cssSize.y * 0.51);
 
-  vec2 centerOrange = vec2(anchorX - 142.0 * s, anchorY - (52.0 + 48.0 * s));
-  vec2 centerBlue   = vec2(anchorX + 130.0 * s, anchorY - (14.0 + 16.0 * s));
-
-  vec2 radiusOrange = vec2(260.0, 180.0) * s;
-  vec2 radiusBlue   = vec2(244.0, 172.0) * s;
+  vec2 radiusOrange = vec2(225.0, 162.0) * s;
+  vec2 radiusBlue   = vec2(210.0, 152.0) * s;
 
   vec2 dOrange = (cssPos - centerOrange) / radiusOrange;
   vec2 dBlue   = (cssPos - centerBlue)   / radiusBlue;
@@ -268,10 +262,9 @@ void main() {
   float intensityOrange = exp(-dot(dOrange, dOrange) * 0.5) * 0.24;
   float intensityBlue   = exp(-dot(dBlue,   dBlue)   * 0.5) * 0.20;
 
-  float edgeFade = smoothstep(0.0, 0.12, st.x) * smoothstep(0.0, 0.12, 1.0 - st.x)
-                 * smoothstep(0.0, 0.12, st.y) * smoothstep(0.0, 0.12, 1.0 - st.y);
-  intensityOrange *= edgeFade;
-  intensityBlue   *= edgeFade;
+  float bottomFade = smoothstep(0.0, 0.16, 1.0 - st.y);
+  intensityOrange *= bottomFade;
+  intensityBlue   *= bottomFade;
 
   vec2 cell = floor(screenCoord / max(u_dpr, 1.0));
   float dO  = triPdf(ign(cell));
