@@ -18,6 +18,30 @@ interface ProductSlideProps {
   nextProductTitle?: string;
 }
 
+const renderWithLinks = (text: string, linkUrl?: string) => {
+  if (!linkUrl || !text.includes("NativeFlow: Client")) {
+    return text;
+  }
+  const parts = text.split(/(NativeFlow:\s*Client(?:\s+App)?)/g);
+  return parts.map((part, i) => {
+    if (part.startsWith("NativeFlow:") || part.startsWith("NativeFlow :")) {
+      return (
+        <a
+          key={i}
+          href={linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[var(--brand-orange)] font-semibold underline decoration-[var(--brand-orange)]/40 hover:decoration-[var(--brand-orange)] hover:text-[var(--brand-orange-dark)] transition-colors inline-flex items-center gap-1"
+        >
+          <span>{part}</span>
+          <ExternalLink className="w-3 h-3 inline-block shrink-0" />
+        </a>
+      );
+    }
+    return part;
+  });
+};
+
 export const ProductSlide: React.FC<ProductSlideProps> = ({
   product,
   isLast = false,
@@ -75,7 +99,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
 
             {/* Extended Description */}
             <p className="font-nunito text-base md:text-[17px] text-[var(--text-secondary)] leading-relaxed">
-              {product.extendedDescription}
+              {renderWithLinks(product.extendedDescription, product.appStoreUrl)}
             </p>
 
             {/* Expanded 4 Features Grid */}
@@ -95,7 +119,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                         {feature.title}
                       </span>
                       <span className="text-xs font-nunito text-[var(--text-secondary)] mt-0.5 leading-snug">
-                        {feature.description}
+                        {renderWithLinks(feature.description, product.appStoreUrl)}
                       </span>
                     </div>
                   </div>
@@ -125,6 +149,22 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                 >
                   {product.buttonText || `Launch ${product.title}`}
                 </PrimaryButton>
+              )}
+
+              {/* Uneed.best Badge for Learn SQL */}
+              {product.id === "product-learnsql" && (
+                <a
+                  href="https://www.uneed.best/tool/learn-sql"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-transform hover:scale-105 active:scale-95 inline-flex items-center shrink-0"
+                >
+                  <img
+                    src="https://www.uneed.best/EMBED1.png"
+                    alt="Featured on Uneed"
+                    className="h-13 w-auto object-contain"
+                  />
+                </a>
               )}
 
               {/* Mobile Store Badges if available */}

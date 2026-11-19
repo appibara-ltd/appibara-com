@@ -15,8 +15,8 @@ const SECTIONS: NavSection[] = [
   { id: "our-services", number: "03", label: "Our Services" },
   { id: "our-products", number: "04", label: "Our Products" },
   { id: "product-nativeflow", number: "05", label: "NativeFlow", isProduct: true },
-  { id: "product-learnsql", number: "06", label: "Learn SQL", isProduct: true },
-  { id: "product-kokono", number: "07", label: "KokoNo", isProduct: true },
+  { id: "product-kokono", number: "06", label: "KokoNo", isProduct: true },
+  { id: "product-learnsql", number: "07", label: "Learn SQL", isProduct: true },
   { id: "product-nema", number: "08", label: "Nema", isProduct: true },
   { id: "contact", number: "09", label: "Contact" },
 ];
