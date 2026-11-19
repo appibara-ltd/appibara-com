@@ -101,7 +101,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
           <div className="lg:col-span-7 flex flex-col gap-6 text-left">
             {/* Header Meta: Index number, Category pill */}
             <div className="flex items-center gap-3 flex-wrap">
-              <span className="font-mono text-xs md:text-sm font-bold tracking-widest text-[var(--accent-primary)] bg-[var(--accent-primary)]/10 px-3 py-1 rounded-full border border-[var(--accent-primary)]/20">
+              <span className="font-mono text-xs md:text-sm font-bold tracking-widest text-[var(--brand-orange)] bg-[var(--brand-orange)]/10 px-3 py-1 rounded-full border border-[var(--brand-orange)]/20">
                 {product.number} / 04
               </span>
               <span className="text-xs uppercase tracking-wider font-semibold text-[var(--text-muted)]">
@@ -112,12 +112,12 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
             {/* Title & Logo Row */}
             <div className="flex items-center gap-4">
               {product.logoUrl && (
-                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-[var(--bg-secondary)] border border-[var(--border-subtle)] p-2.5 flex items-center justify-center shrink-0 shadow-sm overflow-hidden">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-[var(--bg-secondary)]/30 backdrop-blur-sm border border-[var(--border-light)] shadow-[inset_0_1px_0_0_var(--card-highlight)] p-2 flex items-center justify-center shrink-0 overflow-hidden">
                   <Image
                     src={product.logoUrl}
                     alt={`${product.title} logo`}
-                    width={56}
-                    height={56}
+                    width={72}
+                    height={72}
                     className={cn(
                       "w-full h-full",
                       product.logoUrl.endsWith(".jpg")
@@ -152,7 +152,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                 return (
                   <div
                     key={idx}
-                    className="p-3.5 rounded-xl bg-[var(--bg-secondary)]/60 border border-[var(--border-subtle)] hover:border-[var(--brand-orange)]/30 transition-colors flex items-start gap-3"
+                    className="p-3.5 rounded-xl bg-[var(--bg-secondary)]/30 backdrop-blur-sm border border-[var(--border-light)] hover:border-[var(--brand-orange)]/30 shadow-[inset_0_1px_0_0_var(--card-highlight)] transition-all flex items-start gap-3"
                   >
                     <div className="p-2 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-subtle)] text-[var(--brand-orange)] shrink-0">
                       <IconComponent className="w-4 h-4" />

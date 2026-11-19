@@ -208,8 +208,14 @@ export default function Home() {
         </div>
       </MotionSection>
 
-      <MotionSection id="contact" delay={0.5} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
-        <Card className="flex flex-col gap-[1rem] text-center max-w-[1000px] w-full items-center">
+      <MotionSection id="contact" delay={0.5} className="relative overflow-hidden flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35 w-full">
+        {/* Contact Ambient Orange Backlight */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] md:w-[850px] h-[300px] sm:h-[400px] md:h-[480px] bg-gradient-to-tr from-[var(--brand-orange)]/20 via-[var(--brand-orange-light)]/15 to-[var(--brand-yellow)]/10 rounded-full blur-[110px] md:blur-[160px] -z-10"
+        />
+
+        <Card className="relative flex flex-col gap-[1.25rem] text-center max-w-[1000px] w-full items-center border border-[var(--brand-orange)]/30 shadow-[inset_0_1px_0_0_rgba(255,170,85,0.25),0_20px_50px_-15px_rgba(225,113,0,0.15)]">
           <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
             <AudiowaveText>Let&apos;s Connect: Start Your Project with Appibara</AudiowaveText>
           </h2>
@@ -218,11 +224,11 @@ export default function Home() {
           </p>
           <div className="flex flex-row items-center gap-[0.5rem] justify-center">
             <Mail size={'1.5rem'} strokeWidth="3" color="var(--brand-orange)" />
-            <AudiowaveText className="text-[20px]" useGradient={false}>contact@appibara.com</AudiowaveText>
+            <span className="text-[20px] text-[var(--brand-orange)]">contact@appibara.com</span>
           </div>
           <p className="text-[1rem] font-nunito text-[var(--text-secondary)]">We typically respond within 24 hours</p>
           <PrimaryButton href="mailto:contact@appibara.com" icon={<Send className="w-5 h-5" />}>
-            Get In Touch
+            Hire Us
           </PrimaryButton>
         </Card>
       </MotionSection>

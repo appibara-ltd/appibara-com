@@ -4,7 +4,7 @@
 
 ![Defensive Component Design: Building Design Systems for Executive Dysfunction Cover](/blog/defensive-component-design-building-design-systems-for-executive-dysfunction/cover.png)
 
-<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:77%;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/tr/podcast/defensive-component-design-building-design-systems/id6819609987?i=1000793415736"></iframe>
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/tr/podcast/defensive-component-design-building-design-systems/id6819609987?i=1000793415736"></iframe>
 
 ### 1. The Tab That Closed
 

@@ -11,9 +11,9 @@ export const ProductPreviewMockup: React.FC<ProductPreviewMockupProps> = ({
   product,
 }) => {
   return (
-    <div className="w-full h-full flex flex-col rounded-2xl overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-secondary)] shadow-2xl transition-all duration-300 hover:border-[var(--brand-orange)]/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group">
+    <div className="w-full h-full flex flex-col rounded-2xl overflow-hidden border border-[var(--border-subtle)] bg-[var(--bg-secondary)]/30 shadow-2xl transition-all duration-300 hover:border-[var(--brand-orange)]/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] group">
       {/* Browser Window Header Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-[var(--bg-tertiary)]/80 backdrop-blur-md border-b border-[var(--border-subtle)]">
+      <div className="flex items-center justify-between px-4 py-3 bg-[var(--bg-tertiary)]/70 backdrop-blur-md border-b border-[var(--border-subtle)]">
         {/* macOS Window Controls */}
         <div className="flex items-center gap-2">
           <span className="w-3 h-3 rounded-full bg-[#ff5f56] inline-block shadow-sm" />

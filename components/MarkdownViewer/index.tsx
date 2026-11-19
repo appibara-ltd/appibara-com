@@ -14,7 +14,7 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                 rehypePlugins={[rehypeRaw]}
                 components={{
                     h1: ({ node, ...props }) => (
-                        <h1 className="text-2xl md:text-3xl font-audiowide font-bold mt-10 mb-4 text-[var(--text-primary)] border-b border-[var(--border-subtle)] pb-3 leading-snug" {...props} />
+                        <h1 className="text-2xl md:text-3xl font-audiowide font-bold mb-4 text-[var(--text-primary)] border-b border-[var(--border-subtle)] pb-3 leading-snug" {...props} />
                     ),
                     h2: ({ node, ...props }) => (
                         <h2 className="text-xl md:text-2xl font-audiowide font-bold mt-8 mb-4 text-[var(--text-primary)] leading-snug" {...props} />
@@ -104,7 +104,7 @@ export const MarkdownViewer = ({ content, className }: MarkdownViewerProps) => {
                     ),
                     iframe: ({ node, ...props }: any) => (
                         <div className="my-6 w-full overflow-hidden rounded-xl flex flex-row justify-center">
-                            <iframe className="w-full" {...props} />
+                            <iframe className="w-full lg:max-w-[77%]" {...props} />
                         </div>
                     )
                 }}

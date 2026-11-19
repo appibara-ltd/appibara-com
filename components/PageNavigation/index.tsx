@@ -84,7 +84,7 @@ export const PageNavigation: React.FC = () => {
   return (
     <nav
       aria-label="Page navigation"
-      className="hidden min-[1660px]:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col gap-1.5 p-2.5 rounded-2xl bg-[var(--surface-off-white)]/85 backdrop-blur-md border border-[var(--border-subtle)] shadow-xl transition-all"
+      className="hidden min-[1660px]:flex fixed right-6 top-1/2 -translate-y-1/2 z-40 flex-col gap-1.5 p-2.5 rounded-2xl bg-[var(--surface-off-white)]/85 backdrop-blur-md border border-[var(--border-light)] shadow-[inset_0_1px_0_0_var(--card-highlight),0_20px_40px_-15px_var(--shadow-color)] transition-all"
     >
       {SECTIONS.map((section, idx) => {
         const isActive = activeId === section.id;

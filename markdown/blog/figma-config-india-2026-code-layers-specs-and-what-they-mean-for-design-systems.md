@@ -4,7 +4,7 @@
 
 ![Figma Config India 2026: Code Layers, Specs and What They Mean for Design Systems Cover](/blog/figma-config-india-2026-code-layers-specs-and-what-they-mean-for-design-systems/cover.png)
 
-<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;max-width:77%;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/tr/podcast/appisphere/id6819609987"></iframe>
+<iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;overflow:hidden;border-radius:10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.podcasts.apple.com/tr/podcast/appisphere/id6819609987"></iframe>
 
 At Config India on October 15, 2026, Figma moved code layers into open beta and launched Specs, a Markdown format that both people and AI agents can read. Together they change who a design file is written for. It is no longer only the developer who reads your design system. Increasingly, it is an agent.
 

@@ -12,7 +12,7 @@ interface BlogCardProps {
 
 export const BlogCard: React.FC<BlogCardProps> = ({ post, isLatest = false }) => {
   return (
-    <Card className="flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 border border-[var(--border-subtle)] hover:shadow-lg w-full group">
+    <Card className="flex flex-col justify-between hover:-translate-y-1.5 transition-all duration-300 hover:border-[var(--brand-orange)]/40 hover:shadow-[inset_0_1px_0_0_var(--card-highlight-hover),0_16px_36px_-6px_var(--shadow-color)] w-full group">
       <div>
         {/* Image Preview */}
         {post.imageUrl && (
