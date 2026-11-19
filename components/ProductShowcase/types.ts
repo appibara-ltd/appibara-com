@@ -24,4 +24,5 @@ export interface ShowcaseProduct {
   playStoreUrl?: string;
   buttonText?: string;
   accentColor?: string;
+  uneedTheme?: "light" | "dark";
 }

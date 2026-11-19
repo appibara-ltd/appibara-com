@@ -16,6 +16,7 @@ interface ProductSlideProps {
   isLast?: boolean;
   onScrollToNext?: () => void;
   nextProductTitle?: string;
+  theme?: "light" | "dark";
 }
 
 const renderWithLinks = (text: string, linkUrl?: string) => {
@@ -47,7 +48,46 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
   isLast = false,
   onScrollToNext,
   nextProductTitle,
+  theme: themeProp,
 }) => {
+  const [currentTheme, setCurrentTheme] = React.useState<"light" | "dark">(
+    product.uneedTheme || themeProp || "light"
+  );
+
+  React.useEffect(() => {
+    if (product.uneedTheme) {
+      setCurrentTheme(product.uneedTheme);
+      return;
+    }
+    if (themeProp) {
+      setCurrentTheme(themeProp);
+      return;
+    }
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const updateTheme = () => {
+      const isDark =
+        document.documentElement.classList.contains("dark") ||
+        (!document.documentElement.classList.contains("light") && mediaQuery.matches);
+      setCurrentTheme(isDark ? "dark" : "light");
+    };
+
+    updateTheme();
+    mediaQuery.addEventListener("change", updateTheme);
+
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateTheme);
+      observer.disconnect();
+    };
+  }, [product.uneedTheme, themeProp]);
+
+  const theme = product.uneedTheme || themeProp || currentTheme;
   return (
     <section
       id={product.id}
@@ -82,7 +122,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                       "w-full h-full",
                       product.logoUrl.endsWith(".jpg")
                         ? "object-cover rounded-full"
-                        : "object-contain"
+                        : "object-contain",
                     )}
                   />
                 </div>
@@ -99,7 +139,10 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
 
             {/* Extended Description */}
             <p className="font-nunito text-base md:text-[17px] text-[var(--text-secondary)] leading-relaxed">
-              {renderWithLinks(product.extendedDescription, product.appStoreUrl)}
+              {renderWithLinks(
+                product.extendedDescription,
+                product.appStoreUrl,
+              )}
             </p>
 
             {/* Expanded 4 Features Grid */}
@@ -119,7 +162,10 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                         {feature.title}
                       </span>
                       <span className="text-xs font-nunito text-[var(--text-secondary)] mt-0.5 leading-snug">
-                        {renderWithLinks(feature.description, product.appStoreUrl)}
+                        {renderWithLinks(
+                          feature.description,
+                          product.appStoreUrl,
+                        )}
                       </span>
                     </div>
                   </div>
@@ -160,9 +206,9 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                   className="transition-transform hover:scale-105 active:scale-95 inline-flex items-center shrink-0"
                 >
                   <img
-                    src="https://www.uneed.best/EMBED1.png"
-                    alt="Featured on Uneed"
-                    className="h-13 w-auto object-contain"
+                    src={`https://www.uneed.best/badge/rating/learn-sql.svg?theme=${theme}`}
+                    alt="Learn SQL rating on Uneed"
+                    className="h-11 w-auto object-contain"
                   />
                 </a>
               )}

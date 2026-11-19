@@ -5,30 +5,53 @@ import { MotionSection } from "@/components/MotionSection";
 import { Card } from "@/components/Card";
 import { IconCard } from "@/components/IconCard";
 import { Footer } from "@/components/Footer";
-import { ChevronRight, Smartphone, Lightbulb, Award, Handshake, Server, CircleCheck, Mail, Send } from "lucide-react";
+import { ChevronRight, Smartphone, Lightbulb, Award, Handshake, Server, CircleCheck, Mail, Send, ArrowRight } from "lucide-react";
 import { Header } from "@/components/header";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { PageNavigation } from "@/components/PageNavigation";
+import { BlogCard } from "@/components/BlogCard";
+import { POSTS } from "@/lib/blog";
 
 export default function Home() {
+  const latestPostSlug = POSTS.reduce((latest, current) => {
+    return new Date(current.date).getTime() > new Date(latest.date).getTime()
+      ? current
+      : latest;
+  }, POSTS[0])?.slug;
+
+  const latestPosts = [...POSTS]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
 
   return <>
     <PageNavigation />
     <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center">
       <Header />
-      <MotionSection id="home" className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
-        <h1 className="text-[42px] md:text-[72px] flex flex-col justify-center items-center text-center">
-          <AudiowaveText className="leading-none">Calm Tech for </AudiowaveText>
-          <AudiowaveText className="leading-none">Complex Needs</AudiowaveText>
-        </h1>
-        <p className="text-[20px] leading-none m-0 p-0 text-center font-nunito">Welcome to Appibara, where innovative solutions meet simplicity and clarity.</p>
-        <div className="flex flex-col min-[426px]:flex-row gap-4 items-center justify-center">
-          <PrimaryButton href="/#who-we-are" icon={<ChevronRight className="w-4 h-4" />}>
-            Learn More
-          </PrimaryButton>
-          <SecondaryButton href="/#our-products">
-            Explore Products
-          </SecondaryButton>
+      <MotionSection id="home" className="relative overflow-hidden flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35 w-full">
+        {/* Calm Tech Ambient Light Glows */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/3 left-1/2 -translate-x-[65%] -translate-y-1/2 w-[340px] sm:w-[520px] md:w-[680px] h-[300px] sm:h-[420px] bg-[var(--brand-orange)]/15 rounded-full blur-[100px] md:blur-[140px] -z-10"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute top-1/2 left-1/2 translate-x-[15%] -translate-y-1/3 w-[300px] sm:w-[460px] md:w-[600px] h-[280px] sm:h-[400px] bg-[var(--brand-blue)]/12 rounded-full blur-[100px] md:blur-[140px] -z-10"
+        />
+
+        <div className="relative z-10 flex flex-col items-center justify-center gap-[2rem]">
+          <h1 className="text-[42px] md:text-[72px] flex flex-col justify-center items-center text-center">
+            <AudiowaveText className="leading-none">Calm Tech for </AudiowaveText>
+            <AudiowaveText className="leading-none">Complex Needs</AudiowaveText>
+          </h1>
+          <p className="text-[20px] leading-none m-0 p-0 text-center font-nunito">Welcome to Appibara, where innovative solutions meet simplicity and clarity.</p>
+          <div className="flex flex-col min-[426px]:flex-row gap-4 items-center justify-center">
+            <PrimaryButton href="/#who-we-are" icon={<ChevronRight className="w-4 h-4" />}>
+              Learn More
+            </PrimaryButton>
+            <SecondaryButton href="/#our-products">
+              Explore Products
+            </SecondaryButton>
+          </div>
         </div>
       </MotionSection>
 
@@ -152,6 +175,38 @@ export default function Home() {
       </MotionSection>
 
       <ProductShowcase />
+
+      <MotionSection id="blog" delay={0.4} className="flex flex-col justify-center gap-[2.5rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35 w-full max-w-[1200px]">
+        <div className="text-center flex flex-col items-center gap-4 max-w-[800px]">
+          <h2 className="text-[32px] md:text-[48px] leading-tight font-audiowide">
+            <AudiowaveText>Latest from our Blog</AudiowaveText>
+          </h2>
+          <p className="text-[18px] md:text-[20px] font-nunito text-[var(--text-secondary)]">
+            Reflections on design, engineering deep-dives, and calm solutions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+          {latestPosts.map((post, index) => (
+            <MotionSection
+              key={post.slug}
+              delay={(index % 3) * 0.05}
+              className="h-full flex"
+            >
+              <BlogCard
+                post={post}
+                isLatest={post.slug === latestPostSlug}
+              />
+            </MotionSection>
+          ))}
+        </div>
+
+        <div className="flex justify-center mt-2">
+          <PrimaryButton href="/blog" icon={<ArrowRight className="w-4 h-4" />} noWrap={false}>
+            View All Articles
+          </PrimaryButton>
+        </div>
+      </MotionSection>
 
       <MotionSection id="contact" delay={0.5} className="flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35">
         <Card className="flex flex-col gap-[1rem] text-center max-w-[1000px] w-full items-center">
