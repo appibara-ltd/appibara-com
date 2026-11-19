@@ -10,6 +10,7 @@ import { Header } from "@/components/header";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { PageNavigation } from "@/components/PageNavigation";
 import { BlogCard } from "@/components/BlogCard";
+import { AmbientGlowCanvas } from "@/components/AmbientGlowCanvas";
 import { POSTS } from "@/lib/blog";
 
 export default function Home() {
@@ -28,15 +29,8 @@ export default function Home() {
     <main className="flex flex-col row-start-2 items-center font-audiowide flex-auto justify-center">
       <Header />
       <MotionSection id="home" className="relative isolate overflow-hidden flex flex-col justify-center gap-[2rem] items-center font-audiowide flex-auto min-h-[calc(100vh-105px)] p-8 pt-35 w-full">
-        {/* Calm Tech Ambient Light Glows - Cross-Browser, Blended Mesh Aura */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute top-[36%] left-1/2 -translate-x-[52%] -translate-y-1/2 w-[380px] sm:w-[640px] md:w-[880px] h-[350px] sm:h-[500px] md:h-[620px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(225,113,0,0.24)_0%,rgba(225,113,0,0.10)_45%,transparent_75%)] blur-[40px] md:blur-[70px] transform-gpu will-change-transform z-0"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute top-[48%] left-1/2 -translate-x-[8%] -translate-y-1/2 w-[360px] sm:w-[600px] md:w-[820px] h-[340px] sm:h-[480px] md:h-[580px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(21,93,252,0.20)_0%,rgba(21,93,252,0.08)_45%,transparent_75%)] blur-[40px] md:blur-[70px] transform-gpu will-change-transform z-0"
-        />
+        {/* Calm Tech Ambient Light Glows - 32-Bit Floating Point GPU Shader Canvas (Zero Banding in Chrome & Safari) */}
+        <AmbientGlowCanvas />
 
         <div className="relative z-10 flex flex-col items-center justify-center gap-[2rem]">
           <h1 className="text-[42px] md:text-[72px] flex flex-col justify-center items-center text-center">
@@ -212,7 +206,7 @@ export default function Home() {
         {/* Contact Ambient Orange Backlight - Cross-Browser & Safari-Optimized */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] md:w-[850px] h-[300px] sm:h-[420px] md:h-[500px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(225,113,0,0.25)_0%,rgba(255,170,85,0.12)_35%,rgba(255,185,0,0.05)_55%,transparent_75%)] blur-[40px] md:blur-[60px] transform-gpu will-change-transform z-0"
+          className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[600px] md:w-[850px] h-[300px] sm:h-[420px] md:h-[500px] rounded-full [background:radial-gradient(ellipse_at_center,rgba(225,113,0,0.25)_0%,rgba(255,170,85,0.12)_35%,rgba(225,113,0,0.03)_70%,rgba(225,113,0,0)_100%)] blur-[40px] md:blur-[70px] transform-gpu will-change-transform z-0"
         />
 
         <Card className="relative z-10 flex flex-col gap-[1.25rem] text-center max-w-[1000px] w-full items-center border border-[var(--brand-orange)]/30 shadow-[inset_0_1px_0_0_rgba(255,170,85,0.25),0_20px_50px_-15px_rgba(225,113,0,0.15)]">
