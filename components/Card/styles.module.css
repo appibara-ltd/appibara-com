@@ -1,6 +1,6 @@
 .card {
     border-radius: 2rem;
-    background-color: color-mix(in srgb, var(--surface-off-white) 20%, transparent);
+    background-color: color-mix(in srgb, var(--surface-off-white) 70%, transparent);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-light);
