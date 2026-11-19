@@ -107,7 +107,7 @@ const WGSL_SHADER = `
 struct Uniforms {
   resolution: vec2f,
   dpr: f32,
-  pad: f32,
+  progress: f32,
 };
 
 @group(0) @binding(0) var<uniform> uniforms: Uniforms;
@@ -147,6 +147,12 @@ fn triPdf(u: f32) -> f32 {
   return 1.0 - sqrt(max(2.0 * (1.0 - u), 0.0));
 }
 
+fn rotate2d(v: vec2f, angle: f32) -> vec2f {
+  let c = cos(angle);
+  let s = sin(angle);
+  return vec2f(v.x * c - v.y * s, v.x * s + v.y * c);
+}
+
 @fragment
 fn fs_main(@builtin(position) fragCoord: vec4f) -> @location(0) vec4f {
   let dprSafe = max(uniforms.dpr, 1.0);
@@ -162,20 +168,34 @@ fn fs_main(@builtin(position) fragCoord: vec4f) -> @location(0) vec4f {
   let sHeight  = clamp(cssSize.y / 700.0, 0.55, 1.15);
   let s        = min(sWidth, sHeight);
 
-  // Diagonal placement matching live appibara.com:
+  let p = clamp(uniforms.progress, 0.0, 1.0);
+
+  // Diagonal resting placement matching live appibara.com:
   // Orange: higher up (~34% height), slightly left of horizontal center (above/behind "Calm Tech")
   // Blue: lower (~51% height) and further right (beside "Needs" and "Explore Products")
-  let centerOrange = vec2f(cssSize.x * 0.5 - 52.0 * s, cssSize.y * 0.34);
-  let centerBlue   = vec2f(cssSize.x * 0.5 + min(295.0 * s, cssSize.x * 0.32), cssSize.y * 0.51);
+  let targetOrange = vec2f(cssSize.x * 0.5 - 52.0 * s, cssSize.y * 0.34);
+  let targetBlue   = vec2f(cssSize.x * 0.5 + min(295.0 * s, cssSize.x * 0.32), cssSize.y * 0.51);
 
-  let radiusOrange = vec2f(225.0, 162.0) * s;
-  let radiusBlue   = vec2f(210.0, 152.0) * s;
+  // Calm entrance choreography from shared Hero midpoint:
+  // subtle orbital arc (~27.5 deg -> 0), radial spread (0.22 -> 1.0),
+  // gentle scale bloom (0.50 -> 1.0), and serene opacity rise (0.0 -> 1.0)
+  let pivot = vec2f(cssSize.x * 0.5, cssSize.y * 0.43);
+  let angle = (1.0 - p) * 0.48;
+  let spread = mix(0.22, 1.0, p);
+  let sizeScale = mix(0.50, 1.0, p);
+  let opacityScale = smoothstep(0.0, 0.85, p);
 
-  let dOrange = (cssPos - centerOrange) / radiusOrange;
-  let dBlue   = (cssPos - centerBlue)   / radiusBlue;
+  let centerOrange = pivot + rotate2d(targetOrange - pivot, angle) * spread;
+  let centerBlue   = pivot + rotate2d(targetBlue   - pivot, angle) * spread;
 
-  var intensityOrange = exp(-dot(dOrange, dOrange) * 0.5) * 0.24;
-  var intensityBlue   = exp(-dot(dBlue,   dBlue)   * 0.5) * 0.20;
+  let radiusOrange = vec2f(225.0, 162.0) * s * sizeScale;
+  let radiusBlue   = vec2f(210.0, 152.0) * s * sizeScale;
+
+  let dOrange = rotate2d(cssPos - centerOrange, -angle) / radiusOrange;
+  let dBlue   = rotate2d(cssPos - centerBlue,   -angle) / radiusBlue;
+
+  var intensityOrange = exp(-dot(dOrange, dOrange) * 0.5) * 0.24 * opacityScale;
+  var intensityBlue   = exp(-dot(dBlue,   dBlue)   * 0.5) * 0.20 * opacityScale;
 
   // Feather only the bottom boundary where #home meets #who-we-are (avoid pinching right-side blue or top orange)
   let bottomFade = smoothstep(0.0, 0.16, 1.0 - st.y);
@@ -220,6 +240,7 @@ const GLSL_FRAGMENT_SHADER = `
 precision highp float;
 uniform vec2 u_resolution;
 uniform float u_dpr;
+uniform float u_progress;
 
 float ign(vec2 p) {
   return fract(52.9829189 * fract(dot(p, vec2(0.06711056, 0.00583715))));
@@ -236,6 +257,12 @@ float triPdf(float u) {
   return 1.0 - sqrt(max(2.0 * (1.0 - u), 0.0));
 }
 
+vec2 rotate2d(vec2 v, float angle) {
+  float c = cos(angle);
+  float s = sin(angle);
+  return vec2(v.x * c - v.y * s, v.x * s + v.y * c);
+}
+
 void main() {
   float dprSafe = max(u_dpr, 1.0);
   vec2 screenCoord = vec2(gl_FragCoord.x, u_resolution.y - gl_FragCoord.y);
@@ -250,17 +277,28 @@ void main() {
   float sHeight  = clamp(cssSize.y / 700.0, 0.55, 1.15);
   float s        = min(sWidth, sHeight);
 
-  vec2 centerOrange = vec2(cssSize.x * 0.5 - 52.0 * s, cssSize.y * 0.34);
-  vec2 centerBlue   = vec2(cssSize.x * 0.5 + min(295.0 * s, cssSize.x * 0.32), cssSize.y * 0.51);
+  float p = clamp(u_progress, 0.0, 1.0);
 
-  vec2 radiusOrange = vec2(225.0, 162.0) * s;
-  vec2 radiusBlue   = vec2(210.0, 152.0) * s;
+  vec2 targetOrange = vec2(cssSize.x * 0.5 - 52.0 * s, cssSize.y * 0.34);
+  vec2 targetBlue   = vec2(cssSize.x * 0.5 + min(295.0 * s, cssSize.x * 0.32), cssSize.y * 0.51);
 
-  vec2 dOrange = (cssPos - centerOrange) / radiusOrange;
-  vec2 dBlue   = (cssPos - centerBlue)   / radiusBlue;
+  vec2 pivot = vec2(cssSize.x * 0.5, cssSize.y * 0.43);
+  float angle = (1.0 - p) * 0.48;
+  float spread = mix(0.22, 1.0, p);
+  float sizeScale = mix(0.50, 1.0, p);
+  float opacityScale = smoothstep(0.0, 0.85, p);
 
-  float intensityOrange = exp(-dot(dOrange, dOrange) * 0.5) * 0.24;
-  float intensityBlue   = exp(-dot(dBlue,   dBlue)   * 0.5) * 0.20;
+  vec2 centerOrange = pivot + rotate2d(targetOrange - pivot, angle) * spread;
+  vec2 centerBlue   = pivot + rotate2d(targetBlue   - pivot, angle) * spread;
+
+  vec2 radiusOrange = vec2(225.0, 162.0) * s * sizeScale;
+  vec2 radiusBlue   = vec2(210.0, 152.0) * s * sizeScale;
+
+  vec2 dOrange = rotate2d(cssPos - centerOrange, -angle) / radiusOrange;
+  vec2 dBlue   = rotate2d(cssPos - centerBlue,   -angle) / radiusBlue;
+
+  float intensityOrange = exp(-dot(dOrange, dOrange) * 0.5) * 0.24 * opacityScale;
+  float intensityBlue   = exp(-dot(dBlue,   dBlue)   * 0.5) * 0.20 * opacityScale;
 
   float bottomFade = smoothstep(0.0, 0.16, 1.0 - st.y);
   intensityOrange *= bottomFade;
@@ -299,9 +337,50 @@ export const AmbientGlowCanvas: React.FC<{ className?: string }> = ({ className 
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    const ENTRANCE_DURATION_MS = 1800;
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     let isDisposed = false;
     let resizeObserver: ResizeObserver | null = null;
     let cleanupFn: (() => void) | null = null;
+    let rafId: number | null = null;
+    let currentProgress = prefersReducedMotion ? 1.0 : 0.0;
+
+    const startCalmEntrance = (draw: () => void) => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+
+      if (prefersReducedMotion) {
+        currentProgress = 1.0;
+        draw();
+        return;
+      }
+
+      currentProgress = 0.0;
+      draw();
+      const startTime = performance.now();
+
+      const step = (now: number) => {
+        if (isDisposed) return;
+        const t = Math.min((now - startTime) / ENTRANCE_DURATION_MS, 1.0);
+        const inv = 1.0 - t;
+        currentProgress = 1.0 - inv * inv * inv;
+        draw();
+
+        if (t < 1.0) {
+          rafId = requestAnimationFrame(step);
+        } else {
+          currentProgress = 1.0;
+          rafId = null;
+        }
+      };
+
+      rafId = requestAnimationFrame(step);
+    };
 
     // 1. Attempt Native WebGPU (request adapter + device BEFORE claiming canvas context)
     const initWebGPU = async (): Promise<boolean> => {
@@ -418,7 +497,7 @@ export const AmbientGlowCanvas: React.FC<{ className?: string }> = ({ className 
           device.queue.writeBuffer(
             uniformBuffer,
             0,
-            new Float32Array([size.width, size.height, size.dpr, 0.0])
+            new Float32Array([size.width, size.height, size.dpr, currentProgress])
           );
 
           const commandEncoder = device.createCommandEncoder();
@@ -441,7 +520,7 @@ export const AmbientGlowCanvas: React.FC<{ className?: string }> = ({ className 
           device.queue.submit([commandEncoder.finish()]);
         };
 
-        renderWebGPU();
+        startCalmEntrance(renderWebGPU);
 
         resizeObserver = new ResizeObserver(() => {
           renderWebGPU();
@@ -518,6 +597,7 @@ export const AmbientGlowCanvas: React.FC<{ className?: string }> = ({ className 
 
       const resolutionUniformLocation = gl.getUniformLocation(program, "u_resolution");
       const dprUniformLocation = gl.getUniformLocation(program, "u_dpr");
+      const progressUniformLocation = gl.getUniformLocation(program, "u_progress");
 
       const renderWebGL = () => {
         if (isDisposed || !canvas) return;
@@ -534,13 +614,14 @@ export const AmbientGlowCanvas: React.FC<{ className?: string }> = ({ className 
         gl.viewport(0, 0, width, height);
         gl.uniform2f(resolutionUniformLocation, width, height);
         gl.uniform1f(dprUniformLocation, dpr);
+        gl.uniform1f(progressUniformLocation, currentProgress);
 
         gl.clearColor(0, 0, 0, 0);
         gl.clear(gl.COLOR_BUFFER_BIT);
         gl.drawArrays(gl.TRIANGLES, 0, 6);
       };
 
-      renderWebGL();
+      startCalmEntrance(renderWebGL);
 
       resizeObserver = new ResizeObserver(() => {
         renderWebGL();
@@ -566,6 +647,10 @@ export const AmbientGlowCanvas: React.FC<{ className?: string }> = ({ className 
 
     return () => {
       isDisposed = true;
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
       if (cleanupFn) cleanupFn();
     };
   }, []);
