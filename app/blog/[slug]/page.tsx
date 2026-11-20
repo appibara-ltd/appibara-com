@@ -8,6 +8,7 @@ import { Card } from "@/components/Card";
 import { Pill } from "@/components/Pill";
 import { MarkdownViewer } from "@/components/MarkdownViewer";
 import { getPostBySlug, POSTS } from "@/lib/blog";
+import { ORGANIZATION_ID, SITE_INFO, parsePostDateToIso } from "@/lib/site-data";
 import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
 import { promises as fs } from "fs";
 import path from "path";
@@ -44,11 +45,25 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: "Post Not Found | Appibara Blog",
     };
   }
+  const isoDate = parsePostDateToIso(post.date);
   return {
     title: `${post.title} | Appibara Blog`,
     description: post.excerpt,
     alternates: {
       canonical: `/blog/${slug}`,
+      types: {
+        "text/markdown": `/blog/${slug}.md`,
+      },
+    },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      url: `${SITE_INFO.url}/blog/${slug}`,
+      publishedTime: isoDate,
+      authors: [post.author],
+      section: post.categoryLabel,
+      ...(post.imageUrl ? { images: [{ url: post.imageUrl }] } : {}),
     },
   };
 }
@@ -62,9 +77,54 @@ export default async function BlogPostPage({ params }: PageProps) {
   }
 
   const markdownContent = await getPostMarkdownContent(slug);
+  const isoDate = parsePostDateToIso(post.date);
+  const postUrl = `${SITE_INFO.url}/blog/${post.slug}`;
+  const markdownUrl = `${SITE_INFO.url}/blog/${post.slug}.md`;
+  const absoluteImage = post.imageUrl
+    ? post.imageUrl.startsWith("http")
+      ? post.imageUrl
+      : `${SITE_INFO.url}${post.imageUrl}`
+    : SITE_INFO.logo;
+
+  const blogPostingJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${postUrl}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    articleSection: post.categoryLabel,
+    inLanguage: "en",
+    url: postUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": postUrl,
+    },
+    author: {
+      "@type": "Organization",
+      "@id": ORGANIZATION_ID,
+      name: post.author,
+    },
+    publisher: {
+      "@id": ORGANIZATION_ID,
+    },
+    image: absoluteImage,
+    encoding: {
+      "@type": "MediaObject",
+      contentUrl: markdownUrl,
+      encodingFormat: "text/markdown",
+    },
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(blogPostingJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <main className="flex flex-col items-center font-audiowide pt-[120px] pb-16 min-h-[calc(100vh-105px)] w-full">
         <Header />
 

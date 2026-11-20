@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   description: "Read thoughts and guides on Calm Technology, software engineering craftsmanship, B2B SaaS strategies, and mobile app design from the Appibara team.",
   alternates: {
     canonical: "/blog",
+    types: {
+      "text/markdown": "/blog.md",
+    },
   },
 };
 
