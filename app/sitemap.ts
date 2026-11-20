@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '',
     '/blog',
+    '/case-closed',
     '/cookie-policy',
     '/privacy-policy',
     '/privashot',
@@ -21,7 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1.0 : route === '/blog' ? 0.8 : 0.5,
+    priority:
+      route === ''
+        ? 1.0
+        : route === '/blog'
+          ? 0.8
+          : route === '/case-closed'
+            ? 0.6
+            : 0.5,
   }));
 
   // Dynamic blog post routes (only published ones from POSTS)
