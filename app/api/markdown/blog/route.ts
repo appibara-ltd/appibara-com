@@ -5,6 +5,8 @@ import {
   parsePostDateToIso,
 } from "@/lib/site-data";
 
+export const dynamic = "force-static";
+
 export function GET() {
   const posts = getSortedPosts();
 

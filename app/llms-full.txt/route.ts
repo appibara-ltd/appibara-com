@@ -10,6 +10,8 @@ import {
   readBlogMarkdownRaw,
 } from "@/lib/site-data";
 
+export const dynamic = "force-static";
+
 export async function GET() {
   const posts = getSortedPosts();
   const postBodies = await Promise.all(

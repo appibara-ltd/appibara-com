@@ -2,12 +2,15 @@ import { promises as fs } from 'fs';
 import { NextResponse } from 'next/server';
 import path from 'path';
 
-export async function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const lang = searchParams.get('lang');
+export const dynamic = 'force-static';
 
-  const fileName = lang === 'tr' ? 'privacy-policy-tr.md' : 'privacy-policy.md';
-  const filePath = path.join(process.cwd(), 'markdown', 'case-closed', fileName);
+export async function GET() {
+  const filePath = path.join(
+    process.cwd(),
+    'markdown',
+    'case-closed',
+    'privacy-policy.md',
+  );
   try {
     const fileContent = await fs.readFile(filePath, 'utf8');
     return new NextResponse(fileContent, {

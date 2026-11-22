@@ -14,9 +14,45 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/nema',
+        destination: 'https://nema.appibara.com',
+        permanent: true,
+      },
+      {
+        source: '/nema/index.html',
+        destination: 'https://nema.appibara.com',
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [
+        {
+          source: '/case-closed/privacy-policy.md',
+          has: [
+            {
+              type: 'query',
+              key: 'lang',
+              value: 'tr',
+            },
+          ],
+          destination: '/case-closed/privacy-policy-tr.md',
+        },
+        {
+          source: '/case-closed/terms-and-conditions.md',
+          has: [
+            {
+              type: 'query',
+              key: 'lang',
+              value: 'tr',
+            },
+          ],
+          destination: '/case-closed/terms-and-conditions-tr.md',
+        },
         {
           source: '/blog.md',
           destination: '/api/markdown/blog',

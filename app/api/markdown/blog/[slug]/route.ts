@@ -1,10 +1,19 @@
 import { NextResponse } from "next/server";
-import { getPostBySlug } from "@/lib/blog";
+import { POSTS, getPostBySlug } from "@/lib/blog";
 import {
   SITE_INFO,
   formatBlogPostMarkdown,
   readBlogMarkdownRaw,
 } from "@/lib/site-data";
+
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return POSTS.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 interface RouteContext {
   params: Promise<{ slug: string }>;
