@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+export const dynamic = "force-static";
+
 export async function GET() {
     const filePath = path.join(process.cwd(), 'markdown', 'kokono', 'terms-conditions.md');
     try {

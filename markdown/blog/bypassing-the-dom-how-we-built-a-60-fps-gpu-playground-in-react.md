@@ -17,7 +17,7 @@ We wanted the raw, unthrottled math of the GPU, but we wanted it inside a simple
 
 So, we bypassed the browser's layout engine entirely.
 
-Here is the architectural reality behind Nema (live at [appibara.com/nema](http://appibara.com/nema)) how we mapped GLSL shaders to React state without making your CPU cry.
+Here is the architectural reality behind Nema (live at [nema.appibara.com](https://nema.appibara.com)) how we mapped GLSL shaders to React state without making your CPU cry.
 
 ### 1. The DOM Tax vs. The Skia Engine
 
@@ -199,7 +199,7 @@ In JavaScript, we are spoiled by the Garbage Collector. In WebAssembly, you are 
 To turn this into a true playground, we authored 6 distinct generative SKSL shaders. We didn't want laser beams; we wanted the visual equivalent of heavy, dark fabric moving inside a slow current.
 
   ![None](/blog/bypassing-the-dom-how-we-built-a-60-fps-gpu-playground-in-react/image1.gif)
-*6 domains: appibara.com/nema*
+*6 domains: nema.appibara.com*
 
 The math behind the aesthetics:
 
@@ -270,7 +270,7 @@ We need to stop trying to build high-velocity instrumentation panels using web t
 
 If your frontend team is currently spending more hours writing convoluted **useMemo** dependency arrays just to keep a dashboard chart from freezing the browser: **stop trying to fix the document. Start drawing the picture.**
 
-> Test the 6 mathematical domains, inject your exact brand palette, and generate your standalone React component at \[[Nema](http://appibara.com/nema)\]
+> Test the 6 mathematical domains, inject your exact brand palette, and generate your standalone React component at \[[Nema](https://nema.appibara.com)\]
 
 _At ****Appibara****, we architect and build high-performance web applications for global B2B SaaS teams. To discuss custom projects or product architectures that don't suffocate the browser, ****reach out to our team on LinkedIn**** or send your project briefs to ****contact@appibara.com****._
 

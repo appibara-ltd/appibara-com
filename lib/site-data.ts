@@ -198,7 +198,7 @@ export const PRODUCTS_CATALOG: readonly ProductEntry[] = [
       "Fluid & Kinetic Simulations",
       "Zero DOM Layout Tax",
     ],
-    url: `${SITE_INFO.url}/nema`,
+    url: "https://nema.appibara.com",
     logo: `${SITE_INFO.url}/nema/logo.jpg`,
     screenshot: `${SITE_INFO.url}/products/nema_preview.png`,
   },

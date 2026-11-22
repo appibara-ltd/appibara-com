@@ -181,8 +181,8 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
     tags: ["CanvasKit (Skia)", "WebAssembly", "GLSL Shaders", "GPU Engine", "Creative Tech"],
     logoUrl: "/nema/logo.jpg",
     screenshotUrl: "/products/nema_preview.png",
-    previewUrl: "https://appibara.com/nema",
-    websiteUrl: "https://appibara.com/nema",
+    previewUrl: "https://nema.appibara.com",
+    websiteUrl: "https://nema.appibara.com",
     buttonText: "Explore Nema Engine",
   },
 ];

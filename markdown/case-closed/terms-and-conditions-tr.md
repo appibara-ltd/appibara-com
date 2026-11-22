@@ -1,141 +1,141 @@
-**Effective Date:** October 19, 2026  
+**Yürürlük Tarihi:** 19 Ekim 2026  
 
-Welcome to **Case Closed**, an interactive crime mystery and detective simulation game operated by **Appibara LTD** ("**Company**", "**we**", "**us**", or "**our**"), a private company incorporated under the laws of the United Kingdom (England and Wales).
+Birleşik Krallık (İngiltere ve Galler) yasalarına göre kurulmuş özel bir şirket olan **Appibara LTD** ("**Şirket**", "**biz**", "**bize**" veya "**bizim**") tarafından işletilen etkileşimli suç gizemi ve dedektiflik simülasyon oyunu **Case Closed**'a hoş geldiniz.
 
-These Terms of Use ("**Terms**") constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("**you**" or "**User**"), and Appibara LTD, concerning your access to and use of the **Case Closed** mobile application (the "**App**") on iOS and Android devices, as well as any associated services or websites ([https://appibara.com](https://appibara.com)).
+Bu Kullanım Şartları ("**Şartlar**"), iOS ve Android cihazlardaki **Case Closed** mobil uygulamasına ("**Uygulama**") ve ilgili hizmetlere veya web sitelerine ([https://appibara.com](https://appibara.com)) erişiminiz ve bunları kullanımınızla ilgili olarak sizinle (şahsen veya bir kurum adına hareket eden "**siz**" veya "**Kullanıcı**") Appibara LTD arasında yasal olarak bağlayıcı bir sözleşme teşkil eder.
 
-**PLEASE READ THESE TERMS CAREFULLY. BY DOWNLOADING, INSTALLING, ACCESSING, OR USING THE APP, YOU CONFIRM THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS. IF YOU DO NOT AGREE, YOU MUST IMMEDIATELY UNINSTALL AND CEASE ALL USE OF THE APP.**
-
----
-
-## 1. END USER LICENSE GRANT & RESTRICTIONS
-
-### A. License Grant
-Subject to your compliance with these Terms, Appibara LTD grants you a limited, non-exclusive, non-transferable, non-sublicensable, revocable license to download, install, and use one copy of the App on your personal mobile device solely for your personal, non-commercial entertainment purposes.
-
-### B. License Restrictions
-You agree that you will **not**, directly or indirectly:
-1. Copy, modify, adapt, translate, reverse engineer, decompile, disassemble, or attempt to derive the source code of the App or any underlying algorithms;
-2. Hack, bypass, circumvent, or manipulate any digital rights management, security token, Cloudflare edge proxy, or authentication mechanism safeguarding case files or virtual balances;
-3. Use bots, automated scripts, scrapers, or exploits to automate case answering or ticket farming;
-4. Extract, capture, redistribute, broadcast, stream, sell, or publicly display confidential case evidence, mystery plots, suspect dossiers, or media files without prior written consent from Appibara LTD;
-5. Rent, lease, lend, resell, sublicense, or distribute the App or any virtual currency to any third party.
+**LÜTFEN BU ŞARTLARI DİKKATLİCE OKUYUN. UYGULAMAYI İNDİREREK, YÜKLEYEREK, ERİŞEREK VEYA KULLANARAK BU ŞARTLARI OKUDUĞUNUZU, ANLADIĞINIZI VE BUNLARLA BAĞLI OLMAYI KABUL ETTİĞİNİZİ ONAYLAMIŞ OLURSUNUZ. KABUL ETMİYORSANIZ, UYGULAMAYI DERHAL KALDIRMALI VE TÜM KULLANIMINI SONLANDIRMALISINIZ.**
 
 ---
 
-## 2. INTELLECTUAL PROPERTY RIGHTS
+## 1. SON KULLANICI LİSANS HAKKI VE KISITLAMALAR
 
-The App, including but not limited to its software, code, algorithms, case narratives, detective storylines, character biographies, evidence documents, forensic autopsy reports, audio recordings, video trailers, user interfaces, visual design, 3D buttons, graphics, and trademarks ("**Case Closed Content**"), is the proprietary intellectual property of **Appibara LTD** and is protected by United Kingdom and international copyright, trademark, and intellectual property laws.
+### A. Lisans Hakkı
+Bu Şartlara uymanız koşuluyla, Appibara LTD size Uygulamanın bir kopyasını yalnızca kişisel, ticari olmayan eğlence amaçlarınız doğrultusunda kişisel mobil cihazınıza indirmek, yüklemek ve kullanmak için sınırlı, münhasır olmayan, devredilemez, alt lisanslanamaz ve geri alınabilir bir lisans verir.
 
-All rights not expressly granted to you in these Terms are reserved by Appibara LTD.
-
----
-
-## 3. IN-APP PURCHASES & VIRTUAL CURRENCY (TICKETS)
-
-The App provides digital goods and features that can be unlocked using real-world currency through the Apple App Store or Google Play Store.
-
-### A. Virtual Currency ("Tickets")
-- You may purchase consumable virtual currency ("**Tickets**") or earn Tickets by watching rewarded advertisements or completing in-game activities.
-- Tickets may be redeemed solely inside the App to unlock mystery cases, access crime archives, or purchase additional case-answering attempts.
-- **NO REAL-WORLD VALUE:** Tickets constitute a limited, revocable license right and do not constitute personal property. Tickets have no real-world monetary value, accrue no interest, and cannot be redeemed for fiat currency, cash equivalents, or tangible goods from Appibara LTD or any third party.
-- **NON-TRANSFERABLE:** Tickets cannot be transferred, sold, gifted, or traded between accounts or outside the App. Any attempt to do so is void and grounds for immediate account suspension.
-- **NON-REFUNDABLE & NON-RESTORABLE:** Consumable tickets are depleted upon use and cannot be restored if you reinstall the App without a linked account, switch devices, or consume them in-game. Except as required by mandatory consumer protection laws, all purchases of Tickets are final.
+### B. Lisans Kısıtlamaları
+Doğrudan veya dolaylı olarak aşağıdakileri **yapmayacağınızı** kabul edersiniz:
+1. Uygulamanın veya temelindeki herhangi bir algoritmanın kaynak kodunu kopyalamak, değiştirmek, uyarlamak, çevirmek, tersine mühendislik yapmak, kaynak koda dönüştürmek, parçalarına ayırmak veya türetmeye çalışmak;
+2. Vaka dosyalarını veya sanal bakiyeleri koruyan herhangi bir dijital hak yönetimi, güvenlik belirteci, Cloudflare edge proxy veya kimlik doğrulama mekanizmasını hacklemek, atlatmak, devre dışı bırakmak veya manipüle etmek;
+3. Vaka yanıtlama veya bilet toplama işlemlerini otomatikleştirmek için botlar, otomatik betikler, kazıyıcılar (scrapers) veya açıklardan yararlanma araçları kullanmak;
+4. Appibara LTD'nin önceden yazılı izni olmaksızın gizli vaka kanıtlarını, gizem kurgularını, şüpheli dosyalarını veya medya dosyalarını çıkarmak, kaydetmek, yeniden dağıtmak, yayınlamak, canlı yayınlamak, satmak veya kamuya açık şekilde sergilemek;
+5. Uygulamayı veya herhangi bir sanal para birimini herhangi bir üçüncü tarafa kiralamak, finansal kiralamaya vermek, ödünç vermek, yeniden satmak, alt lisanslamak veya dağıtmak.
 
 ---
 
-## 4. AUTO-RENEWABLE SUBSCRIPTIONS & RESTORE PURCHASES
+## 2. FİKRİ MÜLKİYET HAKLARI
 
-We offer auto-renewable subscription tiers ("**Detective Membership**" / "**VIP Subscription**") granting benefits such as unlimited case unlocks, ad-free experience, and priority access to new mystery dossiers.
+Yazılımı, kodu, algoritmaları, vaka anlatıları, dedektiflik hikâyeleri, karakter biyografileri, kanıt belgeleri, adli otopsi raporları, ses kayıtları, video fragmanları, kullanıcı arayüzleri, görsel tasarımı, 3B düğmeleri, grafikleri ve ticari markaları dahil ancak bunlarla sınırlı olmamak üzere Uygulama ("**Case Closed İçeriği**"), **Appibara LTD**'nin münhasır fikri mülkiyetidir ve Birleşik Krallık ile uluslararası telif hakkı, ticari marka ve fikri mülkiyet yasaları tarafından korunmaktadır.
 
-### A. Billing & Store Processing
-- Subscriptions are billed through your **Apple ID** (on iOS) or **Google Play Account** (on Android) upon confirmation of purchase.
-- Any unused portion of a free trial period, if offered, will be forfeited when you purchase a subscription.
-
-### B. Automatic Renewal Terms (Apple Guideline 3.1.2 Compliance)
-- **Auto-Renewal:** Your subscription automatically renews for the same tier and duration (e.g., weekly, monthly, annually) unless auto-renew is disabled at least **24 hours prior** to the conclusion of the current subscription period.
-- **Renewal Charge:** Your account will be charged for renewal within **24 hours prior** to the end of the current billing cycle at the standard tier rate displayed at purchase.
-
-### C. Managing and Canceling Subscriptions
-You can manage your subscription and turn off auto-renewal at any time through your device settings:
-- **iOS:** Open device **Settings > Apple ID > Subscriptions > Case Closed > Cancel Subscription**.
-- **Android:** Open **Google Play Store > Profile Icon > Payments & Subscriptions > Subscriptions > Case Closed > Cancel Subscription**.
-- Uninstalling the App will **not** automatically cancel your active subscription. You must cancel the subscription through your platform account settings.
-
-### D. Restoring Purchases (Apple Guideline 3.1.1 Compliance)
-- You may restore your active subscriptions at any time on any authorized device associated with your Apple ID or Google Play account by tapping the **"Restore Purchases"** button on the Paywall screen.
-- As required by platform store rules, **consumable items (Tickets)** cannot be restored once consumed.
-
-### E. Refunds
-All refunds are subject to the policies of the respective app stores:
-- For iOS purchases, refund requests must be submitted directly to [Apple Support](https://reportaproblem.apple.com).
-- For Android purchases, refund requests are governed by [Google Play Refund Policies](https://support.google.com/googleplay/answer/2479637).
+Bu Şartlarda size açıkça verilmeyen tüm haklar Appibara LTD tarafından saklı tutulur.
 
 ---
 
-## 5. USER ACCOUNTS & SECURITY
+## 3. UYGULAMA İÇİ SATIN ALMALAR VE SANAL PARA BİRİMİ (BİLETLER)
 
-- **Guest / Anonymous Accounts:** You may play without registering. However, guest data is tied to your local device. If you uninstall the App or reset device storage without linking an account, your game progress and unused Tickets may be permanently lost.
-- **Linked Accounts:** By linking Apple Sign-In or Google Sign-In, your progress, purchased cases, and Ticket balances are synchronized with our secure cloud servers.
-- **Account Responsibilities:** You are responsible for safeguarding your login credentials and for all activities that occur under your account. You agree to notify us immediately at [contact@appibara.com](mailto:contact@appibara.com) of any suspected unauthorized access.
+Uygulama, Apple App Store veya Google Play Store aracılığıyla gerçek para birimi kullanılarak kilidi açılabilen dijital ürünler ve özellikler sunar.
 
----
-
-## 6. ACCOUNT TERMINATION AND DELETION
-
-### A. Voluntary Deletion
-You may delete your account and personal data at any time directly in the App via **Profile > Delete Account** or by contacting [contact@appibara.com](mailto:contact@appibara.com). Upon deletion, your progress and unused Tickets will be permanently destroyed without eligibility for refund.
-
-### B. Termination by Company
-We reserve the right, without prior notice or liability, to suspend, terminate, or ban your access to the App if you violate these Terms, cheat, tamper with API endpoints, abuse payment systems, or engage in unlawful conduct.
+### A. Sanal Para Birimi ("Biletler" / "Tickets")
+- Tüketilebilir sanal para birimi ("**Biletler**") satın alabilir veya ödüllü reklamlar izleyerek ya da oyun içi etkinlikleri tamamlayarak Bilet kazanabilirsiniz.
+- Biletler yalnızca Uygulama içinde gizem vakalarının kilidini açmak, suç arşivlerine erişmek veya ek vaka yanıtlama hakları satın almak için kullanılabilir.
+- **GERÇEK DÜNYA DEĞERİ YOKTUR:** Biletler sınırlı, geri alınabilir bir lisans hakkı teşkil eder ve kişisel mülkiyet oluşturmaz. Biletlerin gerçek dünyada parasal bir değeri yoktur, faiz getirmez ve Appibara LTD'den veya herhangi bir üçüncü taraftan itibari para birimi, nakit eşdeğerleri veya maddi mallar karşılığında bozdurulamaz.
+- **DEVREDİLEMEZ:** Biletler hesaplar arasında veya Uygulama dışında devredilemez, satılamaz, hediye edilemez veya takas edilemez. Bunu yapmaya yönelik her türlü girişim geçersizdir ve hesabın derhal askıya alınması için gerekçe oluşturur.
+- **İADE EDİLEMEZ VE GERİ YÜKLENEMEZ:** Tüketilebilir biletler kullanıldığında tükenir ve Uygulamayı bağlı bir hesap olmadan yeniden yüklemeniz, cihaz değiştirmeniz veya bunları oyun içinde tüketmeniz halinde geri yüklenemez. Zorunlu tüketici koruma yasalarının gerektirdiği durumlar hariç olmak üzere, tüm Bilet satın alımları kesindir.
 
 ---
 
-## 7. DISCLAIMER OF WARRANTIES
+## 4. OTOMATİK YENİLENEN ABONELİKLER VE SATIN ALMALARI GERİ YÜKLEME
 
-THE APP AND ALL CONTENT ARE PROVIDED ON AN **"AS IS"** AND **"AS AVAILABLE"** BASIS, WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, APPIBARA LTD EXPRESSLY DISCLAIMS ALL WARRANTIES, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+Sınırsız vaka kilidi açma, reklamsız deneyim ve yeni gizem dosyalarına öncelikli erişim gibi avantajlar sağlayan otomatik yenilenen abonelik katmanları ("**Dedektif Üyeliği**" / "**VIP Abonelik**") sunuyoruz.
 
-WE DO NOT WARRANT THAT:
-1. THE APP WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE;
-2. DEFECTS OR GAME DATA GLITCHES WILL BE CORRECTED IMMEDIATELY;
-3. THE APP IS FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
+### A. Faturalandırma ve Mağaza İşlemleri
+- Abonelikler, satın alma onayının ardından **Apple Kimliğiniz** (iOS'ta) veya **Google Play Hesabınız** (Android'de) üzerinden faturalandırılır.
+- Sunulması halinde, ücretsiz deneme süresinin kullanılmayan herhangi bir kısmı abonelik satın aldığınızda geçersiz olur.
 
----
+### B. Otomatik Yenileme Şartları
+- **Otomatik Yenileme:** Otomatik yenileme, mevcut abonelik döneminin bitiminden en az **24 saat önce** devre dışı bırakılmadığı sürece aboneliğiniz aynı katman ve süre (aylık, yıllık) için otomatik olarak yenilenir.
+- **Yenileme Ücreti:** Mevcut fatura döneminin bitiminden önceki **24 saat içinde**, satın alma sırasında gösterilen standart katman ücreti üzerinden yenileme ücreti hesabınızdan tahsil edilir.
 
-## 8. LIMITATION OF LIABILITY
+### C. Abonelikleri Yönetme ve İptal Etme
+Aboneliğinizi istediğiniz zaman cihaz ayarlarınızdan yönetebilir ve otomatik yenilemeyi kapatabilirsiniz:
+- **iOS:** Cihazınızda **Ayarlar > Apple Kimliği > Abonelikler > Case Closed > Aboneliği İptal Et** yolunu izleyin.
+- **Android:** **Google Play Store > Profil Simgesi > Ödemeler ve Abonelikler > Abonelikler > Case Closed > Aboneliği İptal Et** yolunu izleyin.
+- Uygulamayı kaldırmak aktif aboneliğinizi otomatik olarak iptal **etmez**. Aboneliği platform hesap ayarlarınız üzerinden iptal etmeniz gerekir.
 
-TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL APPIBARA LTD, ITS DIRECTORS, EMPLOYEES, AFFILIATES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES (INCLUDING LOSS OF PROFITS, DATA LOSS, DEVICE DAMAGE, OR BUSINESS INTERRUPTION) ARISING OUT OF OR IN CONNECTION WITH YOUR ACCESS TO OR USE OF THE APP.
+### D. Satın Almaları Geri Yükleme
+- Aktif aboneliklerinizi, Apple Kimliğiniz veya Google Play hesabınızla ilişkili herhangi bir yetkili cihazda Ödeme Ekranındaki (Paywall) **"Satın Almaları Geri Yükle"** (Restore Purchases) düğmesine dokunarak dilediğiniz zaman geri yükleyebilirsiniz.
+- Platform mağaza kuralları gereği, **tüketilebilir öğeler (Biletler)** tüketildikten sonra geri yüklenemez.
 
-OUR TOTAL AGGREGATE LIABILITY ARISING OUT OF OR RELATING TO THESE TERMS OR THE APP SHALL NOT EXCEED THE TOTAL AMOUNT PAID BY YOU TO APPIBARA LTD IN THE SIX (6) MONTHS PRECEDING THE CLAIM, OR FIFTY POUNDS STERLING (£50.00 GBP) / FIFTY UNITED STATES DOLLARS ($50.00 USD), WHICHEVER IS GREATER.
-
----
-
-## 9. INDEMNIFICATION
-
-You agree to defend, indemnify, and hold harmless Appibara LTD, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with your breach of these Terms, unauthorized use of the App, or violation of any third-party rights.
-
----
-
-## 10. GOVERNING LAW AND JURISDICTION
-
-These Terms, their subject matter, and their formation (and any non-contractual disputes or claims) shall be governed by and construed in accordance with the **laws of England and Wales**.
-
-You and Appibara LTD irrevocably agree that the **courts of England and Wales** shall have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with these Terms or the App.
+### E. İadeler
+Tüm iadeler ilgili uygulama mağazalarının politikalarına tabidir:
+- iOS satın alımları için iade talepleri doğrudan [Apple Destek](https://reportaproblem.apple.com) üzerinden gönderilmelidir.
+- Android satın alımları için iade talepleri [Google Play İade Politikalarına](https://support.google.com/googleplay/answer/2479637) tabidir.
 
 ---
 
-## 11. MODIFICATIONS TO TERMS
+## 5. KULLANICI HESAPLARI VE GÜVENLİK
 
-We reserve the right to revise or update these Terms at any time. When changes are made, we will update the "Last Updated" date at the top of these Terms. Your continued use of the App following the posting of revised Terms constitutes your acceptance of and agreement to the changes.
+- **Misafir / Anonim Hesaplar:** Kayıt olmadan oynayabilirsiniz. Ancak misafir verileri yerel cihazınıza bağlıdır. Bir hesap bağlamadan Uygulamayı kaldırırsanız veya cihaz depolamasını sıfırlarsanız, oyun ilerlemeniz ve kullanılmamış Biletleriniz kalıcı olarak kaybolabilir.
+- **Bağlı Hesaplar:** Apple ile Giriş Yap veya Google ile Giriş Yap hesabınızı bağlayarak ilerlemeniz, satın alınan vakalarınız ve Bilet bakiyeleriniz güvenli bulut sunucularımızla senkronize edilir.
+- **Hesap Sorumlulukları:** Giriş bilgilerinizi korumaktan ve hesabınız altında gerçekleşen tüm etkinliklerden siz sorumlusunuz. Herhangi bir yetkisiz erişim şüphesini derhal [contact@appibara.com](mailto:contact@appibara.com) adresinden bize bildirmeyi kabul edersiniz.
 
 ---
 
-## 12. CONTACT INFORMATION
+## 6. HESABIN SONLANDIRILMASI VE SİLİNMESİ
 
-For questions, support, or legal inquiries regarding these Terms, please contact:
+### A. İsteğe Bağlı Silme
+Hesabınızı ve kişisel verilerinizi dilediğiniz zaman doğrudan Uygulama içindeki **Profil > Hesabı Sil** yoluyla veya [contact@appibara.com](mailto:contact@appibara.com) ile iletişime geçerek silebilirsiniz. Silme işlemi sonrasında ilerlemeniz ve kullanılmamış Biletleriniz iade hakkı olmaksızın kalıcı olarak imha edilir.
+
+### B. Şirket Tarafından Sonlandırma
+Bu Şartları ihlal etmeniz, hile yapmanız, API uç noktalarına müdahale etmeniz, ödeme sistemlerini kötüye kullanmanız veya yasa dışı davranışlarda bulunmanız halinde, önceden bildirimde bulunmaksızın ve herhangi bir yükümlülük altına girmeksizin Uygulamaya erişiminizi askıya alma, sonlandırma veya yasaklama hakkımızı saklı tutarız.
+
+---
+
+## 7. GARANTİLERİN REDDİ
+
+UYGULAMA VE TÜM İÇERİK, AÇIK VEYA ZIMNİ HİÇBİR GARANTİ OLMAKSIZIN **"OLDUĞU GİBİ"** VE **"MEVCUT OLDUĞU ŞEKİLDE"** SUNULMAKTADIR. APPIBARA LTD, YÜRÜRLÜKTEKİ YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, TİCARİ ELVERİŞLİLİK, BELİRLİ BİR AMACA UYGUNLUK, MÜLKİYET VE İHLAL ETMEME ZIMNİ GARANTİLERİ DAHİL OLMAK ÜZERE TÜM GARANTİLERİ AÇIKÇA REDDEDER.
+
+AŞAĞIDAKİLERİ GARANTİ ETMİYORUZ:
+1. UYGULAMANIN KESİNTİSİZ, ZAMANINDA, GÜVENLİ VEYA HATASIZ OLACAĞINI;
+2. KUSURLARIN VEYA OYUN VERİSİ AKSAKLIKLARININ DERHAL DÜZELTİLECEĞİNİ;
+3. UYGULAMANIN VİRÜSLERDEN VEYA DİĞER ZARARLI BİLEŞENLERDEN ARINMIŞ OLDUĞUNU.
+
+---
+
+## 8. SORUMLULUĞUN SINIRLANDIRILMASI
+
+YÜRÜRLÜKTEKİ YASALARIN İZİN VERDİĞİ AZAMİ ÖLÇÜDE, APPIBARA LTD, YÖNETİCİLERİ, ÇALIŞANLARI, İŞTİRAKLERİ VEYA TEMSİLCİLERİ HİÇBİR DURUMDA UYGULAMAYA ERİŞİMİNİZDEN VEYA UYGULAMAYI KULLANIMINIZDAN KAYNAKLANAN YA DA BUNLARLA BAĞLANTILI HERHANGİ BİR DOLAYLI, ARIZİ, ÖZEL, SONUÇSAL VEYA CEZAİ ZARARDAN (KÂR KAYBI, VERİ KAYBI, CİHAZ HASARI VEYA İŞ KESİNTİSİ DAHİL) SORUMLU OLMAYACAKTIR.
+
+BU ŞARTLARDAN VEYA UYGULAMADAN KAYNAKLANAN YA DA BUNLARLA İLGİLİ TOPLAM KÜMÜLATİF SORUMLULUĞUMUZ, TALEPTEN ÖNCEKİ ALTI (6) AY İÇİNDE APPIBARA LTD'YE ÖDEDİĞİNİZ TOPLAM TUTARI VEYA ELLİ İNGİLİZ STERLİNİNİ (£50.00 GBP) / ELLİ ABD DOLARINI ($50.00 USD) — HANGİSİ DAHA BÜYÜKSE — AŞMAYACAKTIR.
+
+---
+
+## 9. TAZMİNAT
+
+Bu Şartları ihlal etmenizden, Uygulamayı yetkisiz kullanmanızdan veya herhangi bir üçüncü tarafın haklarını ihlal etmenizden kaynaklanan ya da bunlarla herhangi bir şekilde bağlantılı olan her türlü talep, yükümlülük, zarar, kayıp ve masrafa (makul avukatlık ücretleri dahil) karşı Appibara LTD'yi, yetkililerini, yöneticilerini, çalışanlarını ve temsilcilerini savunmayı, tazmin etmeyi ve zararsız tutmayı kabul edersiniz.
+
+---
+
+## 10. UYGULANACAK HUKUK VE YETKİLİ MAHKEME
+
+Bu Şartlar, konusu ve kuruluşu (ve sözleşme dışı her türlü uyuşmazlık veya talep) **İngiltere ve Galler yasalarına** tabi olacak ve bu yasalara göre yorumlanacaktır.
+
+Siz ve Appibara LTD, bu Şartlardan veya Uygulamadan kaynaklanan ya da bunlarla bağlantılı her türlü uyuşmazlık veya talebin çözümünde **İngiltere ve Galler mahkemelerinin** münhasır yetkiye sahip olacağını gayrikabili rücu olarak kabul edersiniz.
+
+---
+
+## 11. ŞARTLARDA DEĞİŞİKLİK
+
+Bu Şartları dilediğimiz zaman gözden geçirme veya güncelleme hakkımızı saklı tutarız. Değişiklik yapıldığında, bu Şartların üst kısmındaki "Son Güncelleme" tarihini güncelleyeceğiz. Gözden geçirilmiş Şartların yayınlanmasının ardından Uygulamayı kullanmaya devam etmeniz, değişiklikleri kabul ettiğiniz ve onayladığınız anlamına gelir.
+
+---
+
+## 12. İLETİŞİM BİLGİLERİ
+
+Bu Şartlarla ilgili sorularınız, destek talepleriniz veya yasal başvurularınız için lütfen bizimle iletişime geçin:
 
 **Appibara LTD**  
-Incorporated in the United Kingdom (England and Wales)  
-Email: [contact@appibara.com](mailto:contact@appibara.com)  
-Website: [https://appibara.com](https://appibara.com)  
-Product: Case Closed  
+Birleşik Krallık'ta (İngiltere ve Galler) kurulmuştur  
+E-posta: [contact@appibara.com](mailto:contact@appibara.com)  
+Web Sitesi: [https://appibara.com](https://appibara.com)  
+Ürün: Case Closed  
