@@ -53,31 +53,40 @@ export default function Home() {
           name: "Worldwide",
         },
       })),
-      ...PRODUCTS_CATALOG.map((product) => ({
-        "@type": "SoftwareApplication",
-        "@id": `${SITE_INFO.url}/#product-${product.id}`,
-        name: product.name,
-        description: `${product.tagline} ${product.description}`,
-        applicationCategory: product.applicationCategory,
-        operatingSystem: product.operatingSystem,
-        url: product.url,
-        image: product.screenshot,
-        screenshot: product.screenshot,
-        featureList: [...product.features],
-        author: {
-          "@id": ORGANIZATION_ID,
-        },
-        publisher: {
-          "@id": ORGANIZATION_ID,
-        },
-        ...(product.appStoreUrl || product.playStoreUrl
-          ? {
-              sameAs: [product.appStoreUrl, product.playStoreUrl].filter(
-                (link): link is string => Boolean(link),
-              ),
-            }
-          : {}),
-      })),
+      ...PRODUCTS_CATALOG.map((product) => {
+        const sameAsLinks = [
+          product.appStoreUrl,
+          product.playStoreUrl,
+          product.githubUrl,
+        ].filter((link): link is string => Boolean(link));
+
+        return {
+          "@type": product.isOpenSource
+            ? ["SoftwareApplication", "SoftwareSourceCode"]
+            : "SoftwareApplication",
+          "@id": `${SITE_INFO.url}/#product-${product.id}`,
+          name: product.name,
+          description: `${product.tagline} ${product.description}`,
+          applicationCategory: product.applicationCategory,
+          operatingSystem: product.operatingSystem,
+          url: product.url,
+          image: product.screenshot,
+          screenshot: product.screenshot,
+          featureList: [...product.features],
+          author: {
+            "@id": ORGANIZATION_ID,
+          },
+          publisher: {
+            "@id": ORGANIZATION_ID,
+          },
+          ...(product.githubUrl ? { codeRepository: product.githubUrl } : {}),
+          ...(product.isOpenSource ? { isAccessibleForFree: true } : {}),
+          ...(product.license === "MIT"
+            ? { license: "https://opensource.org/licenses/MIT" }
+            : {}),
+          ...(sameAsLinks.length > 0 ? { sameAs: sameAsLinks } : {}),
+        };
+      }),
     ],
   };
 

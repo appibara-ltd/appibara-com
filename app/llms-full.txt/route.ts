@@ -77,6 +77,14 @@ export async function GET() {
       if (product.playStoreUrl) {
         lines.push(`- **Google Play:** ${product.playStoreUrl}`);
       }
+      if (product.githubUrl) {
+        lines.push(`- **GitHub:** ${product.githubUrl}`);
+      }
+      if (product.isOpenSource) {
+        lines.push(
+          `- **License:** ${product.license ? `Open Source (${product.license})` : "Open Source"}`,
+        );
+      }
       if (product.description !== product.tagline) {
         lines.push("", product.description);
       }

@@ -185,6 +185,52 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
     websiteUrl: "https://nema.appibara.com",
     buttonText: "Explore Nema Engine",
   },
+  {
+    id: "product-appitool",
+    number: "05",
+    category: "Open-Source Mobile Release & Store CLI",
+    title: "appitool",
+    tagline: "Unified Mobile Release & Store CLI built in Swift.",
+    description:
+      "An open-source Swift CLI utility and release orchestration engine for Apple App Store Connect, Google Play Console, Firebase App Distribution, and Git-backed code signing.",
+    extendedDescription:
+      "appitool is an open-source release orchestration CLI engineered in Swift 6.4 for iOS and Android teams. Run deterministic 7-stage release pipelines, manage Fastlane-compatible encrypted code signing via Git (Match V1/V2), automate App Store Connect, Google Play Console, and Firebase App Distribution uploads, and dispatch E2E-encrypted KokoNo or Slack release alerts — all from one fast native binary.",
+    features: [
+      {
+        icon: Workflow,
+        title: "7-Stage Flow Pipeline",
+        description:
+          "Deterministic release lifecycle (setup → prebuild → build → postbuild → prerelease → release → postrelease) with dry-run validation.",
+      },
+      {
+        icon: ShieldCheck,
+        title: "Fastlane-Compatible Match",
+        description:
+          "Git-backed AES-256-GCM (V2) & AES-256-CBC (V1) encrypted sync for Apple certificates, profiles, and Android keystores.",
+      },
+      {
+        icon: Smartphone,
+        title: "App Store, Play & Firebase",
+        description:
+          "OpenAPI-powered App Store Connect, Google Play tracks, Gradle builds, Firebase Distribution, Auth, and Firestore automation.",
+      },
+      {
+        icon: Terminal,
+        title: "Native Swift Binary & Alerts",
+        description:
+          "Single macOS & Linux CLI with SHA256 self-update verification, CI safety guards, and E2E KokoNo or Slack alerts.",
+      },
+    ],
+    tags: ["Open Source", "MIT License", "Swift CLI", "iOS & Android CI/CD", "Fastlane Match"],
+    logoUrl: "/products/appitool_logo.png",
+    screenshotUrl: "/products/appitool_preview.png",
+    previewUrl: "https://appitool.appibara.com",
+    websiteUrl: "https://appitool.appibara.com/",
+    githubUrl: "https://github.com/appibara-ltd/appitool",
+    isOpenSource: true,
+    license: "MIT",
+    buttonText: "Explore Docs",
+  },
 ];
 
 export const ProductShowcase: React.FC = () => {
@@ -241,6 +287,7 @@ export const ProductShowcase: React.FC = () => {
             <ProductSlide
               key={product.id}
               product={product}
+              totalCount={PRODUCTS_DATA.length}
               isLast={isLast}
               nextProductTitle={nextProduct?.title}
               onScrollToNext={() => scrollToProduct(index + 1)}
