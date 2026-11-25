@@ -110,6 +110,9 @@ export interface ProductEntry {
   description: string;
   features: readonly string[];
   url: string;
+  githubUrl?: string;
+  isOpenSource?: boolean;
+  license?: string;
   appStoreUrl?: string;
   playStoreUrl?: string;
   logo: string;
@@ -201,6 +204,29 @@ export const PRODUCTS_CATALOG: readonly ProductEntry[] = [
     url: "https://nema.appibara.com",
     logo: `${SITE_INFO.url}/nema/logo.jpg`,
     screenshot: `${SITE_INFO.url}/products/nema_preview.png`,
+  },
+  {
+    id: "appitool",
+    number: "05",
+    name: "appitool",
+    category: "Open-Source Mobile Release & Store CLI",
+    applicationCategory: "DeveloperApplication",
+    operatingSystem: "macOS, Linux, CLI",
+    tagline: "Unified Mobile Release & Store CLI built in Swift.",
+    description:
+      "An open-source Swift CLI utility and release orchestration engine for Apple App Store Connect, Google Play Console, Firebase App Distribution, and Git-backed code signing.",
+    features: [
+      "7-Stage Flow Pipeline",
+      "Fastlane-Compatible Match (V1/V2)",
+      "App Store, Google Play & Firebase Automation",
+      "Native Swift Binary & E2E Webhook Alerts",
+    ],
+    url: "https://appitool.appibara.com/",
+    githubUrl: "https://github.com/appibara-ltd/appitool",
+    isOpenSource: true,
+    license: "MIT",
+    logo: `${SITE_INFO.url}/products/appitool_logo.png`,
+    screenshot: `${SITE_INFO.url}/products/appitool_preview.png`,
   },
 ] as const;
 

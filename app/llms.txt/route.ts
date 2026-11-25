@@ -50,14 +50,21 @@ export function GET() {
       const storeLinks = [
         product.appStoreUrl ? `[App Store](${product.appStoreUrl})` : null,
         product.playStoreUrl ? `[Google Play](${product.playStoreUrl})` : null,
+        product.githubUrl ? `[GitHub](${product.githubUrl})` : null,
       ]
         .filter(Boolean)
         .join(", ");
+      const openSourceLabel = product.isOpenSource
+        ? product.license
+          ? `Open Source (${product.license})`
+          : "Open Source"
+        : null;
+      const metaParts = [openSourceLabel, storeLinks].filter(Boolean).join(", ");
       const summary =
         product.tagline === product.description
           ? product.tagline
           : `${product.tagline} ${product.description}`;
-      const suffix = storeLinks ? ` (${storeLinks})` : "";
+      const suffix = metaParts ? ` (${metaParts})` : "";
       return `- [${product.name}](${product.url}): ${product.category} — ${summary}${suffix}`;
     }),
     "",

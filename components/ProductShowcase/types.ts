@@ -20,6 +20,9 @@ export interface ShowcaseProduct {
   screenshotUrl: string;
   previewUrl: string;
   websiteUrl?: string;
+  githubUrl?: string;
+  isOpenSource?: boolean;
+  license?: string;
   appStoreUrl?: string;
   playStoreUrl?: string;
   buttonText?: string;

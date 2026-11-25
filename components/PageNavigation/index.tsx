@@ -18,8 +18,9 @@ const SECTIONS: NavSection[] = [
   { id: "product-kokono", number: "06", label: "KokoNo", isProduct: true },
   { id: "product-learnsql", number: "07", label: "Learn SQL", isProduct: true },
   { id: "product-nema", number: "08", label: "Nema", isProduct: true },
-  { id: "blog", number: "09", label: "Blog" },
-  { id: "contact", number: "10", label: "Contact" },
+  { id: "product-appitool", number: "09", label: "appitool", isProduct: true },
+  { id: "blog", number: "10", label: "Blog" },
+  { id: "contact", number: "11", label: "Contact" },
 ];
 
 export const PageNavigation: React.FC = () => {
