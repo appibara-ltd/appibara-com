@@ -9,7 +9,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { Check, Copy, Download, Search, X } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 import { AudiowaveText } from "@/components/AudiowaveText";
 import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 import { cn } from "@/lib/utils";
@@ -97,7 +97,8 @@ const IconCardItem = memo(function IconCardItem({
   const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
     const target = event.target as HTMLElement | null;
     const weightEl = target?.closest<HTMLElement>("[data-weight]");
-    const weight = (weightEl?.dataset.weight as IconWeight | undefined) ?? "solid";
+    const weight =
+      (weightEl?.dataset.weight as IconWeight | undefined) ?? "solid";
     onSelect(item, weight);
   };
 
@@ -161,7 +162,9 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
   const [searchQuery, setSearchQuery] = useState<string>("");
   const deferredQuery = useDeferredValue(searchQuery);
 
-  const [primaryColor, setPrimaryColor] = useState<string>(DEFAULT_PRIMARY_COLOR);
+  const [primaryColor, setPrimaryColor] = useState<string>(
+    DEFAULT_PRIMARY_COLOR,
+  );
   const [secondaryColor, setSecondaryColor] = useState<string>(
     DEFAULT_SECONDARY_COLOR,
   );
@@ -228,7 +231,10 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
     }
 
     if (!cachedInitial) {
-      fetchCatalog(`/icons-data/${activeFamily}-initial.json`, controller.signal)
+      fetchCatalog(
+        `/icons-data/${activeFamily}-initial.json`,
+        controller.signal,
+      )
         .then((payload) => {
           if (controller.signal.aborted || fullFinished) return;
           const expanded = expandIconCatalog(payload);
@@ -384,7 +390,9 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
 
   const handleDownloadSvg = () => {
     if (!activeIconSet || !modalSvgCode) return;
-    const blob = new Blob([modalSvgCode], { type: "image/svg+xml;charset=utf-8" });
+    const blob = new Blob([modalSvgCode], {
+      type: "image/svg+xml;charset=utf-8",
+    });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
@@ -415,13 +423,17 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
           <AudiowaveText>Icons</AudiowaveText>
         </h1>
         <p className={cn(styles.heroDesc, "font-nunito")}>
-          A calm-tech collection of unique dual-tone SVG vector icons across
-          Duo and S Duo styles, tailored for precision UI design and seamless
-          React / React Native integration.
+          A calm-tech collection of unique dual-tone SVG vector icons across Duo
+          and S Duo styles, tailored for precision UI design and seamless React
+          / React Native integration.
         </p>
 
         <div className={styles.styleFilterContainer}>
-          <div className={styles.familySwitcher} role="tablist" aria-label="Icon family">
+          <div
+            className={styles.familySwitcher}
+            role="tablist"
+            aria-label="Icon family"
+          >
             {ICON_FAMILIES.map((family) => {
               const isActive = activeFamily === family.id;
               const count = initialManifest.families[family.id]?.count;
@@ -452,10 +464,17 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
       </section>
 
       {/* Controls Panel */}
-      <section className={styles.controlsWrapper} aria-label="Icon filters and customization">
+      <section
+        className={styles.controlsWrapper}
+        aria-label="Icon filters and customization"
+      >
         <div className={styles.controlsCard}>
           <div className={styles.searchBox}>
-            <Search className={styles.searchIcon} aria-hidden="true" />
+            <DuoIcon
+              icon={DUO_ICONS.magnifyingGlass}
+              aria-hidden="true"
+              className={styles.searchIcon}
+            />
             <input
               type="text"
               value={searchQuery}
@@ -471,7 +490,7 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
                 className={styles.clearBtn}
                 aria-label="Clear search"
               >
-                <X className="w-4 h-4" />
+                <DuoIcon icon={DUO_ICONS.xmark} className="w-4 h-4" />
               </button>
             ) : null}
           </div>
@@ -604,7 +623,7 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
               className={styles.modalClose}
               aria-label="Close icon inspector"
             >
-              <X className="w-4 h-4" />
+              <DuoIcon icon={DUO_ICONS.xmark} className="w-4 h-4" />
             </button>
 
             <div className={styles.modalPreview}>
@@ -671,9 +690,9 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
                 className={cn(styles.btnPrimary, "font-nunito")}
               >
                 {copied ? (
-                  <Check className="w-4 h-4" />
+                  <DuoIcon icon={DUO_ICONS.fileCheck} className="w-4 h-4" />
                 ) : (
-                  <Copy className="w-4 h-4" />
+                  <DuoIcon icon={DUO_ICONS.copy} className="w-4 h-4" />
                 )}
                 <span>{copied ? "Copied to Clipboard!" : "Copy SVG Code"}</span>
               </button>
@@ -683,7 +702,7 @@ export function IconsExplorer({ initialManifest }: IconsExplorerProps) {
                 onClick={handleDownloadSvg}
                 className={cn(styles.btnSecondary, "font-nunito")}
               >
-                <Download className="w-4 h-4" />
+                <DuoIcon icon={DUO_ICONS.download} className="w-4 h-4" />
                 <span>Download SVG</span>
               </button>
             </div>
