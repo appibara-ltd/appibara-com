@@ -3,6 +3,7 @@
 import {
   NavigationMenu,
   NavigationMenuLink,
+  NavigationMenuTrigger,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
 import styles from "./styles.module.css";

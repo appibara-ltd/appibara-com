@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Home, ChevronRight } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/Footer";
 import { MotionSection } from "@/components/MotionSection";
@@ -7,6 +6,7 @@ import { AmbientGlowCanvas } from "@/components/AmbientGlowCanvas";
 import { AudiowaveText } from "@/components/AudiowaveText";
 import { PrimaryButton } from "@/components/PrimaryButton";
 import { SecondaryButton } from "@/components/SecondaryButton";
+import { DuoIcon, DUO_HEADER_ICONS } from "@/components/DuoIcon";
 
 export const metadata: Metadata = {
   title: "404 — Page Not Found | Appibara",
@@ -36,16 +36,27 @@ export default function NotFound() {
             </h1>
 
             <p className="text-[18px] md:text-[20px] leading-relaxed m-0 p-0 text-center font-nunito text-[var(--text-secondary)] max-w-[540px]">
-              The page you&apos;re looking for may have been moved, renamed, or no longer exists. Let&apos;s get you back to calmer waters.
+              The page you&apos;re looking for may have been moved, renamed, or
+              no longer exists. Let&apos;s get you back to calmer waters.
             </p>
 
             <div className="flex flex-col min-[426px]:flex-row gap-4 items-center justify-center mt-2">
-              <PrimaryButton href="/" icon={<Home className="w-4 h-4" />}>
+              <PrimaryButton
+                href="/"
+                icon={
+                  <DuoIcon className="w-4 h-4" icon={DUO_HEADER_ICONS.house} />
+                }
+              >
                 Back to Home
               </PrimaryButton>
               <SecondaryButton
                 href="/blog"
-                icon={<ChevronRight className="w-4 h-4" />}
+                icon={
+                  <DuoIcon
+                    icon={DUO_HEADER_ICONS.bookOpen}
+                    className="w-4 h-4"
+                  />
+                }
               >
                 Explore Blog
               </SecondaryButton>
