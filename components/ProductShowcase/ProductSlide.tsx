@@ -10,7 +10,7 @@ import { Card } from "@/components/Card";
 import { ProductPreviewMockup } from "./ProductPreviewMockup";
 import { ShowcaseProduct } from "./types";
 import { cn } from "@/lib/utils";
-import { ExternalLink, ChevronDown, Code2 } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 
 interface ProductSlideProps {
   product: ShowcaseProduct;
@@ -37,7 +37,7 @@ const renderWithLinks = (text: string, linkUrl?: string) => {
           className="text-[var(--brand-orange)] font-semibold underline decoration-[var(--brand-orange)]/40 hover:decoration-[var(--brand-orange)] hover:text-[var(--brand-orange-dark)] transition-colors inline-flex items-center gap-1"
         >
           <span>{part}</span>
-          <ExternalLink className="w-3 h-3 inline-block shrink-0" />
+          <DuoIcon icon={DUO_ICONS.arrowUpRightFromSquare} className="w-3 h-3 inline-block shrink-0" />
         </a>
       );
     }
@@ -112,7 +112,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
               </span>
               {product.isOpenSource && (
                 <span className="inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/25">
-                  <Code2 className="w-3.5 h-3.5" />
+                  <DuoIcon icon={DUO_ICONS.code} className="w-3.5 h-3.5" />
                   <span>Open Source{product.license ? ` · ${product.license}` : ""}</span>
                 </span>
               )}
@@ -156,15 +156,13 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
 
             {/* Expanded 4 Features Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-1">
-              {product.features.map((feature, idx) => {
-                const IconComponent = feature.icon;
-                return (
+              {product.features.map((feature, idx) => (
                   <div
                     key={idx}
                     className="p-3.5 rounded-xl bg-[var(--bg-secondary)]/30 backdrop-blur-sm border border-[var(--border-light)] hover:border-[var(--brand-orange)]/30 shadow-[inset_0_1px_0_0_var(--card-highlight)] transition-all flex items-start gap-3"
                   >
                     <div className="p-2 rounded-lg bg-[var(--bg-primary)] border border-[var(--border-subtle)] text-[var(--brand-orange)] shrink-0">
-                      <IconComponent className="w-4 h-4" />
+                      <DuoIcon icon={feature.icon} className="w-4 h-4" />
                     </div>
                     <div className="flex flex-col">
                       <span className="text-xs md:text-sm font-bold font-nunito text-[var(--text-primary)]">
@@ -178,8 +176,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                       </span>
                     </div>
                   </div>
-                );
-              })}
+                ))}
             </div>
 
             {/* Tags / Pills */}
@@ -200,7 +197,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
                   href={product.websiteUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  icon={<ExternalLink className="w-4 h-4" />}
+                  icon={<DuoIcon icon={DUO_ICONS.arrowUpRightFromSquare} className="w-4 h-4" />}
                 >
                   {product.buttonText || `Launch ${product.title}`}
                 </PrimaryButton>
@@ -297,7 +294,7 @@ export const ProductSlide: React.FC<ProductSlideProps> = ({
               className="group flex items-center gap-1.5 text-xs text-[var(--text-secondary)] hover:text-[var(--brand-orange)] font-medium transition-colors cursor-pointer py-1 px-2 rounded-md hover:bg-[var(--bg-secondary)]"
             >
               <span>Next: {nextProductTitle}</span>
-              <ChevronDown className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
+              <DuoIcon icon={DUO_ICONS.chevronDown} className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
             </button>
           )}
 

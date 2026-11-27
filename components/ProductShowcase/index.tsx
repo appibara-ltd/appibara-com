@@ -2,28 +2,9 @@
 
 import React, { useRef } from "react";
 import { AudiowaveText } from "@/components/AudiowaveText";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 import { ProductSlide } from "./ProductSlide";
 import { ShowcaseProduct } from "./types";
-import {
-  Layers,
-  Smartphone,
-  Zap,
-  Workflow,
-  Cpu,
-  BarChart3,
-  Code2,
-  Terminal,
-  Radio,
-  Clock,
-  Bell,
-  Sliders,
-  Sparkles,
-  Gauge,
-  ChevronDown,
-  GitBranch,
-  ShieldCheck,
-  BookOpen,
-} from "lucide-react";
 
 export const PRODUCTS_DATA: ShowcaseProduct[] = [
   {
@@ -38,22 +19,22 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
       "NativeFlow bridges the gap between visual design and production-grade mobile engineering. Build cross-platform apps visually in your browser with the Meta Yoga layout engine, preview live on your physical iPhone via NativeFlow: Client App, and publish directly to the App Store & Google Play — while your entire source code automatically syncs to your personal GitHub repository.",
     features: [
       {
-        icon: GitBranch,
+        icon: DUO_ICONS.codeBranch,
         title: "Own Your Code (GitHub Sync)",
         description: "All source code automatically syncs to your personal GitHub repository — no vendor lock-in.",
       },
       {
-        icon: Smartphone,
+        icon: DUO_ICONS.mobile,
         title: "Real-Time Device Preview",
         description: "Preview projects live on your phone as you build; scan a QR code with NativeFlow: Client App.",
       },
       {
-        icon: Zap,
+        icon: DUO_ICONS.bolt,
         title: "One-Click Store Publish",
         description: "Connect your developer accounts and deploy to the App Store and Google Play via automated CI/CD.",
       },
       {
-        icon: Layers,
+        icon: DUO_ICONS.layerGroup,
         title: "Visual Layout & Logic Engine",
         description: "Powered by Meta Yoga engine, visually assemble responsive interfaces compiled to clean native code.",
       },
@@ -78,22 +59,22 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
       "KokoNo is a lightweight notification gateway that delivers instant mobile alerts without heavy third-party SDKs, complex APNs certificates, or token exchanges. Trigger push alerts directly via standard HTTP POST webhooks, send command-line alerts with the official CLI, or protect sensitive server logs using zero-knowledge E2E encryption.",
     features: [
       {
-        icon: Terminal,
+        icon: DUO_ICONS.terminal,
         title: "Simple Webhook API",
         description: "No complex authentication frameworks or token exchanges. Trigger connections with a clean POST request.",
       },
       {
-        icon: ShieldCheck,
+        icon: DUO_ICONS.shieldCheck,
         title: "E2E Zero-Knowledge Encryption",
         description: "Zero-knowledge security (ECIES: X25519 & AES-256-GCM). Payloads are decrypted strictly on-device.",
       },
       {
-        icon: Radio,
+        icon: DUO_ICONS.towerBroadcast,
         title: "Official CLI Tool (npx)",
         description: "Fire instantaneous alerts from terminal, bash scripts, or CI/CD pipelines via npx @cmd-bin/kokono.",
       },
       {
-        icon: Bell,
+        icon: DUO_ICONS.bell,
         title: "Multi-Device & Public Channels",
         description: "Link multiple devices to a single webhook, or create public channels for team coordination.",
       },
@@ -119,22 +100,22 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
       "Learn SQL is a modern, distraction-free platform engineered to turn you into a data expert. Powered by PGlite (PostgreSQL compiled to WebAssembly), it runs a full, real PostgreSQL engine entirely client-side. Practice real-world SaaS metrics — analyzing customer cohorts, MRR movements, churn rates, and payments on a realistic mock schema through a structured 60-step curriculum.",
     features: [
       {
-        icon: Cpu,
+        icon: DUO_ICONS.microchip,
         title: "Zero Setup (Powered by PGlite)",
         description: "Real embedded PostgreSQL running in your browser via WebAssembly — no servers or installation.",
       },
       {
-        icon: BarChart3,
+        icon: DUO_ICONS.chartColumn,
         title: "Real-World SaaS Schema",
         description: "Query actual subscription tiers, MRR analytics, invoices, and customer cohorts for Acme Cloud Analytics.",
       },
       {
-        icon: BookOpen,
+        icon: DUO_ICONS.bookOpen,
         title: "60-Step Structured Curriculum",
         description: "Structured learning path from Beginner (filters, aggregates) to Advanced (Joins, Window Functions, CTEs).",
       },
       {
-        icon: Code2,
+        icon: DUO_ICONS.code,
         title: "In-Browser SQL Playground",
         description: "Real-time query execution, interactive schema explorer, instant feedback, and progress tracking.",
       },
@@ -158,22 +139,22 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
       "Nema unleashes the raw graphics power of Google Skia (CanvasKit) compiled to WebAssembly for modern web applications. Connect reactive component state directly to GLSL fragment shaders and fluid physics simulations with sub-millisecond frame times, hardware-accelerated locked 60 FPS rendering, and absolutely zero DOM layout overhead.",
     features: [
       {
-        icon: Gauge,
+        icon: DUO_ICONS.gaugeHigh,
         title: "Locked 60 FPS GPU Acceleration",
         description: "Sub-millisecond GPU draw calls powered by Google Skia (CanvasKit) WebAssembly engine.",
       },
       {
-        icon: Sliders,
+        icon: DUO_ICONS.sliders,
         title: "Reactive State to GLSL Binding",
         description: "Real-time uniform syncing between UI state and GLSL fragment shaders with zero latency.",
       },
       {
-        icon: Sparkles,
+        icon: DUO_ICONS.sparkles,
         title: "Fluid & Kinetic Simulations",
         description: "Real-time interactive fluid dynamics, generative particle fields, and responsive visual experiments.",
       },
       {
-        icon: Cpu,
+        icon: DUO_ICONS.microchip,
         title: "Zero DOM Layout Tax",
         description: "Direct GPU canvas rendering with zero browser CSS reflow or layout recalculation overhead.",
       },
@@ -197,25 +178,25 @@ export const PRODUCTS_DATA: ShowcaseProduct[] = [
       "appitool is an open-source release orchestration CLI engineered in Swift 6.4 for iOS and Android teams. Run deterministic 7-stage release pipelines, manage Fastlane-compatible encrypted code signing via Git (Match V1/V2), automate App Store Connect, Google Play Console, and Firebase App Distribution uploads, and dispatch E2E-encrypted KokoNo or Slack release alerts — all from one fast native binary.",
     features: [
       {
-        icon: Workflow,
+        icon: DUO_ICONS.diagramProject,
         title: "7-Stage Flow Pipeline",
         description:
           "Deterministic release lifecycle (setup → prebuild → build → postbuild → prerelease → release → postrelease) with dry-run validation.",
       },
       {
-        icon: ShieldCheck,
+        icon: DUO_ICONS.shieldCheck,
         title: "Fastlane-Compatible Match",
         description:
           "Git-backed AES-256-GCM (V2) & AES-256-CBC (V1) encrypted sync for Apple certificates, profiles, and Android keystores.",
       },
       {
-        icon: Smartphone,
+        icon: DUO_ICONS.mobile,
         title: "App Store, Play & Firebase",
         description:
           "OpenAPI-powered App Store Connect, Google Play tracks, Gradle builds, Firebase Distribution, Auth, and Firestore automation.",
       },
       {
-        icon: Terminal,
+        icon: DUO_ICONS.terminal,
         title: "Native Swift Binary & Alerts",
         description:
           "Single macOS & Linux CLI with SHA256 self-update verification, CI safety guards, and E2E KokoNo or Slack alerts.",
@@ -256,7 +237,7 @@ export const ProductShowcase: React.FC = () => {
         className="w-full min-h-[calc(100vh-120px)] flex flex-col justify-center items-center text-center px-6 py-12 gap-6 max-w-[1100px] mx-auto scroll-mt-[105px]"
       >
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[var(--accent-primary)]/10 border border-[var(--accent-primary)]/20 text-xs font-mono font-bold text-[var(--accent-primary)] shadow-sm">
-          <Sparkles className="w-3.5 h-3.5" />
+          <DuoIcon icon={DUO_ICONS.sparkles} className="w-3.5 h-3.5" />
           <span>APPIBARA ECOSYSTEM</span>
         </div>
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-audiowide leading-tight max-w-[950px]">
@@ -273,7 +254,7 @@ export const ProductShowcase: React.FC = () => {
           className="mt-4 inline-flex items-center gap-2.5 px-5 py-2.5 rounded-full bg-[var(--bg-secondary)] border border-[var(--border-subtle)] text-sm font-semibold text-[var(--brand-orange)] hover:bg-[var(--brand-orange)]/10 transition-all cursor-pointer group shadow-sm"
         >
           <span>Scroll to explore products</span>
-          <ChevronDown className="w-4 h-4 animate-bounce" />
+          <DuoIcon icon={DUO_ICONS.chevronDown} className="w-4 h-4 animate-bounce" />
         </button>
       </section>
 

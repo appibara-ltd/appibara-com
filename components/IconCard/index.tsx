@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { cn } from "@/lib/utils";
-import { LucideIcon } from "lucide-react";
+import { DuoIcon, type DuoIconDefinition } from "@/components/DuoIcon";
 
 interface IconCardProps extends React.HTMLAttributes<HTMLDivElement> {
-    icon: LucideIcon;
+    icon: DuoIconDefinition;
 }
 
-export const IconCard = ({ icon: Icon, className, ...props }: IconCardProps) => {
+export const IconCard = ({ icon, className, ...props }: IconCardProps) => {
     return (
         <div className={cn(styles.card, className)} {...props}>
-            <Icon className={styles.icon} />
+            <DuoIcon icon={icon} className={styles.icon} />
         </div>
     );
 };

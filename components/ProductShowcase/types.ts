@@ -1,7 +1,7 @@
-import { LucideIcon } from "lucide-react";
+import type { DuoIconDefinition } from "@/components/DuoIcon";
 
 export interface ProductFeature {
-  icon: LucideIcon;
+  icon: DuoIconDefinition;
   title: string;
   description: string;
 }

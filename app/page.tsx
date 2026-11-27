@@ -6,7 +6,7 @@ import { MotionSection } from "@/components/MotionSection";
 import { Card } from "@/components/Card";
 import { IconCard } from "@/components/IconCard";
 import { Footer } from "@/components/Footer";
-import { ChevronRight, Smartphone, Lightbulb, Award, Handshake, Server, CircleCheck, Mail, Send, ArrowRight } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 import { Header } from "@/components/header";
 import { ProductShowcase } from "@/components/ProductShowcase";
 import { PageNavigation } from "@/components/PageNavigation";
@@ -111,7 +111,7 @@ export default function Home() {
           </h1>
           <p className="text-[20px] leading-none m-0 p-0 text-center font-nunito">Welcome to Appibara, where innovative solutions meet simplicity and clarity.</p>
           <div className="flex flex-col min-[426px]:flex-row gap-4 items-center justify-center">
-            <PrimaryButton href="/#who-we-are" icon={<ChevronRight className="w-4 h-4" />}>
+            <PrimaryButton href="/#who-we-are" icon={<DuoIcon icon={DUO_ICONS.chevronRight} className="w-4 h-4" />}>
               Learn More
             </PrimaryButton>
             <SecondaryButton href="/#our-products">
@@ -135,17 +135,17 @@ export default function Home() {
           </p>
           <div className="flex gap-[2rem] flex-col md:flex-row w-full">
             <div className="flex items-center gap-[1rem] flex-col w-full">
-              <IconCard icon={Lightbulb} />
+              <IconCard icon={DUO_ICONS.lightbulb} />
               <AudiowaveText useGradient={false}>Innovation</AudiowaveText>
               <p className="font-nunito text-[var(--text-secondary)]">Pushing boundaries with cutting-edge technology</p>
             </div>
             <div className="flex items-center gap-[1rem] flex-col w-full">
-              <IconCard icon={Award} />
+              <IconCard icon={DUO_ICONS.award} />
               <AudiowaveText useGradient={false}>Quality</AudiowaveText>
               <p className="font-nunito text-[var(--text-secondary)]">Delivering excellence in every project</p>
             </div>
             <div className="flex items-center gap-[1rem] flex-col w-full">
-              <IconCard icon={Handshake} />
+              <IconCard icon={DUO_ICONS.handshake} />
               <AudiowaveText useGradient={false}>Partnership</AudiowaveText>
               <p className="font-nunito text-[var(--text-secondary)]">Your success is our mission</p>
             </div>
@@ -218,7 +218,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row w-full gap-[2rem] md:gap-0">
             <div className="flex flex-col gap-[1rem] w-full md:w-[50%]">
               <div className="flex items-center gap-[1rem]">
-                <IconCard icon={Server} />
+                <IconCard icon={DUO_ICONS.server} />
                 <h3 className="text-[24px] font-audiowide text-left">
                   <AudiowaveText useGradient={false}>Scalable SaaS Product Engineering</AudiowaveText>
                 </h3>
@@ -231,23 +231,23 @@ export default function Home() {
               <AudiowaveText useGradient={false} className="text-[20px] text-left">Key Features</AudiowaveText>
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Cloud-native architecture for maximum scalability</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Real-time data synchronization across devices</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem]  self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Advanced security and compliance features</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Intuitive user interfaces and dashboards</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">API-first design for seamless integrations</p>
                 </div>
               </div>
@@ -256,7 +256,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row w-full gap-[2rem] md:gap-0">
             <div className="flex flex-col gap-[1rem] w-full md:w-[50%]">
               <div className="flex items-center gap-[1rem]">
-                <IconCard icon={Smartphone} />
+                <IconCard icon={DUO_ICONS.mobile} />
                 <h3 className="text-[24px] font-audiowide text-left">
                   <AudiowaveText useGradient={false}>Native & Cross-Platform Mobile Applications</AudiowaveText>
                 </h3>
@@ -269,23 +269,23 @@ export default function Home() {
               <AudiowaveText useGradient={false} className="text-[20px] text-left">Key Features</AudiowaveText>
               <div className="flex flex-col">
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Native iOS and Android development</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Cross-platform solutions tailored to your architecture</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Offline functionality and data sync</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">Push notifications and real-time updates</p>
                 </div>
                 <div className="flex items-center gap-[0.5rem]">
-                  <CircleCheck className="w-[1.25rem] h-[1.25rem] self-start shrink-0" color="var(--border)" />
+                  <DuoIcon icon={DUO_ICONS.circleCheck} className="w-5 h-5 self-start shrink-0 text-[var(--border-primary)] mt-0.5" />
                   <p className="text-[1rem] font-nunito text-[var(--text-secondary)] font-medium text-left">App Store/Play Console optimizations and deployment</p>
                 </div>
               </div>
@@ -322,7 +322,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center mt-2">
-          <PrimaryButton href="/blog" icon={<ArrowRight className="w-4 h-4" />} noWrap={false}>
+          <PrimaryButton href="/blog" icon={<DuoIcon icon={DUO_ICONS.arrowRight} className="w-4 h-4" />} noWrap={false}>
             View All Articles
           </PrimaryButton>
         </div>
@@ -343,11 +343,11 @@ export default function Home() {
             Need a calm hand for your next design or development cycle? We're here — quietly, but ready to help.
           </p>
           <div className="flex flex-row items-center gap-[0.5rem] justify-center">
-            <Mail size={'1.5rem'} strokeWidth="3" color="var(--brand-orange)" />
+            <DuoIcon icon={DUO_ICONS.envelope} className="w-6 h-6 text-[var(--brand-orange)] shrink-0" />
             <span className="text-[20px] text-[var(--brand-orange)]">contact@appibara.com</span>
           </div>
           <p className="text-[1rem] font-nunito text-[var(--text-secondary)]">We typically respond within 24 hours</p>
-          <PrimaryButton href="mailto:contact@appibara.com" icon={<Send className="w-5 h-5" />}>
+          <PrimaryButton href="mailto:contact@appibara.com" icon={<DuoIcon icon={DUO_ICONS.paperPlane} className="w-5 h-5" />}>
             Hire Us
           </PrimaryButton>
         </Card>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Monitor, Moon, Sun } from "lucide-react";
+import { DuoIcon, DUO_ICONS, type DuoIconDefinition } from "@/components/DuoIcon";
 import { cn } from "@/lib/utils";
 import styles from "./styles.module.css";
 
@@ -12,11 +12,11 @@ const THEME_CHANGE_EVENT = "appibara-theme-change";
 const THEME_OPTIONS: ReadonlyArray<{
   id: ThemePreference;
   label: string;
-  icon: typeof Sun;
+  icon: DuoIconDefinition;
 }> = [
-  { id: "light", label: "Light", icon: Sun },
-  { id: "dark", label: "Dark", icon: Moon },
-  { id: "system", label: "System", icon: Monitor },
+  { id: "light", label: "Light", icon: DUO_ICONS.sunBright },
+  { id: "dark", label: "Dark", icon: DUO_ICONS.moon },
+  { id: "system", label: "System", icon: DUO_ICONS.display },
 ];
 
 function isThemePreference(value: string | null): value is ThemePreference {
@@ -103,7 +103,6 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
       className={cn(styles.switcher, "font-nunito", className)}
     >
       {THEME_OPTIONS.map((option) => {
-        const Icon = option.icon;
         const isActive = mounted && theme === option.id;
         return (
           <button
@@ -115,7 +114,7 @@ export function ThemeSwitcher({ className }: ThemeSwitcherProps) {
             className={cn(styles.option, isActive && styles.optionActive)}
             title={`Use ${option.label.toLowerCase()} theme`}
           >
-            <Icon className="w-[13px] h-[13px]" aria-hidden="true" />
+            <DuoIcon icon={option.icon} className="w-[13px] h-[13px]" />
             <span>{option.label}</span>
           </button>
         );

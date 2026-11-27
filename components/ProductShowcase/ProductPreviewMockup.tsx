@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Lock, RotateCw, ExternalLink, Globe } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 import { ShowcaseProduct } from "./types";
 
 interface ProductPreviewMockupProps {
@@ -23,11 +23,11 @@ export const ProductPreviewMockup: React.FC<ProductPreviewMockupProps> = ({
 
         {/* Real URL Address Bar */}
         <div className="flex items-center gap-2 bg-[var(--bg-primary)] px-4 py-1.5 rounded-full border border-[var(--border-subtle)] text-xs font-mono text-[var(--text-secondary)] max-w-[360px] w-full mx-2 shadow-inner">
-          <Lock className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+          <DuoIcon icon={DUO_ICONS.lock} className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
           <span className="truncate flex-1 select-none font-medium text-[var(--text-primary)]">
             {product.previewUrl}
           </span>
-          <RotateCw className="w-3 h-3 text-[var(--text-muted)] hover:rotate-180 transition-transform cursor-pointer shrink-0" />
+          <DuoIcon icon={DUO_ICONS.arrowRotateRight} className="w-3 h-3 text-[var(--text-muted)] hover:rotate-180 transition-transform cursor-pointer shrink-0" />
         </div>
 
         {/* Live Link Button */}
@@ -40,9 +40,9 @@ export const ProductPreviewMockup: React.FC<ProductPreviewMockupProps> = ({
               aria-label={`Open ${product.title} live website`}
               className="flex items-center gap-1.5 text-xs text-[var(--text-secondary)] hover:text-[var(--brand-orange)] font-sans font-medium transition-colors px-2 py-1 rounded-md hover:bg-[var(--bg-primary)]"
             >
-              <Globe className="w-3.5 h-3.5" />
+              <DuoIcon icon={DUO_ICONS.globe} className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Live</span>
-              <ExternalLink className="w-3.5 h-3.5" />
+              <DuoIcon icon={DUO_ICONS.arrowUpRightFromSquare} className="w-3.5 h-3.5" />
             </a>
           )}
         </div>
@@ -77,7 +77,7 @@ export const ProductPreviewMockup: React.FC<ProductPreviewMockupProps> = ({
               className="text-xs bg-white/20 hover:bg-white/30 backdrop-blur-md px-3 py-1 rounded-full font-medium transition-colors flex items-center gap-1.5"
             >
               <span>Visit Site</span>
-              <ExternalLink className="w-3 h-3" />
+              <DuoIcon icon={DUO_ICONS.arrowUpRightFromSquare} className="w-3 h-3" />
             </a>
           )}
         </div>

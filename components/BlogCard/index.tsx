@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card } from "@/components/Card";
 import { Pill } from "@/components/Pill";
 import { BlogPost } from "@/lib/blog";
-import { Calendar, Clock, ArrowRight, Pin } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 
 interface BlogCardProps {
   post: BlogPost;
@@ -33,7 +33,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, isLatest = false }) =>
           <Pill>{post.categoryLabel}</Pill>
           {post.pinned && (
             <span className="inline-flex items-center gap-1.5 text-[10px] uppercase tracking-wider font-bold bg-[var(--bg-tertiary)] text-[var(--accent-primary)] px-2.5 py-1 rounded-full font-nunito shadow-sm border border-[var(--border-subtle)]">
-              <Pin className="w-3 h-3 rotate-[30deg] fill-[var(--accent-primary)] stroke-none" /> Pinned
+              <DuoIcon icon={DUO_ICONS.thumbtack} className="w-3 h-3 rotate-[30deg]" /> Pinned
             </span>
           )}
           {isLatest && (
@@ -64,11 +64,11 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, isLatest = false }) =>
       <div className="border-t border-[var(--border-subtle)] pt-4 flex flex-col gap-3">
         <div className="flex items-center justify-between text-xs text-[var(--text-muted)] font-nunito">
           <div className="flex items-center gap-1.5">
-            <Calendar className="w-3.5 h-3.5 text-[var(--brand-orange)]" />
+            <DuoIcon icon={DUO_ICONS.calendar} className="w-3.5 h-3.5 text-[var(--brand-orange)]" />
             <span>{post.date}</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <Clock className="w-3.5 h-3.5 text-[var(--brand-blue-light)]" />
+            <DuoIcon icon={DUO_ICONS.clock} className="w-3.5 h-3.5 text-[var(--brand-blue-light)]" />
             <span>{post.readTime}</span>
           </div>
         </div>
@@ -77,7 +77,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post, isLatest = false }) =>
           href={`/blog/${post.slug}`}
           className="inline-flex items-center gap-1.5 text-sm font-semibold font-nunito text-[var(--brand-orange)] hover:text-[var(--brand-orange-dark)] hover:translate-x-1 transition-all w-fit mt-1"
         >
-          Read Post <ArrowRight className="w-4 h-4" />
+          Read Post <DuoIcon icon={DUO_ICONS.arrowRight} className="w-4 h-4" />
         </Link>
       </div>
     </Card>
