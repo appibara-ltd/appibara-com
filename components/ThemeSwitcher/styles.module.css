@@ -1,0 +1,72 @@
+.switcher {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  background: rgba(26, 26, 26, 0.055);
+  border: 1px solid rgba(26, 26, 26, 0.07);
+}
+
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 9999px;
+  border: none;
+  background: transparent;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.option:hover {
+  color: var(--text-primary);
+}
+
+.optionActive {
+  background: #ffffff;
+  color: var(--brand-orange);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.09);
+}
+
+.optionActive:hover {
+  color: var(--brand-orange);
+}
+
+:global(html.dark) .switcher {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+:global(html.dark) .optionActive {
+  background: var(--bg-tertiary);
+  color: var(--brand-orange-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+:global(html.dark) .optionActive:hover {
+  color: var(--brand-orange-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(html:not(.light)) .switcher {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.09);
+  }
+
+  :global(html:not(.light)) .optionActive {
+    background: var(--bg-tertiary);
+    color: var(--brand-orange-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+
+  :global(html:not(.light)) .optionActive:hover {
+    color: var(--brand-orange-light);
+  }
+}

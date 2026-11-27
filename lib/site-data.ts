@@ -238,6 +238,11 @@ export interface AdditionalResource {
 
 export const ADDITIONAL_APPS: readonly AdditionalResource[] = [
   {
+    name: "Appibara Icons",
+    url: `${SITE_INFO.url}/icons`,
+    notes: "Dual-tone SVG icon library across Duo and S Duo styles (Solid, Regular, Light, Thin)",
+  },
+  {
     name: "Case Closed",
     url: `${SITE_INFO.url}/case-closed`,
     notes: "Product page (Privacy Policy Markdown at /case-closed/privacy-policy.md)",

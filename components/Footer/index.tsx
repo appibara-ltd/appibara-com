@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
 import styles from "./styles.module.css";
 import { AudiowaveText } from "@/components/AudiowaveText";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export const Footer = () => {
     return (
@@ -53,6 +54,7 @@ export const Footer = () => {
                                 </svg>
                             </Link>
                         </div>
+                        <ThemeSwitcher className="mt-[0.65rem]" />
                     </div>
 
                     <div className={styles.column}>
@@ -80,6 +82,12 @@ export const Footer = () => {
                             className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
                         >
                             Blog
+                        </a>
+                        <a
+                            href="/icons"
+                            className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
+                        >
+                            Icons
                         </a>
                     </div>
                     <div className={styles.column}>
