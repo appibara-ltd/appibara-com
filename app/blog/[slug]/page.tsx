@@ -9,7 +9,7 @@ import { Pill } from "@/components/Pill";
 import { MarkdownViewer } from "@/components/MarkdownViewer";
 import { getPostBySlug, POSTS } from "@/lib/blog";
 import { ORGANIZATION_ID, SITE_INFO, parsePostDateToIso } from "@/lib/site-data";
-import { Calendar, Clock, User, ArrowLeft } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -135,7 +135,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               href="/blog"
               className="inline-flex items-center gap-2 text-sm font-semibold font-nunito text-[var(--text-muted)] hover:text-[var(--brand-orange)] transition-colors cursor-pointer group"
             >
-              <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Blog
+              <DuoIcon icon={DUO_ICONS.arrowLeft} className="w-4 h-4 group-hover:-translate-x-1 transition-transform" /> Back to Blog
             </Link>
           </div>
 
@@ -152,15 +152,15 @@ export default async function BlogPostPage({ params }: PageProps) {
               {/* Meta information */}
               <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs md:text-sm text-[var(--text-muted)] font-nunito mt-2">
                 <div className="flex items-center gap-1.5">
-                  <Calendar className="w-4 h-4 text-[var(--brand-orange)]" />
+                  <DuoIcon icon={DUO_ICONS.calendar} className="w-4 h-4 text-[var(--brand-orange)]" />
                   <span>{post.date}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Clock className="w-4 h-4 text-[var(--brand-blue-light)]" />
+                  <DuoIcon icon={DUO_ICONS.clock} className="w-4 h-4 text-[var(--brand-blue-light)]" />
                   <span>{post.readTime}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <User className="w-4 h-4 text-[var(--text-muted)]" />
+                  <DuoIcon icon={DUO_ICONS.user} className="w-4 h-4 text-[var(--text-muted)]" />
                   <span>{post.author}</span>
                 </div>
               </div>

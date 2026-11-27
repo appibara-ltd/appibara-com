@@ -10,7 +10,6 @@ import { Pill } from "@/components/Pill";
 import { BlogCard } from "@/components/BlogCard";
 import { AudiowaveText } from "@/components/AudiowaveText";
 import { POSTS, CATEGORIES, BlogPost } from "@/lib/blog";
-import { Calendar, Clock, ArrowRight, Pin } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function BlogPage() {

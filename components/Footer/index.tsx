@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { DuoIcon, DUO_ICONS } from "@/components/DuoIcon";
 import styles from "./styles.module.css";
 import { AudiowaveText } from "@/components/AudiowaveText";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export const Footer = () => {
     return (
@@ -53,6 +54,7 @@ export const Footer = () => {
                                 </svg>
                             </Link>
                         </div>
+                        <ThemeSwitcher className="mt-[0.65rem]" />
                     </div>
 
                     <div className={styles.column}>
@@ -80,6 +82,12 @@ export const Footer = () => {
                             className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
                         >
                             Blog
+                        </a>
+                        <a
+                            href="/icons"
+                            className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
+                        >
+                            Icons
                         </a>
                     </div>
                     <div className={styles.column}>
@@ -109,14 +117,14 @@ export const Footer = () => {
                             href="mailto:contact@appibara.com"
                             className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
                         >
-                            <MapPin className="w-4 h-4 self-start mt-1" />
+                            <DuoIcon icon={DUO_ICONS.locationDot} className="w-4 h-4 self-start mt-1 shrink-0" />
                             Unit 501 Leroy House, 434-436 Essex Road, London, England, N1 3FY
                         </a>
                         <a
                             href="mailto:contact@appibara.com"
                             className="flex items-center gap-2 font-nunito hover:text-[#e17100] transition-colors text-[0.85rem]"
                         >
-                            <Mail className="w-4 h-4" />
+                            <DuoIcon icon={DUO_ICONS.envelope} className="w-4 h-4 shrink-0" />
                             contact@appibara.com
                         </a>
                     </div>

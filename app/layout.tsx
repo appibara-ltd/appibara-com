@@ -93,8 +93,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){try{var t=localStorage.getItem('appibara-theme');var r=document.documentElement;if(t==='dark'){r.classList.add('dark');r.classList.remove('light');}else if(t==='light'){r.classList.add('light');r.classList.remove('dark');}}catch(e){}})();",
+          }}
+        />
         <link
           rel="describedby"
           type="text/markdown"

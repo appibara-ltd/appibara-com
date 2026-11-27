@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     '',
     '/blog',
+    '/icons',
     '/case-closed',
     '/cookie-policy',
     '/privacy-policy',
@@ -24,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       route === ''
         ? 1.0
-        : route === '/blog'
+        : route === '/blog' || route === '/icons'
           ? 0.8
           : route === '/case-closed'
             ? 0.6

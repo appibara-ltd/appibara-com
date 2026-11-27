@@ -8,9 +8,23 @@ import {
 import styles from "./styles.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { Box, Briefcase, Home, Mail, Users, Menu, X, BookOpen } from "lucide-react";
+import { DuoIcon, DUO_HEADER_ICONS, type DuoIconDefinition } from "@/components/DuoIcon";
 import { ReactNode, useState, useEffect, useCallback } from "react";
 import { cn } from "@/lib/utils";
+
+const HEADER_NAV_ITEMS: ReadonlyArray<{
+  href: string;
+  label: string;
+  icon: DuoIconDefinition;
+}> = [
+  { href: "/#home", label: "Home", icon: DUO_HEADER_ICONS.house },
+  { href: "/#who-we-are", label: "Who we are", icon: DUO_HEADER_ICONS.users },
+  { href: "/#our-services", label: "Our services", icon: DUO_HEADER_ICONS.briefcase },
+  { href: "/#our-products", label: "Our Products", icon: DUO_HEADER_ICONS.box },
+  { href: "/blog", label: "Blog", icon: DUO_HEADER_ICONS.bookOpen },
+  // { href: "/icons", label: "Icons", icon: DUO_HEADER_ICONS.shapes },
+  { href: "/#contact", label: "Contact", icon: DUO_HEADER_ICONS.envelope },
+];
 
 // ... (ListItem component remains unchanged)
 
@@ -107,30 +121,21 @@ export const Header = () => {
 
         {/* Mobile Menu Button */}
         <button className="lg:hidden p-2" onClick={toggleMenu} aria-label={isOpen ? "Close menu" : "Open menu"}>
-          {isOpen ? <X /> : <Menu />}
+          <DuoIcon
+            icon={isOpen ? DUO_HEADER_ICONS.xmark : DUO_HEADER_ICONS.bars}
+            className="size-6 text-[var(--foreground)]"
+          />
         </button>
 
         {/* Desktop Menu */}
         <NavigationMenu className="hidden lg:block">
           <NavigationMenuList>
-            <ListItem href={"/#home"}>
-              <Home color="var(--foreground)" /> Home
-            </ListItem>
-            <ListItem href={"/#who-we-are"}>
-              <Users color="var(--foreground)" /> Who we are
-            </ListItem>
-            <ListItem href={"/#our-services"}>
-              <Briefcase color="var(--foreground)" /> Our services
-            </ListItem>
-            <ListItem href={"/#our-products"}>
-              <Box color="var(--foreground)" /> Our Products
-            </ListItem>
-            <ListItem href={"/blog"}>
-              <BookOpen color="var(--foreground)" /> Blog
-            </ListItem>
-            <ListItem href={"/#contact"}>
-              <Mail color="var(--foreground)" /> Contact
-            </ListItem>
+            {HEADER_NAV_ITEMS.map((item) => (
+              <ListItem key={item.href} href={item.href}>
+                <DuoIcon icon={item.icon} className="size-4 text-[var(--foreground)] shrink-0" />
+                {item.label}
+              </ListItem>
+            ))}
           </NavigationMenuList>
         </NavigationMenu>
 
@@ -140,24 +145,12 @@ export const Header = () => {
 
             <NavigationMenu className="flex flex-col gap-2 w-full max-w-none justify-stretch items-stretch">
               <NavigationMenuList className="flex flex-col gap-2 w-full">
-                <ListItem href={"/#home"} onClick={toggleMenu}>
-                  <Home className="w-5 h-5" color="var(--foreground)" /> Home
-                </ListItem>
-                <ListItem href={"/#who-we-are"} onClick={toggleMenu}>
-                  <Users className="w-5 h-5" color="var(--foreground)" /> Who we are
-                </ListItem>
-                <ListItem href={"/#our-services"} onClick={toggleMenu}>
-                  <Briefcase className="w-5 h-5" color="var(--foreground)" /> Our services
-                </ListItem>
-                <ListItem href={"/#our-products"} onClick={toggleMenu}>
-                  <Box className="w-5 h-5" color="var(--foreground)" /> Our Products
-                </ListItem>
-                <ListItem href={"/blog"} onClick={toggleMenu}>
-                  <BookOpen className="w-5 h-5" color="var(--foreground)" /> Blog
-                </ListItem>
-                <ListItem href={"/#contact"} onClick={toggleMenu}>
-                  <Mail className="w-5 h-5" color="var(--foreground)" /> Contact
-                </ListItem>
+                {HEADER_NAV_ITEMS.map((item) => (
+                  <ListItem key={item.href} href={item.href} onClick={toggleMenu}>
+                    <DuoIcon icon={item.icon} className="size-5 text-[var(--foreground)] shrink-0" />
+                    {item.label}
+                  </ListItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
 

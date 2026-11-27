@@ -1,7 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark, .dark *), @media (prefers-color-scheme: dark));
+@custom-variant dark {
+  &:where(.dark, .dark *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not(.light), :root:not(.light) *) {
+      @slot;
+    }
+  }
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -76,6 +85,7 @@ body {
 }
 
 :root {
+  color-scheme: light;
   --radius: 0.625rem;
 
   /* Base Theme Colors */
@@ -145,8 +155,70 @@ body {
   --sidebar-border: var(--border-subtle);
 }
 
+:root.dark,
+html.dark {
+  color-scheme: dark;
+  --bg-primary: #191a21;
+  --bg-secondary: #20212a;
+  --bg-tertiary: #2a2c34;
+  --bg-inverted: #fafaf9;
+  --text-primary: #d0d5de;
+  --text-secondary: #9fa3ac;
+  --text-muted: #7f848c;
+  --text-inverted: #31353c;
+  --text-on-accent: #fafaf9;
+  --accent-primary: #bb4d00;
+  --accent-secondary: #54a2ff;
+  --border-primary: #5f6673;
+  --border-subtle: #353c47ba;
+  --border-focus: #bb4d00;
+
+  /* UI Variables Dark Overrides */
+  --surface-off-white: var(--bg-secondary);
+  --text-dark: var(--text-primary);
+  --text-gray-600: var(--text-secondary);
+  --background-gray-100: var(--bg-tertiary);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgb(0 0 0 / 0.45);
+  --card-highlight: rgba(255, 255, 255, 0.1);
+  --card-highlight-hover: rgba(255, 255, 255, 0.18);
+
+  --background: var(--bg-primary);
+  --foreground: var(--text-primary);
+  --card: var(--bg-secondary);
+  --card-foreground: var(--text-primary);
+  --popover: var(--bg-secondary);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--text-primary);
+  --primary-foreground: var(--bg-primary);
+  --secondary: var(--bg-tertiary);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--bg-tertiary);
+  --muted-foreground: var(--text-muted);
+  --accent: var(--bg-tertiary);
+  --accent-foreground: var(--text-primary);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: var(--border-subtle);
+  --input: var(--border-subtle);
+  --ring: var(--border-focus);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: var(--bg-secondary);
+  --sidebar-foreground: var(--text-primary);
+  --sidebar-primary: var(--accent-primary);
+  --sidebar-primary-foreground: var(--text-on-accent);
+  --sidebar-accent: var(--bg-tertiary);
+  --sidebar-accent-foreground: var(--text-primary);
+  --sidebar-border: var(--border-subtle);
+  --sidebar-ring: var(--border-focus);
+}
+
 @media (prefers-color-scheme: dark) {
   :root:not(.light) {
+    color-scheme: dark;
     --bg-primary: #191a21;
     --bg-secondary: #20212a;
     --bg-tertiary: #2a2c34;
